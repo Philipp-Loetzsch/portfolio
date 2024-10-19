@@ -7,10 +7,7 @@
         </div>
     </div>
 
-    <nav>
-        <a href="#">Contact</a>
-        <a href="#">MyWork</a>
-        <a href="#">Skills</a>
-        <a href="#">Why me</a>
+    <nav class="nav-desktop">
+        <a href="#" *ngFor="let link of ['Contact', 'MyWork', 'Skills', 'Why me']">{{ link }}</a>
     </nav>
 </section>

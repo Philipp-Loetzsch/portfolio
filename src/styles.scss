@@ -13,7 +13,9 @@
 }
 
 body{
+  display: flex;
   height: 100vh;
+  overflow-y: hidden;
   background-image: linear-gradient(
     to right,
     #000000,
@@ -23,5 +25,9 @@ body{
     #0b0a0a
   );
   background-repeat: no-repeat;
- 
+  background-size: 1000%;
+}
+
+span{
+  cursor: default;
 }

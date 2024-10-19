@@ -1,0 +1,15 @@
+main{
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 170px;
+    height: 100%;
+    background-color: #b5e93b;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    left: 0;
+    gap: 2em;
+  }
