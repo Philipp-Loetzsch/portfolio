@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* quantico-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Quantico';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/font/Quantico/quantico-v17-latin-regular.woff2') format('woff2');
+  }
+
+* {
+  margin: 0;
+  font-family: Quantico, Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    #000000,
+    #2c2b2b,
+    #0b0a0a,
+    #323232,
+    #0b0a0a
+  );
+  background-repeat: no-repeat;
+ 
+}

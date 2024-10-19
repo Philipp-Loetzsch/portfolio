@@ -1,0 +1,35 @@
+section{
+    width: 170px;
+    height: 100%;
+    background-color: #B5E93B;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.initials{
+    display: flex;
+    position: absolute;
+    top: 15px;
+    font-size: 46px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #4A4A4A;
+}
+
+nav{
+    transform: rotate(-90deg);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    >a{
+        text-decoration: none;
+        color: #4A4A4A;
+    }
+}
