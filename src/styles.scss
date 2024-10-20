@@ -1,31 +1,63 @@
-/* quantico-regular - latin */
+/* fira-code-300 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Quantico';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/font/Quantico/quantico-v17-latin-regular.woff2') format('woff2');
-  }
+  font-display: swap; 
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/font/fira-code-v22-latin/fira-code-v22-latin-300.woff2') format('woff2'); 
+}
+/* fira-code-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/font/fira-code-v22-latin/fira-code-v22-latin-regular.woff2') format('woff2'); 
+}
+/* fira-code-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/font/fira-code-v22-latin/fira-code-v22-latin-500.woff2') format('woff2'); 
+}
+/* fira-code-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/font/fira-code-v22-latin/fira-code-v22-latin-600.woff2') format('woff2'); 
+}
+/* fira-code-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/font/fira-code-v22-latin/fira-code-v22-latin-700.woff2') format('woff2'); 
+}
+
+@mixin dFlex($jc:center, $ai:center, $fd:unset, $g:0px){
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+  flex-direction: $fd;
+}
 
 * {
   margin: 0;
-  font-family: Quantico, Arial, Helvetica, sans-serif;
+  font-family: 'Fira Code', Arial, Helvetica, sans-serif;
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  color: #D9D9D9;
 }
-
 body{
-  display: flex;
-  height: 100vh;
-  overflow-y: hidden;
-  background-image: linear-gradient(
-    to right,
-    #000000,
-    #2c2b2b,
-    #0b0a0a,
-    #323232,
-    #0b0a0a
-  );
-  background-repeat: no-repeat;
-  background-size: 1000%;
+  background-color: #1C1C1C;
+ 
 }
 
 span{

@@ -9,5 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  german(){
+    console.log(true);
+    
+  }
 
+  english(){
+    console.log(false);
+    
+  }
 }

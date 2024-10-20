@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
-
+  
 }

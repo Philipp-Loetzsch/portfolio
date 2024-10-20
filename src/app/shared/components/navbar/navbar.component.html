@@ -1,13 +1,12 @@
 <section>
-    <div class="logo">
-        <img src="assets/img/navbar/Logo/SVG/curved-text.svg" alt="">
-        <div class="initials">
-            <span>P</span>
-            <span>L</span>
-        </div>
-    </div>
-
     <nav class="nav-desktop">
-        <a href="#" *ngFor="let link of ['Contact', 'MyWork', 'Skills', 'Why me']">{{ link }}</a>
+        <div class="language">
+            <button (click)="english()">EN</button>
+            <button (click)="german()">DE</button>
+        </div>
+        <a href="#" *ngFor="let link of ['About me', 'Skills', 'Projects']">{{ link }}</a>
     </nav>
+    <div class="logo">
+        <img src="" alt="Logo">
+    </div>
 </section>

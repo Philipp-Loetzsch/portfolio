@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LandingPageComponent } from "../landing-page/landing-page.component";
 
+
 @Component({
   selector: 'app-main-content',
   standalone: true,
