@@ -1,5 +1,75 @@
-@import './../../styles.scss';
+@import "./../../styles.scss";
 
-section{
+section {
   min-height: 100vh;
+  @include dFlex($fd: column);
+  background: linear-gradient(to top right, #1c1c1c, 80%, #08463b);
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
+
+h1 {
+  font-size: 128px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.landing-links {
+  display: flex;
+  gap: 48px;
+  > a {
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+  }
+}
+
+.next-page {
+  border-radius: 32px;
+  padding: 12px;
+  border: 1px solid #3dcfb6;
+}
+
+.marquee-links {
+  position: absolute;
+  bottom: 0;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  background-color: white;
+}
+
+.green {
+  background-color: #3dcfb6;
+}
+
+.marquee {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  @include dFlex($jc: space-between,);
+  background-color: rgba(85, 78, 78, 0.5);
+  padding: 12px 32px;
+  transform-origin: left bottom;
+  transform: rotate(-4deg);
+  > span {
+    color: #3dcfb6;
+  }
+}
+

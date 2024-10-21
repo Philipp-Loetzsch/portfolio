@@ -63,3 +63,11 @@ body{
 span{
   cursor: default;
 }
+
+a{
+  text-decoration: none
+}
+
+.d-flex{
+  @include dFlex($fd:column)
+}
