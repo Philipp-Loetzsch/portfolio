@@ -39,6 +39,47 @@
   src: url('./assets/font/fira-code-v22-latin/fira-code-v22-latin-700.woff2') format('woff2'); 
 }
 
+/* karla-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/font/karla-v31-latin/karla-v31-latin-regular.woff2') format('woff2'); 
+}
+/* karla-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/font/karla-v31-latin/karla-v31-latin-500.woff2') format('woff2'); 
+}
+/* karla-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/font/karla-v31-latin/karla-v31-latin-600.woff2') format('woff2'); 
+}
+/* karla-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/font/karla-v31-latin/karla-v31-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./assets/font/karla-v31-latin/karla-v31-latin-800.woff2') format('woff2'); 
+}
+
 @mixin dFlex($jc:center, $ai:center, $fd:unset, $g:0px){
   display: flex;
   justify-content: $jc;
@@ -49,7 +90,7 @@
 
 * {
   margin: 0;
-  font-family: 'Fira Code', Arial, Helvetica, sans-serif;
+  font-family: 'Karla', Arial, Helvetica, sans-serif;
   ::-webkit-scrollbar{
     display: none;
   }
@@ -68,6 +109,32 @@ a{
   text-decoration: none
 }
 
+h3{
+  font-size: 64px;
+  font-weight: 700;
+  color: #3DCFB6;
+  font-family: 'Fira Code';
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+h4{
+  font-size: 24px;
+  color: #3DCFB6;
+  padding-bottom: 20px;
+  font-weight: 500;
+
+}
+
 .d-flex{
   @include dFlex($fd:column)
+}
+
+.content-container{
+  background-color: hsla(170, 60%, 53%, 0.08);
+  border-radius: 30px;
+  border: 1px solid #3DCFB6;
+  word-break: break-all;
+  padding: 32px;
+  @include dFlex($g:32px,$fd:column, $ai:start, $jc:start);
 }

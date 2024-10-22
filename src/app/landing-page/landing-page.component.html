@@ -8,15 +8,18 @@
     </div>
   </div>
   <div class="marquee-links">
-    <div class="d-flex" >
+    <div class="df-gap">
       <a class="next-page" href="#"><img src="assets/img/links/Arrow_next.png" alt=""/></a>
       <div class="line green"></div>
     </div>
-    <div>
+    <div class="df-gap ">
+        <a href="mailto:philipp.loetzsch@outlook.com" [ngClass]="{'desktop-mail': true}">philipp.loetzsch&#64;outlook.com</a>
         <a href="" *ngFor="let link of socialMedia"><img src="assets/img/sozial_media/{{ link }}_default.png" alt=""></a>
+        <div class="line white"></div>
     </div>
   </div>
   <div class="marquee">
     <span *ngFor="let text of ['Available for remote work' , 'Frontend Developer', 'Based in Chemnitz', 'open to work']">{{ text }}</span>
+
   </div>
 </section>

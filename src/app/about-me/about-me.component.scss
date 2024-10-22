@@ -1,0 +1,24 @@
+@import "./../../styles.scss";
+
+section {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 112px;
+  box-sizing: border-box;
+  gap: 5%;
+  >img{
+    object-fit: contain;
+    align-self: flex-start;
+    border-radius: 30px;
+  }
+}
+
+.description{
+    @include dFlex($fd:unset, $g:24px, $ai:flex-start);
+    padding-bottom: 16px;
+}
+
+.content-am{
+    align-self: flex-end;
+}

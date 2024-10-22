@@ -1,0 +1,20 @@
+<section>
+  <img src="assets/img/profile/file.png" alt="Profilbild" />
+  <div class="content-am">
+    <div>
+      <h4>Who I Am</h4>
+      <div class="content-container">
+        <h3>About me</h3>
+        <span
+          >Hi, I’m a german speaking Frontend Developer based in Munich.
+          Motivated by the limitless opportunities within IT, I am excited about
+          crafting visually captivating and intuitive websites and applications.
+        </span>
+        <div class="description" *ngFor="let description of descriptions">
+          <img src="assets/img/profile/{{ description.image }}.png" alt="" />
+          <span>{{ description.text }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
