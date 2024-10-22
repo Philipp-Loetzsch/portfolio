@@ -1,0 +1,30 @@
+@import "./../../styles.scss";
+
+section {
+  display: flex;
+  gap: 30px;
+  padding: 112px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.skilltree {
+  min-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding-top: 3%;
+}
+
+.skill {
+  width: 80px;
+  text-align: center;
+  height: fit-content;
+  @include dFlex($g: 10px, $fd: column);
+  > span {
+    display: flex;
+    align-items: start;
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  }
+}

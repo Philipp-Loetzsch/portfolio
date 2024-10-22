@@ -1,1 +1,30 @@
-<p>skills works!</p>
+<section>
+  <div class="content-am">
+    <div>
+      <h4>Technologies</h4>
+      <div class="content-container">
+        <h3>Skill Set</h3>
+        <span>
+          My journey has involved working on diverse projects, employing a range
+          of frontend technologies and concepts. I am open to embracing new
+          technologies and methodologies to Continously enhance my skills and
+          stay ahead in the ever-evolving landscape of web development.
+        </span>
+        <div style="font-size: 24px">
+          <b>You Need <span style="color: #3dcfb6">another skill?</span></b>
+        </div>
+        <span>
+          Feel free to contact me. I look forward to expanding on my previous
+          knowledge.
+        </span>
+        <a href="#">Let's Talk</a>
+      </div>
+    </div>
+  </div>
+  <div class="skilltree">
+    <div class="skill" *ngFor="let exp of skills">
+      <img src="./../../assets/img/skills/{{ exp.img }}.png" alt="" />
+      <span>{{ exp.skill }}</span>
+    </div>
+  </div>
+</section>
