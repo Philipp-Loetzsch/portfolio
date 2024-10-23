@@ -1,0 +1,53 @@
+@import "./../../styles.scss";
+
+section {
+  min-height: 100vh;
+  @include dFlex($fd: column, $ai: flex-start);
+  padding: 112px;
+}
+
+p{
+    padding: 24px 0;
+}
+
+.project-list {
+  @include dFlex($ai: flex-start, $jc:space-between);
+  width: 100%;
+  gap: 10%;
+  position: relative;
+  > button {
+    cursor: pointer;
+    width: 65%;
+    @include dFlex($jc: space-between);
+    padding: 40px 32px;
+    background-color: transparent;
+    border: solid #3dcfb6;
+    border-width: 1px 0 1px 0;
+    font-size: 18px;
+    font-weight: 400;
+    > span {
+      font-family: "Fira Code";
+      font-size: 24px;
+      font-weight: 700;
+    }
+    &:hover{
+        background-color: rgba(63, 207, 183, 0.302);
+    }
+  }
+  >img{
+    position: absolute;
+    right: 0;
+  }
+}
+
+.separator {
+  gap: 10px;
+}
+
+.show-arrow{
+    display: flex !important;
+}
+
+df-i{
+    display: flex !important;
+}

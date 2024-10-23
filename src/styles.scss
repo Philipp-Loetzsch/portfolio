@@ -125,8 +125,12 @@ h4{
 
 }
 
-.d-flex{
+.df-col{
   @include dFlex($fd:column)
+}
+
+.d-flex{
+  @include dFlex()
 }
 
 .content-container{

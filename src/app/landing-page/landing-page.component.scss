@@ -32,6 +32,16 @@ h2 {
     border-radius: 100px;
     padding: 12px 24px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      border-color: #3dcfb6;
+      >span{
+        color: #3dcfb6;
+        cursor: pointer;
+      }
+    }
+    
   }
 }
 
@@ -39,6 +49,19 @@ h2 {
   border-radius: 32px;
   padding: 12px;
   border: 1px solid #3dcfb6;
+ 
+    >img{
+      position: relative;
+      animation: moveArrow 1s infinite ease-in-out;
+    }
+
+}
+
+@keyframes moveArrow {
+  0%{top:0}
+  50%{top:13px}
+  100%{top:0}
+  
 }
 
 .marquee-links {
@@ -66,21 +89,29 @@ h2 {
   width: 100%;
   position: absolute;
   bottom: 0;
-  @include dFlex($jc: space-between,);
+  @include dFlex($jc: space-between);
   background-color: rgba(85, 78, 78, 0.5);
   padding: 12px 32px;
   transform-origin: left bottom;
   transform: rotate(-3deg);
   > span {
     color: #3dcfb6;
+    /* animation: animationMarquee 10s infinite ease; */
   }
 }
 
-.df-gap{
-  @include dFlex($fd:column, $g:10px)
+/* @keyframes animationMarquee {
+  0% {transform: translateX(0);}
+  30% {transform: translateX(-100%);}
+  60% {transform: translateX(-300%);}
+  100%{transform: translateX(-700%);}
+} */
+
+.df-gap {
+  @include dFlex($fd: column, $g: 10px);
 }
 
-.desktop-mail{
+.desktop-mail {
   transform: rotate(-90deg) translatex(50%);
   max-width: 40px;
 }
