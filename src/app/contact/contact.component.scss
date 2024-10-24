@@ -1,0 +1,28 @@
+@import "./../../styles.scss";
+
+@mixin inputFields(){
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: #3DCFB6;
+    &::placeholder{
+        color: #3DCFB6;
+    }
+}
+
+section {
+  min-height: 100vh;
+  @include dFlex( $ai: flex-start);
+  padding: 112px;
+}
+
+form{
+    @include dFlex($fd:column);
+    >input{
+        @include inputFields()
+    }
+    >textarea{
+        @include inputFields()
+    }
+}

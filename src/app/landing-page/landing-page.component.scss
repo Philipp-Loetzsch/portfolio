@@ -39,6 +39,7 @@ h2 {
       >span{
         color: #3dcfb6;
         cursor: pointer;
+        position: relative;
       }
     }
     
@@ -94,18 +95,18 @@ h2 {
   padding: 12px 32px;
   transform-origin: left bottom;
   transform: rotate(-3deg);
+  overflow: hidden;
   > span {
     color: #3dcfb6;
-    /* animation: animationMarquee 10s infinite ease; */
+    position: relative;
+    margin-right: 100px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
   }
 }
-
-/* @keyframes animationMarquee {
-  0% {transform: translateX(0);}
-  30% {transform: translateX(-100%);}
-  60% {transform: translateX(-300%);}
-  100%{transform: translateX(-700%);}
-} */
 
 .df-gap {
   @include dFlex($fd: column, $g: 10px);

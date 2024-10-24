@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,14 +9,25 @@ import { CommonModule } from '@angular/common';
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent {
+  lpLinks = [
+    {
+      jump: '#',
+      content: 'Check my work',
+    },
+    {
+      jump: '#',
+      content: 'Contact me',
+    },
+  ];
+
   socialMedias = [
     {
-      img:'mail',
-      link:'mailto:philipp.loetzsch@outlook.com'
+      img: 'mail',
+      link: 'mailto:philipp.loetzsch@outlook.com',
     },
-    { 
-      img: 'github', 
-      link: 'https://github.com/Philipp-Loetzsch' 
+    {
+      img: 'github',
+      link: 'https://github.com/Philipp-Loetzsch',
     },
     {
       img: 'linkedIn',
@@ -24,7 +35,46 @@ export class LandingPageComponent {
     },
   ];
 
-  startAnimation(){
-    
+  texts = ['Available for remote work' , 'Frontend Developer', 'Based in Chemnitz', 'open to work', 'Available for remote work' , 'Frontend Developer', 'Based in Chemnitz', 'open to work']
+  screenWidth: number = window.innerWidth;
+
+
+  ngOnInit() {
+
+    this.texts.forEach((text, index) => {
+      this.startAnimation(text, this.screenWidth, -this.screenWidth);
+    });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = event.target.innerWidth;
+    this.texts.forEach((text) => this.stopAnimation(text));
+    this.texts.forEach((text, index) => {
+      this.startAnimation(text, this.screenWidth, -this.screenWidth);
+    });
+  }
+
+  marqueeLinkX: { [key: string]: number } = {};
+  animations: { [key: string]: any } = {};
+
+  startAnimation(content: string, maxXLeft: number, xRight: number) {
+    this.stopAnimation(content);
+    this.marqueeLinkX[content] = this.marqueeLinkX[content] || 0;
+
+    this.animations[content] = setInterval(() => {
+      if (this.marqueeLinkX[content] > maxXLeft) {
+        this.marqueeLinkX[content] = xRight;
+      }
+      this.marqueeLinkX[content]++;
+    }, 1000 / 40);
+  }
+
+  stopAnimation(content: string) {
+    if (this.animations[content]) {
+      clearInterval(this.animations[content]);
+      delete this.animations[content];
+      this.marqueeLinkX[content] = 0;
+    }
   }
 }
