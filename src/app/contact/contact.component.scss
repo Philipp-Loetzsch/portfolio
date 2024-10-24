@@ -1,28 +1,44 @@
 @import "./../../styles.scss";
 
-@mixin inputFields(){
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    font-weight: 500;
-    color: #3DCFB6;
-    &::placeholder{
-        color: #3DCFB6;
-    }
+@mixin inputFields() {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: #3dcfb6;
+  &::placeholder {
+    color: #3dcfb6;
+  }
 }
 
 section {
   min-height: 100vh;
-  @include dFlex( $ai: flex-start);
+  @include dFlex($ai: flex-start, $g: 10%, $jc:space-between);
   padding: 112px;
+  box-sizing: border-box;
 }
 
-form{
-    @include dFlex($fd:column);
-    >input{
-        @include inputFields()
+form {
+    width: 100%;
+  > div {
+    @include dFlex($fd: column, $g: 10px, $ai: flex-start);
+    padding: 32px;
+    border-top: rgba(61, 207, 183, 0.5) 1px solid;
+    > input {
+      @include inputFields();
     }
-    >textarea{
-        @include inputFields()
+    > textarea {
+      @include inputFields();
+      display: flex;
+      align-items: center;
+      resize: vertical;
     }
+    >img{
+        position: relative;
+        z-index: 1;
+        &:hover{        
+            cursor: pointer;
+        }
+    }
+  }
 }

@@ -11,14 +11,26 @@
   </div>
 
   <form>
-    <input type="text" placeholder="What's your Name" />
-    <label>Your name goes here</label>
-    <input type="text" placeholder="What's your Email" />
-    <label>youremail&#64;email.com</label>
-    <textarea placeholder="How can I help you?" cols="50 , 1"></textarea>
-    <label>Hello Philipp, I am interested in...</label>
     <div>
-      <input type="checkbox" name="acceptTerms" />
+      <input type="text" placeholder="What's your Name" />
+      <label>Your name goes here</label>
+    </div>
+    <div>
+      <input type="text" placeholder="What's your Email" />
+      <label>youremail&#64;email.com</label>
+    </div>
+    <div>
+      <textarea
+        placeholder="How can I help you?"
+        cols="50"
+        rows="1"
+        maxlength="500"
+      ></textarea>
+      <label>Hello Philipp, I am interested in...</label>
+    </div>
+
+    <div style="flex-direction: unset;">
+      <img  src="assets/img/contatct/checkbox_default.png" alt="">
       <label for="acceptTerms"
         >I've read the privacy policy and agree to the processing of my data as
         outlined.</label
