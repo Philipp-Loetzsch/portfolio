@@ -10,31 +10,73 @@
     >
   </div>
 
-  <form>
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div>
-      <input type="text" placeholder="What's your Name" />
-      <label>Your name goes here</label>
+      <input
+        #name="ngModel"
+        id="name"
+        name="name"
+        type="text"
+        placeholder="What's your name?"
+        [(ngModel)]="contactData.name"
+        required
+      />
+      @if(!name.valid && (name.touched || contactForm.submitted)){
+      <label class="invalid" for="name">Oops! it seems your name is missing </label>
+      }
+      @else{
+      <label for="name">Your name goes here</label>
+      }
     </div>
     <div>
-      <input type="text" placeholder="What's your Email" />
-      <label>youremail&#64;email.com</label>
+      <input
+        #email="ngModel"
+        id="email"
+        name="email"
+        type="text"
+        placeholder="What's your email?"
+        [(ngModel)]="contactData.email"
+        required
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+      />
+      @if(email.hasError('required') && (email.touched || contactForm.submitted)){
+        <label class="invalid" for="email">Hoppla! your email is required</label>
+      }
+      @else if(email.hasError('pattern') && contactForm.submitted){
+        <label class="invalid" for="email">Pls use the right syntax (name&#64;email.com)</label>
+      }
+      @else{ <label for="email">youremail&#64;email.com</label>}
+     
     </div>
     <div>
       <textarea
+        #message="ngModel"
+        id="message"
+        name="message"
         placeholder="How can I help you?"
+        [(ngModel)]="contactData.message"
         cols="50"
         rows="1"
         maxlength="500"
+        required
+        minlength="4"
       ></textarea>
-      <label>Hello Philipp, I am interested in...</label>
+
+      @if(!message.valid && (message.touched || contactForm.submitted)){
+      <label class="invalid" for="message">What do you need to develop?</label>
+      } @else{
+      <label for="message">Hello Philipp, I am interested in...</label>
+      }
     </div>
 
-    <div style="flex-direction: unset;">
-      <img  src="assets/img/contatct/checkbox_default.png" alt="">
+    <div style="flex-direction: unset">
+      <img src="assets/img/contatct/checkbox_default.png" alt="" />
       <label for="acceptTerms"
-        >I've read the privacy policy and agree to the processing of my data as
-        outlined.</label
+        >I've read the <a href="#">privacy policy</a> and agree to the
+        processing of my data as outlined.</label
       >
     </div>
+
+    <input type="submit" value="Say Hello :)" />
   </form>
 </section>

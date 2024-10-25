@@ -13,13 +13,15 @@
 
 section {
   min-height: 100vh;
-  @include dFlex($ai: flex-start, $g: 10%, $jc:space-between);
+  @include dFlex($ai: flex-start, $g: 10%, $jc: space-between);
   padding: 112px;
   box-sizing: border-box;
 }
 
 form {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   > div {
     @include dFlex($fd: column, $g: 10px, $ai: flex-start);
     padding: 32px;
@@ -33,12 +35,29 @@ form {
       align-items: center;
       resize: vertical;
     }
-    >img{
-        position: relative;
-        z-index: 1;
-        &:hover{        
-            cursor: pointer;
-        }
+    > img {
+      position: relative;
+      z-index: 1;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
+  > input {
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    width: fit-content;
+    align-self: center;
+   
+  }
+}
+
+.invalid{
+  color: #EC7B7BCC;
 }

@@ -1,0 +1,14 @@
+@import "./../../styles.scss";
+
+section {
+  min-height: 100vh;
+  @include dFlex($fd: column, $ai: flex-start);
+  padding: 112px;
+}
+
+h5{
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Fira Code',Arial, Helvetica, sans-serif;
+    color: #3DCFB6;
+}
