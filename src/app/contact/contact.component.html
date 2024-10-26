@@ -2,12 +2,11 @@
   <div>
     <h4>Contact me</h4>
     <h3>Lets Work together</h3>
-    <span>Got a problem to solve?</span>
+    <p style="color: #3DCFB6; font-family: 'Fira Code';">Got a problem to solve?</p>
     <span
       >Contact me through this form, I am interested in hearing from you,
-      knowing your ideas and contributing to your projects with my work Need a
-      Frontend developer? Let’s talk!</span
-    >
+      knowing your ideas and contributing to your projects with my work</span>
+      <p>Need aFrontend developer? <span style="color:#3DCFB6 ;">Let’s talk!</span> </p>
   </div>
 
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -55,7 +54,7 @@
         name="message"
         placeholder="How can I help you?"
         [(ngModel)]="contactData.message"
-        cols="50"
+        cols="30"
         rows="1"
         maxlength="500"
         required

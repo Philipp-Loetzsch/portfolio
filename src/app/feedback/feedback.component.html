@@ -1,3 +1,49 @@
 <section>
-    <h5>What my colleagues say about me</h5>
+  <h5>What my colleagues say about me</h5>
+  <div class="carousel">
+    <div class="previous-comment">
+      <span>{{ this.previousComment.text }}</span>
+      <div>
+        <div class="line"></div>
+        <span>{{ this.previousComment.name }}</span>
+      </div>
+    </div>
+    <div class="main-comment">
+      <img src="assets/img/feedback/quotes.png" alt="" />
+      <span>{{ this.mainComment.text }}</span>
+      <div>
+        <div class="line"></div>
+        <span>{{ this.mainComment.name }}</span>
+      </div>
+    </div>
+    <div class="next-comment">
+      <span>{{ this.nextComment.text }}</span>
+      <div>
+        <div class="line"></div>
+        <span>{{ this.nextComment.name }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comment-navigation">
+    <img
+      style="cursor: pointer"
+      (click)="showPreviousComment()"
+      src="assets/img/feedback/arrow_back.png"
+      alt="arrow left"
+    />
+    <div *ngFor="let feedback of feedbacks; let i = index">
+      <img
+        *ngIf="i <= feedbacks.length && i < 6"
+        src="assets/img/feedback/point_white.png"
+        alt="point"
+      />
+    </div>
+    <img
+      style="cursor: pointer"
+      (click)="showNextComment()"
+      src="assets/img/feedback/arrow_forward.png"
+      alt="arrow right"
+    />
+  </div>
 </section>
