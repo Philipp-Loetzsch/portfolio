@@ -1,12 +1,12 @@
 <section>
     <nav class="nav-desktop">
         <div class="language">
-            <button (click)="english()">EN</button>
-            <button (click)="german()">DE</button>
+            <button [ngClass]="{'chosen': !language}" (click)="english()">EN</button>
+            <button [ngClass]="{'chosen': language}" (click)="german()">DE</button>
         </div>
-        <a href="#" *ngFor="let link of ['About me', 'Skills', 'Projects']">{{ link }}</a>
+        <a href="#{{ navlink.link }}" *ngFor="let navlink of navLinks">{{ navlink.title }}</a>
     </nav>
-    <div class="logo">
+    <a href="#" class="logo">
         <img src="assets/img/navbar/Logo/PNG/logo.png" alt="Logo">
-    </div>
+    </a>
 </section>

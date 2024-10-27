@@ -4,7 +4,8 @@ section {
   @include dFlex($jc:space-between);
   padding: 24px 42px;
   box-sizing: border-box;
-  position: absolute;
+  position: sticky;
+  top: 0;
   width: 100%;
   background: linear-gradient(to bottom, black, 20%, rgba(0, 0, 0, 0.1));
   z-index: 999;
@@ -23,11 +24,13 @@ section {
   border-radius: 100px;
   display: flex;
   > button {
-    font-size: 500;
+    cursor: pointer;
+    font-weight: 500;
     background-color: transparent;
     border: none;
     border-radius: 100px;
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
+    color: rgba(61, 207, 183, 0.50);
   }
 }
 
@@ -36,4 +39,9 @@ section {
     object-fit: cover;
     height: 48px;
   }
+}
+
+.chosen{
+  background-color: #3dcfb6 !important;
+  color: white !important;
 }

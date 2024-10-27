@@ -14,11 +14,11 @@ export class LandingPageComponent {
 
   lpLinks = [
     {
-      jump: '#',
+      jump: 'projects',
       content: 'Check my work',
     },
     {
-      jump: '#',
+      jump: 'contact',
       content: 'Contact me',
     },
   ];

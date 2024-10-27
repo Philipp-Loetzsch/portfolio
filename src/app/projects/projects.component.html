@@ -7,7 +7,7 @@
   </p>
 
   <div class="project-list" *ngFor="let project of projects ; let index = index">
-    <button (mouseenter)="hoverButton(index)" (mouseleave)="noHover()">
+    <button (mouseenter)="hoverButton(index)" (mouseleave)="noHover()" (click)="showDialog = true">
       <span>
         {{ project.title }}
         <img *ngIf="hoverIndex === index" src="assets/img/portfolio/arrow_outward.png" alt=""
@@ -19,4 +19,5 @@
     </button>
     <img *ngIf="hoverIndex === index" src="assets/img/portfolio/{{ project.image }}.png" alt="" />
   </div>
+  <app-project-dialog *ngIf="showDialog"></app-project-dialog>
 </section>

@@ -4,7 +4,7 @@
     <h1>Philipp Lötzsch</h1>
     <div class="landing-links">
       <a *ngFor="let link of lpLinks; let i = index" 
-      [href]="link.jump" 
+      href="#{{link.jump}}" 
       (mouseenter)="startAnimation(link.content,200,-150)" 
       (mouseleave)="stopAnimation(link.content)">
      <span [ngStyle]="{'right.px': getMarqueePosition(link.content)}">{{ link.content }}</span>

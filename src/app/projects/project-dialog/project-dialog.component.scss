@@ -1,0 +1,87 @@
+@import "./../../../styles.scss";
+
+@mixin firaCode($w: 700, $fs:64px) {
+  font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  font-weight: $w;
+  font-size: $fs;
+}
+
+section {
+  position: fixed;
+  padding: 112px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  @include dFlex();
+}
+h6 {
+  font-size: 128px;
+  color: #3dcfb6;
+}
+article {
+  @include dFlex($jc: space-between, $ai: start);
+  background: linear-gradient(to top right, #1c1c1c, 80%, #08463b);
+  padding: 48px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  height: 100%
+}
+
+.title {
+  @include firaCode();
+}
+
+.headline {
+  @include firaCode($fs:24px);
+  color: #3dcfb6;
+
+}
+
+.project-content {
+  @include dFlex($fd: column, $ai: start, $jc:space-between);
+  height: 100%;
+  width: 50%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.project-image {
+  @include dFlex($fd: column, $ai: end, $jc:space-between);
+  height: 100%;
+  width: 50%;
+  > button {
+    font-size: 18px;
+    font-weight: 400;
+    color: #3dcfb6;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    @include dFlex($g: 16px);
+  }
+  >img{
+    width: 100%;
+  }
+}
+
+.project-links {
+  @include dFlex($g: 24px);
+  > a {
+    @include dFlex($g: 8px);
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    border: 1px solid #ffffff;
+    &:hover {
+      border-color: #3dcfb6;
+      color: #3dcfb6;
+      > img {
+        transition-duration: 300ms;
+        transform: translateX(3px) translateY(-3px);
+      }
+    }
+  }
+}

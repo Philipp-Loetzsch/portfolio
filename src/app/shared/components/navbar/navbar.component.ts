@@ -6,16 +6,35 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  german(){
+  language: boolean = false;
+
+  chosen = {color: 'red'}
+
+  navLinks: Array<{ link: string; title: string }> = [
+    {
+      link: 'aboutMe',
+      title: 'About Me',
+    },
+    {
+      link: 'skills',
+      title: 'Skills',
+    },
+    {
+      link: 'projects',
+      title: 'Projects',
+    },
+  ];
+
+  german() {
+    this.language = true;
     console.log(true);
-    
   }
 
-  english(){
+  english() {
+    this.language = false;
     console.log(false);
-    
   }
 }
