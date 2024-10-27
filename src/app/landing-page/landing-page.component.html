@@ -7,7 +7,7 @@
       [href]="link.jump" 
       (mouseenter)="startAnimation(link.content,200,-150)" 
       (mouseleave)="stopAnimation(link.content)">
-     <span [ngStyle]="{'right.px': marqueeLinkX[link.content] || 0}">{{ link.content }}</span>
+     <span [ngStyle]="{'right.px': getMarqueePosition(link.content)}">{{ link.content }}</span>
    </a>
     </div>
   </div>
@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="marquee">
-    <span *ngFor="let text of texts ; let i = index"  [ngStyle]="{'right.px':marqueeLinkX[text] || 0}">{{ text }}</span>
+    <span *ngFor="let text of texts ; let i = index"  [ngStyle]="{'right.px': getMarqueePosition(text)}">{{ text }}</span>
   </div>
 </section>
 

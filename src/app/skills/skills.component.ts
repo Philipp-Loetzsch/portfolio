@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { AnimationService } from '../shared/services/animation.service';
+
 
 @Component({
   selector: 'app-skills',
@@ -9,6 +11,8 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+  constructor(private animationService: AnimationService) {};
+  linkContent: string = "Let's Talk"
   skills = [
     {img:'html', skill:'HTML'},
     {img:'css', skill:'CSS'},
@@ -22,4 +26,17 @@ export class SkillsComponent {
     {img:'scrum', skill:'Scrum'},
     {img:'growth', skill:'Growth mindset'},
   ]
+
+  
+  startAnimation(content: string, maxXLeft: number, xRight: number) {
+    this.animationService.startAnimation(content, maxXLeft, xRight);
+  }
+
+  stopAnimation(content: string) {
+    this.animationService.stopAnimation(content);
+  }
+
+  getMarqueePosition(content: string): number {
+    return this.animationService.marqueeLinkX[content] || 0;
+  }
 }

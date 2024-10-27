@@ -88,6 +88,26 @@
   flex-direction: $fd;
 }
 
+@mixin animatetLinks(){
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  padding: 12px 24px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    border-color: #3dcfb6;
+    > span {
+      color: #3dcfb6;
+      cursor: pointer;
+      position: relative;
+    }
+  }
+ 
+}
+
 * {
   margin: 0;
   font-family: 'Karla', Arial, Helvetica, sans-serif;

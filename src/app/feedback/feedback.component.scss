@@ -1,5 +1,29 @@
 @import "./../../styles.scss";
 
+@mixin comments($pos: relative, $bgc: rgba(61, 207, 183, 0.3)) {
+  position: $pos;
+  height: 150px;
+  width: 500px;
+  max-width: 500px;
+  border: 1px solid #3dcfb76c;
+  background-color: $bgc;
+  border-radius: 30px;
+  padding: 40px 24px;
+}
+
+@mixin commentFooter() {
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+    > span {
+      min-width: fit-content;
+    }
+  }
+}
+
 section {
   min-height: 100vh;
   @include dFlex($fd: column, $ai: center, $g: 40px);
@@ -21,60 +45,32 @@ h5 {
   width: 100%;
   align-items: center;
   justify-content: center;
-
 }
 
-.previous-comment{
-  position: absolute;
+.previous-comment {
+  @include comments($pos: absolute, $bgc: rgba(61, 207, 183, 0.123));
   left: -30%;
-  height: 150px;
-  width: 500px;
-  max-width: 500px;
-  border: 1px solid #3dcfb76c;
-  background-color: rgba(61, 207, 183, 0.123);
-  border-radius: 30px;
-  padding: 40px 24px;
+  @include dFlex($fd: column, $jc: space-between, $ai: start);
+  @include commentFooter();
 }
 
 .main-comment {
-  position: relative;
-  height: 150px;
-  width: 500px;
-  max-width: 500px;
-  border: 1px solid #3dcfb6;
-  background-color: rgba(61, 207, 183, 0.3);
-  border-radius: 30px;
-  padding: 40px 24px;
+  @include comments();
   @include dFlex($fd: column, $jc: space-between, $ai: start);
+  @include commentFooter();
   > img {
     position: absolute;
     width: 62px;
     left: -5%;
     top: -5px;
   }
-  > div {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    gap: 15px;
-    > span {
-      min-width: fit-content;
-    }
-  }
 }
 
-
-.next-comment{
-  position: absolute;
+.next-comment {
+  @include comments($pos: absolute, $bgc: rgba(61, 207, 183, 0.123));
   right: -30%;
-  height: 150px;
-  width: 500px;
-  max-width: 500px;
-  border: 1px solid #3dcfb76c;
-  background-color: rgba(61, 207, 183, 0.123);
-  border-radius: 30px;
-  padding: 40px 24px;
+  @include dFlex($fd: column, $jc: space-between, $ai: start);
+  @include commentFooter();
 }
 
 .line {
@@ -83,14 +79,12 @@ h5 {
   height: 1px;
 }
 
-.comment-navigation{
+.comment-navigation {
   display: flex;
   justify-content: center;
   padding-top: 50px;
   gap: 20px;
-  >img{
+  > img {
     padding: 0 10px;
   }
 }
-
-

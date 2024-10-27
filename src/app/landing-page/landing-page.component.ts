@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AnimationService } from '../shared/services/animation.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -9,6 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent {
+  constructor(private animationService: AnimationService) {};
+
   lpLinks = [
     {
       jump: '#',
@@ -40,7 +43,6 @@ export class LandingPageComponent {
 
 
   ngOnInit() {
-
     this.texts.forEach((text, index) => {
       this.startAnimation(text, this.screenWidth, -this.screenWidth);
     });
@@ -55,13 +57,27 @@ export class LandingPageComponent {
     });
   }
 
-  marqueeLinkX: { [key: string]: number } = {};
-  animations: { [key: string]: any } = {};
 
+
+  startAnimation(content: string, maxXLeft: number, xRight: number) {
+    this.animationService.startAnimation(content, maxXLeft, xRight);
+  }
+
+  stopAnimation(content: string) {
+    this.animationService.stopAnimation(content);
+  }
+
+  getMarqueePosition(content: string): number {
+    return this.animationService.marqueeLinkX[content] || 0;
+  }
+
+
+/*   marqueeLinkX: { [key: string]: number } = {};
+  animations: { [key: string]: any } = {}; */
+  /*
   startAnimation(content: string, maxXLeft: number, xRight: number) {
     this.stopAnimation(content);
     this.marqueeLinkX[content] = this.marqueeLinkX[content] || 0;
-
     this.animations[content] = setInterval(() => {
       if (this.marqueeLinkX[content] > maxXLeft) {
         this.marqueeLinkX[content] = xRight;
@@ -76,5 +92,5 @@ export class LandingPageComponent {
       delete this.animations[content];
       this.marqueeLinkX[content] = 0;
     }
-  }
+  } */
 }

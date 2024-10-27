@@ -7,7 +7,11 @@ section {
   box-sizing: border-box;
   min-height: 100vh;
   align-items: center;
-  background: radial-gradient( farthest-side at left,#08463B4D 30%, #1C1C1C 100%);
+  background: radial-gradient(
+    farthest-side at left,
+    #08463b4d 30%,
+    #1c1c1c 100%
+  );
 }
 
 .skilltree {
@@ -27,5 +31,10 @@ section {
     display: flex;
     align-items: start;
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  }
+}
+.content-container {
+  > a {
+    @include animatetLinks();
   }
 }

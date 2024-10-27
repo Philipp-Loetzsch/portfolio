@@ -24,25 +24,34 @@ export class FeedbackComponent {
     name: 'Valeska S. - Customer'
     },
   ]
-  currentComment = 0
-  mainComment = this.feedbacks[this.currentComment]
-  previousComment = this.feedbacks[this.currentComment + 1]
-  nextComment = this.feedbacks[this.currentComment + 1]
-    
-  showMainComment(){
-    this.mainComment= this.feedbacks[this.currentComment]
-    console.log(this.mainComment.name); 
+  currentComment = 0;
+  mainComment = this.feedbacks[this.currentComment];
+  previousComment = this.feedbacks[this.getPreviousIndex(this.currentComment)];
+  nextComment = this.feedbacks[this.getNextIndex(this.currentComment)];
+  
+  getPreviousIndex(index: number): number {
+    return (index - 1 + this.feedbacks.length) % this.feedbacks.length;
   }
-
-
+  
+  getNextIndex(index: number): number {
+    return (index + 1) % this.feedbacks.length;
+  }
+  
+  updateComments() {
+    this.mainComment = this.feedbacks[this.currentComment];
+    this.previousComment = this.feedbacks[this.getPreviousIndex(this.currentComment)];
+    this.nextComment = this.feedbacks[this.getNextIndex(this.currentComment)];
+  }
+  
   showPreviousComment() {
-    this.currentComment = (this.currentComment - 1 + this.feedbacks.length) % this.feedbacks.length;
-    this.showMainComment();
+    this.currentComment = this.getPreviousIndex(this.currentComment);
+    this.updateComments();
   }
   
   showNextComment() {
-    this.currentComment = (this.currentComment + 1) % this.feedbacks.length;
-    this.showMainComment();
+    this.currentComment = this.getNextIndex(this.currentComment);
+    this.updateComments();
   }
+  
   
 }

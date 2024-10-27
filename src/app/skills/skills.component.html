@@ -17,13 +17,16 @@
           Feel free to contact me. I look forward to expanding on my previous
           knowledge.
         </span>
-        <a href="#">Let's Talk</a>
+        <a href="#"
+        (mouseenter)="startAnimation(linkContent,200,-150)" 
+        (mouseleave)="stopAnimation(linkContent)">
+        <span [ngStyle]="{'right.px': getMarqueePosition(linkContent)}">{{linkContent}}</span></a>
       </div>
     </div>
   </div>
   <div class="skilltree">
     <div class="skill" *ngFor="let exp of skills">
-      <img src="./../../assets/img/skills/{{ exp.img }}.png" alt="" />
+      <img src="assets/img/skills/{{ exp.img }}.png" alt="" />
       <span>{{ exp.skill }}</span>
     </div>
   </div>

@@ -26,23 +26,7 @@ h2 {
   box-sizing: border-box;
 
   > a {
-    font-size: 18px;
-    font-weight: 400;
-    border: 1px solid #ffffff;
-    border-radius: 100px;
-    padding: 12px 24px;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    &:hover {
-      border-color: #3dcfb6;
-      >span{
-        color: #3dcfb6;
-        cursor: pointer;
-        position: relative;
-      }
-    }
-    
+    @include animatetLinks();
   }
 }
 
@@ -50,19 +34,23 @@ h2 {
   border-radius: 32px;
   padding: 12px;
   border: 1px solid #3dcfb6;
- 
-    >img{
-      position: relative;
-      animation: moveArrow 1s infinite ease-in-out;
-    }
 
+  > img {
+    position: relative;
+    animation: moveArrow 1s infinite ease-in-out;
+  }
 }
 
 @keyframes moveArrow {
-  0%{top:0}
-  50%{top:13px}
-  100%{top:0}
-  
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 13px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 .marquee-links {
