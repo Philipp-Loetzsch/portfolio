@@ -1,0 +1,12 @@
+@import './../../../../styles.scss';
+
+section{
+ @include dFlex($jc:space-between);
+ padding: 112px;
+ >div{
+    @include dFlex($fd:column, $ai:start);
+    >img{
+        height: 48px;
+    }
+ }
+}

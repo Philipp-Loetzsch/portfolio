@@ -57,8 +57,6 @@ export class LandingPageComponent {
     });
   }
 
-
-
   startAnimation(content: string, maxXLeft: number, xRight: number) {
     this.animationService.startAnimation(content, maxXLeft, xRight);
   }
@@ -70,27 +68,4 @@ export class LandingPageComponent {
   getMarqueePosition(content: string): number {
     return this.animationService.marqueeLinkX[content] || 0;
   }
-
-
-/*   marqueeLinkX: { [key: string]: number } = {};
-  animations: { [key: string]: any } = {}; */
-  /*
-  startAnimation(content: string, maxXLeft: number, xRight: number) {
-    this.stopAnimation(content);
-    this.marqueeLinkX[content] = this.marqueeLinkX[content] || 0;
-    this.animations[content] = setInterval(() => {
-      if (this.marqueeLinkX[content] > maxXLeft) {
-        this.marqueeLinkX[content] = xRight;
-      }
-      this.marqueeLinkX[content]++;
-    }, 1000 / 40);
-  }
-
-  stopAnimation(content: string) {
-    if (this.animations[content]) {
-      clearInterval(this.animations[content]);
-      delete this.animations[content];
-      this.marqueeLinkX[content] = 0;
-    }
-  } */
 }

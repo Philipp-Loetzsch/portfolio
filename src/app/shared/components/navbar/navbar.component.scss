@@ -1,8 +1,7 @@
 @import "./../../../../styles.scss";
 
 section {
-  display: flex;
-  justify-content: space-between;
+  @include dFlex($jc:space-between);
   padding: 24px 42px;
   box-sizing: border-box;
   position: absolute;
@@ -29,5 +28,12 @@ section {
     border: none;
     border-radius: 100px;
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  }
+}
+
+.logo{
+  >img{
+    object-fit: cover;
+    height: 48px;
   }
 }

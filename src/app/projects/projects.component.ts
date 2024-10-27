@@ -21,6 +21,11 @@ export class ProjectsComponent {
       codeLanguage: ['HTML', 'CSS', 'JavaScript'],
       image: 'pollo',
     },
+    {
+      title: 'DA Bubble',
+      codeLanguage: ['Angular', 'Firebase', 'TypeScript'],
+      image: 'dabubble',
+    },
   ];
 
   hoverButton(index: number) {
