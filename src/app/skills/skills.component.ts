@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { AnimationService } from '../shared/services/animation.service';
+import { AnimationService } from '../services/animation.service';
 
 @Component({
   selector: 'app-skills',

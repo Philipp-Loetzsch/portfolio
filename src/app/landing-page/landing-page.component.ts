@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AnimationService } from '../shared/services/animation.service';
+import { AnimationService } from '../services/animation.service';
 
 @Component({
   selector: 'app-landing-page',
