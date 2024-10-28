@@ -3,26 +3,37 @@
     <h2>Frontend Developer</h2>
     <h1>Philipp Lötzsch</h1>
     <div class="landing-links">
-      <a *ngFor="let link of lpLinks; let i = index" 
-      href="#{{link.jump}}" 
-      (mouseenter)="startAnimation(link.content,200,-150)" 
-      (mouseleave)="stopAnimation(link.content)">
-     <span [ngStyle]="{'right.px': getMarqueePosition(link.content)}">{{ link.content }}</span>
-   </a>
+      <a
+        *ngFor="let link of lpLinks; let i = index"
+        href="#{{ link.jump }}"
+        (mouseenter)="startAnimation(link.content, 200, -150)"
+        (mouseleave)="stopAnimation(link.content)"
+      >
+        <span [ngStyle]="{ 'right.px': getMarqueePosition(link.content) }">{{
+          link.content
+        }}</span>
+      </a>
     </div>
   </div>
   <div class="marquee-links">
     <div class="df-gap">
-      <a class="next-page" href="#aboutMe"><img src="assets/img/links/Arrow_next.png" alt=""/></a>
+      <a class="next-page" href="#aboutMe"
+        ><img src="assets/img/links/Arrow_next.png" alt=""
+      /></a>
       <div class="line green"></div>
     </div>
-    <div class="df-gap ">
-        <a href="{{socialMedia.link}}" *ngFor="let socialMedia of socialMedias"><img src="assets/img/sozial_media/{{ socialMedia.img }}_default.png" alt=""></a>
-        <div class="line white"></div>
+    <div class="df-gap">
+      <a href="{{ socialMedia.link }}" *ngFor="let socialMedia of socialMedias"
+        ><img
+          src="assets/img/sozial_media/{{ socialMedia.img }}_default.png"
+          alt=""
+      /></a>
+      <div class="line white"></div>
     </div>
   </div>
   <div class="marquee">
-    <span *ngFor="let text of texts ; let i = index"  [ngStyle]="{'right.px': getMarqueePosition(text)}">{{ text }}</span>
+    @for (text of texts; track text; let i = $index) {
+    <span [ngStyle]="{ 'left.px': positions[i] }">{{ text }}</span>
+    }
   </div>
 </section>
-

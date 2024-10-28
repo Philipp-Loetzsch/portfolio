@@ -10,7 +10,7 @@ import { AnimationService } from '../shared/services/animation.service';
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent {
-  constructor(private animationService: AnimationService) {};
+  constructor(private animationService: AnimationService) {}
 
   lpLinks = [
     {
@@ -37,25 +37,62 @@ export class LandingPageComponent {
       link: 'https://de.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F',
     },
   ];
+  texts = [
+    'Available for remote work',
+    'Frontend Developer',
+    'Based in Chemnitz',
+    'open to work',
+    'Available for remote work',
+    'Frontend Developer',
+    'Based in Chemnitz',
+    'open to work',
+  ];
 
-  texts = ['Available for remote work' , 'Frontend Developer', 'Based in Chemnitz', 'open to work', 'Available for remote work' , 'Frontend Developer', 'Based in Chemnitz', 'open to work']
+  positions: number[] = [];
   screenWidth: number = window.innerWidth;
-
+  speed: number = 1; // Geschwindigkeit der Bewegung (Pixel pro Frame)
+  itemSpacing: number = 300; // fester Abstand zwischen den Elementen
 
   ngOnInit() {
-    this.texts.forEach((text, index) => {
-      this.startAnimation(text, this.screenWidth, -this.screenWidth);
+    this.initializePositions();
+    this.startMarqueeAnimation();
+  }
+
+  // Initialisiert die Startpositionen der Texte
+  initializePositions() {
+    // Das erste Element startet am linken Rand (Position 0)
+    this.positions = this.texts.map((_, index) => index * this.itemSpacing);
+  }
+
+  // Animation starten
+  startMarqueeAnimation() {
+    setInterval(() => {
+      this.moveMarquee();
+    }, 16); // ca. 60fps
+  }
+
+  // Bewegt die Texte
+  moveMarquee() {
+    this.positions = this.positions.map((position) => {
+      // Bewege das Element nach links
+      let newPosition = position - this.speed;
+
+      // Wenn das Element den linken Bildschirmrand verlässt, springt es hinter das letzte sichtbare Element
+      if (newPosition < -this.itemSpacing) {
+        newPosition = Math.max(...this.positions) + this.itemSpacing;
+      }
+
+      return newPosition;
     });
   }
 
+  // Bildschirmbreite bei Änderung aktualisieren
   @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.screenWidth = event.target.innerWidth;
-    this.texts.forEach((text) => this.stopAnimation(text));
-    this.texts.forEach((text, index) => {
-      this.startAnimation(text, this.screenWidth, -this.screenWidth);
-    });
+  onResize() {
+    this.screenWidth = window.innerWidth;
+    this.initializePositions();
   }
+
 
   startAnimation(content: string, maxXLeft: number, xRight: number) {
     this.animationService.startAnimation(content, maxXLeft, xRight);

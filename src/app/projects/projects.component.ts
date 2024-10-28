@@ -12,6 +12,7 @@ import { ProjectDialogComponent } from "./project-dialog/project-dialog.componen
 export class ProjectsComponent {
   showDialog = false
   hoverIndex: number | null = null;
+  currentIndex: number = 0;
   projects = [
     {
       title: 'Join',
@@ -42,4 +43,11 @@ export class ProjectsComponent {
   onWheel(event: Event) {
     if(this.showDialog) event.preventDefault();
    }
+
+
+  openDialog(index:number){
+    this.showDialog = true
+    this.currentIndex = index
+    console.log(this.currentIndex);
+  }
 }

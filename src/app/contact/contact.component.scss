@@ -54,7 +54,10 @@ form {
     box-sizing: border-box;
     width: fit-content;
     align-self: center;
-   
+    &:hover{
+      color:#3dcfb6;
+      border-color: #3dcfb6;
+    }
   }
 }
 
