@@ -6,22 +6,41 @@
     skills in action.
   </p>
 
-  <div class="project-list" *ngFor="let project of projects ; let index = index">
-    <button (mouseenter)="hoverButton(index)" (mouseleave)="noHover()" (click)="openDialog(index)">
+  <div class="project-list" *ngFor="let project of projects; let index = index">
+    <button
+      (mouseenter)="hoverButton(index)"
+      (mouseleave)="noHover()"
+      (click)="openDialog(index)"
+    >
       <span>
         {{ project.title }}
-        <img *ngIf="hoverIndex === index" src="assets/img/portfolio/arrow_outward.png" alt=""
+        <img
+          *ngIf="hoverIndex === index"
+          src="assets/img/portfolio/arrow_outward.png"
+          alt=""
       /></span>
 
       <div class="d-flex separator">
-        <div *ngFor="let skill of project.codeLanguage">{{ skill }}</div>
+        @for (skill of project.codeLanguage; track skill; let i = $index) {
+        <div>{{ skill }}</div>
+        @if(i <= project.codeLanguage.length - 2){
+        <div class="green-separator"></div>
+        } }
       </div>
     </button>
     <div class="preview" *ngIf="hoverIndex === index">
-      <img style="right: -20px; top: 20px;" src="assets/img/portfolio/background.png" alt="">
-      <img  src="assets/img/portfolio/{{ project.image }}.png" alt="" />
+      <img
+        style="right: -20px; top: 20px"
+        src="assets/img/portfolio/background.png"
+        alt=""
+      />
+      <img src="assets/img/portfolio/{{ project.image }}.png" alt="" />
     </div>
-    
   </div>
-  <app-project-dialog [currentIndex]="currentIndex" [projects]="projects" *ngIf="showDialog" (addDialogClosed)="showDialog = $event"></app-project-dialog>
+  <app-project-dialog
+    [currentIndex]="currentIndex"
+    [projects]="projects"
+    *ngIf="showDialog"
+    (addDialogClosed)="showDialog = $event"
+  ></app-project-dialog>
 </section>

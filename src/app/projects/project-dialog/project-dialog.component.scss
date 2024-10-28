@@ -36,7 +36,7 @@ h6 {
 article {
   @include dFlex($jc: space-between, $ai: start);
   background: linear-gradient(to top right, #1c1c1c, 80%, #08463b);
-  padding: 48px;
+  padding: 32px;
   box-sizing: border-box;
   border-radius: 30px;
   height: 100%;
@@ -94,4 +94,9 @@ article {
       }
     }
   }
+}
+
+.used-skills{
+  @include dFlex($g:4px);
+  
 }

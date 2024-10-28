@@ -20,4 +20,8 @@ export class ProjectDialogComponent {
 
   }
 
+  formatTitle(title: string): string {
+    return title.replace(/\s+/g, '').toLowerCase();
+  }
+
  }
