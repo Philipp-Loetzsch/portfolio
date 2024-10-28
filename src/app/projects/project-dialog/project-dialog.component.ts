@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './project-dialog.component.scss'
 })
 export class ProjectDialogComponent {
+  @Output() addDialogClosed: EventEmitter<boolean> = new EventEmitter();
 }

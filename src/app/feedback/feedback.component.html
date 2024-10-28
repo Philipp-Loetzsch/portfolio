@@ -33,11 +33,14 @@
       alt="arrow left"
     />
     <div *ngFor="let feedback of feedbacks; let i = index">
-      <img
-        *ngIf="i <= feedbacks.length && i < 6"
-        src="assets/img/feedback/point_white.png"
-        alt="point"
-      />
+      @if(i <= feedbacks.length && i < 6){
+        @if(currentComment === i){
+          <img src="assets/img/feedback/point_green.png" alt="point"/>
+        }
+        @else{ <img src="assets/img/feedback/point_white.png" alt="point"/>}
+       
+      }
+      
     </div>
     <img
       style="cursor: pointer"

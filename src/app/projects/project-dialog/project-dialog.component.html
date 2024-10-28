@@ -1,5 +1,5 @@
-<section>
-  <article>
+<section (click)="this.addDialogClosed.emit(false)">
+  <article (click)="$event.stopPropagation()">
     <div class="project-content">
       <h6>01</h6>
       <span class="title">Join</span>
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="project-image">
-        <button><img src="assets/img/portfolio/close_small.png" alt=""></button>
+        <button (click)="this.addDialogClosed.emit(false)"><img src="assets/img/portfolio/close_small.png" alt=""></button>
         <img src="assets/img/portfolio/join.png" alt="" />
         <button>Next project <img src="assets/img/portfolio/arrow_forward_green.png" alt=""></button>
     </div>

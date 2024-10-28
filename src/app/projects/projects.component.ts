@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ProjectDialogComponent } from "./project-dialog/project-dialog.component";
 
 @Component({
@@ -37,4 +37,9 @@ export class ProjectsComponent {
   noHover() {
     this.hoverIndex = null;
   }
+
+  @HostListener('wheel', ['$event'])
+  onWheel(event: Event) {
+    if(this.showDialog) event.preventDefault();
+   }
 }

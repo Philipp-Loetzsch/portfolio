@@ -19,7 +19,7 @@ export class FooterComponent {
       name:'LinkedIn'
     },
     {
-      link:'#',
+      link:'mailto:philipp.loetzsch@outlook.com',
       name:'Email'
     },
     {

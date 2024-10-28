@@ -17,17 +17,38 @@
           Feel free to contact me. I look forward to expanding on my previous
           knowledge.
         </span>
-        <a href="#"
-        (mouseenter)="startAnimation(linkContent,200,-150)" 
-        (mouseleave)="stopAnimation(linkContent)">
-        <span [ngStyle]="{'right.px': getMarqueePosition(linkContent)}">{{linkContent}}</span></a>
+        <a
+          href="#contact"
+          (mouseenter)="startAnimation(linkContent, 200, -150)"
+          (mouseleave)="stopAnimation(linkContent)"
+        >
+          <span [ngStyle]="{ 'right.px': getMarqueePosition(linkContent) }">{{
+            linkContent
+          }}</span></a
+        >
       </div>
     </div>
   </div>
   <div class="skilltree">
-    <div class="skill" *ngFor="let exp of skills">
-      <img src="assets/img/skills/{{ exp.img }}.png" alt="" />
+    <div class="skill" *ngFor="let exp of skills; let i = index">
+      <img
+        (mouseenter)="showPopup(i)"
+        (mouseleave)="enablePopup = false"
+        src="assets/img/skills/{{ exp.img }}.png"
+        alt=""
+      />
       <span>{{ exp.skill }}</span>
+      <div class="popover" *ngIf="i === skills.length - 1 && enablePopup">
+        <span>I have a special interest in learning</span>
+        <div>
+          <div *ngFor="let interest of interests; let i = index">
+            <div>
+              <img src="assets/img/skills/{{ interest.img }}.png" alt="" />
+            </div>
+            <span>{{ interest.title }}</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

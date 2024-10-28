@@ -23,6 +23,7 @@ section {
 }
 
 .skill {
+  position: relative;
   width: 80px;
   text-align: center;
   height: fit-content;
@@ -32,7 +33,43 @@ section {
     align-items: start;
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
   }
+  > img {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
+.popover {
+  position: absolute;
+  top: -90%;
+  left: 10px;
+  background-color: #ffffff;
+  min-width: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  span {
+    word-break: keep-all;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #3dcfb6;
+  }
+  >div{
+    @include dFlex()
+  }
+}
+
+.popover::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  width: 0;
+  border-top: 10px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
 .content-container {
   > a {
     @include animatetLinks();

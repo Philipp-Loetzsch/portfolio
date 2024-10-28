@@ -1,12 +1,13 @@
 @import "./../../../styles.scss";
 
-@mixin firaCode($w: 700, $fs:64px) {
+@mixin firaCode($w: 700, $fs: 64px) {
   font-family: "Fira Code", Arial, Helvetica, sans-serif;
   font-weight: $w;
   font-size: $fs;
 }
 
 section {
+  animation: slideIn 500ms forwards ease-in-out;
   position: fixed;
   padding: 112px;
   box-sizing: border-box;
@@ -18,6 +19,16 @@ section {
   z-index: 999;
   @include dFlex();
 }
+
+@keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
 h6 {
   font-size: 128px;
   color: #3dcfb6;
@@ -28,7 +39,7 @@ article {
   padding: 48px;
   box-sizing: border-box;
   border-radius: 30px;
-  height: 100%
+  height: 100%;
 }
 
 .title {
@@ -36,13 +47,12 @@ article {
 }
 
 .headline {
-  @include firaCode($fs:24px);
+  @include firaCode($fs: 24px);
   color: #3dcfb6;
-
 }
 
 .project-content {
-  @include dFlex($fd: column, $ai: start, $jc:space-between);
+  @include dFlex($fd: column, $ai: start, $jc: space-between);
   height: 100%;
   width: 50%;
   padding: 32px;
@@ -50,7 +60,7 @@ article {
 }
 
 .project-image {
-  @include dFlex($fd: column, $ai: end, $jc:space-between);
+  @include dFlex($fd: column, $ai: end, $jc: space-between);
   height: 100%;
   width: 50%;
   > button {
@@ -62,7 +72,7 @@ article {
     border: none;
     @include dFlex($g: 16px);
   }
-  >img{
+  > img {
     width: 100%;
   }
 }

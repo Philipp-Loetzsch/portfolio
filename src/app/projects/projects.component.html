@@ -17,7 +17,11 @@
         <div *ngFor="let skill of project.codeLanguage">{{ skill }}</div>
       </div>
     </button>
-    <img *ngIf="hoverIndex === index" src="assets/img/portfolio/{{ project.image }}.png" alt="" />
+    <div class="preview" *ngIf="hoverIndex === index">
+      <img style="right: -20px; top: 20px;" src="assets/img/portfolio/background.png" alt="">
+      <img  src="assets/img/portfolio/{{ project.image }}.png" alt="" />
+    </div>
+    
   </div>
-  <app-project-dialog *ngIf="showDialog"></app-project-dialog>
+  <app-project-dialog *ngIf="showDialog" (addDialogClosed)="showDialog = $event"></app-project-dialog>
 </section>
