@@ -2,11 +2,16 @@
   <div>
     <h4>Contact me</h4>
     <h3>Lets Work together</h3>
-    <p style="color: #3DCFB6; font-family: 'Fira Code'; padding: 20px 0;">Got a problem to solve?</p>
+    <p style="color: #3dcfb6; font-family: 'Fira Code'; padding: 20px 0">
+      Got a problem to solve?
+    </p>
     <span>
-      Contact me through this form, I am interested in hearing from you,
-      knowing your ideas and contributing to your projects with my work</span>
-      <p style="padding-top: 20px;">Need aFrontend developer? <span style="color:#3DCFB6 ;">Let’s talk!</span> </p>
+      Contact me through this form, I am interested in hearing from you, knowing
+      your ideas and contributing to your projects with my work</span
+    >
+    <p style="padding-top: 20px">
+      Need aFrontend developer? <span style="color: #3dcfb6">Let’s talk!</span>
+    </p>
   </div>
 
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -21,9 +26,10 @@
         required
       />
       @if(!name.valid && (name.touched || contactForm.submitted)){
-      <label class="invalid" for="name">Oops! it seems your name is missing </label>
-      }
-      @else{
+      <label class="invalid" for="name"
+        >Oops! it seems your name is missing
+      </label>
+      } @else{
       <label for="name">Your name goes here</label>
       }
     </div>
@@ -38,14 +44,14 @@
         required
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
       />
-      @if(email.hasError('required') && (email.touched || contactForm.submitted)){
-        <label class="invalid" for="email">Hoppla! your email is required</label>
-      }
-      @else if(email.hasError('pattern') && contactForm.submitted){
-        <label class="invalid" for="email">Pls use the right syntax (name&#64;email.com)</label>
-      }
-      @else{ <label for="email">youremail&#64;email.com</label>}
-     
+      @if(email.hasError('required') && (email.touched ||
+      contactForm.submitted)){
+      <label class="invalid" for="email">Hoppla! your email is required</label>
+      } @else if(email.hasError('pattern') && contactForm.submitted){
+      <label class="invalid" for="email"
+        >Pls use the right syntax (name&#64;email.com)</label
+      >
+      } @else{ <label for="email">youremail&#64;email.com</label>}
     </div>
     <div>
       <textarea
@@ -54,7 +60,7 @@
         name="message"
         placeholder="How can I help you?"
         [(ngModel)]="contactData.message"
-        cols="30"
+        cols="auto"
         rows="1"
         maxlength="500"
         required
@@ -68,13 +74,20 @@
       }
     </div>
 
-    <div style="flex-direction: unset">
-      <img src="assets/img/contatct/checkbox_default.png" alt="" />
+    <div style="flex-direction: unset; padding: 32px 0 0 0;">
+    <button class="terms" type="button"(click)="toggleTerms()" required>
+       <img src="{{img}}" alt="">
+      </button> 
       <label for="acceptTerms"
-        >I've read the <a href="#">privacy policy</a> and agree to the
-        processing of my data as outlined.</label
-      >
+      >I've read the <a href="#" style="color: #3dcfb6; font-family: 'Fira Code';">privacy policy</a> and agree to the
+      processing of my data as outlined.</label>
     </div>
+    @if( !terms && contactForm.submitted){
+      <label for="acceptTerms" class="invalid" style="height: 18px; padding-bottom: 32px;">Please accept the privacy policy.</label>
+    }
+    @else{
+      <label for="acceptTerms" style="height: 18px; padding-bottom: 32px;"></label>
+    }
 
     <input type="submit" value="Say Hello :)" />
   </form>

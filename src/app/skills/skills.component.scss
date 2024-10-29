@@ -54,12 +54,12 @@ section {
     box-sizing: border-box;
     color: #3dcfb6;
   }
-  >div{
-    @include dFlex()
+  > div {
+    @include dFlex();
   }
 }
 
-.popover::before{
+.popover::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -73,5 +73,26 @@ section {
 .content-container {
   > a {
     @include animatetLinks();
+  }
+}
+
+@media screen and (max-width: 960px) {
+  section {
+    flex-direction: column;
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .link-contact {
+    width: max-content;
+    padding: 2px 16px;
+    > span {
+    
+      font-size: 14px;
+    }
+  }
+  .skilltree{
+    gap: 20px;
   }
 }

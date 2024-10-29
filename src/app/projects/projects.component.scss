@@ -29,6 +29,7 @@ p{
       font-family: "Fira Code";
       font-size: 24px;
       font-weight: 700;
+      width: max-content;
     }
     &:hover{
         background-color: rgba(63, 207, 183, 0.302);
@@ -62,4 +63,25 @@ p{
 
 df-i{
     display: flex !important;
+}
+
+@media screen and (max-width: 960px) {
+  section{
+    flex-direction: column;
+    padding: 16px ;
+    
+    >img{
+      width: 100%;
+      padding-bottom: 32px;
+    }
+  }
+
+  .project-list{
+    >button{
+      flex-direction: column;
+      align-items: start;
+      padding: 0;
+      width: 100%;
+    }
+  }
 }

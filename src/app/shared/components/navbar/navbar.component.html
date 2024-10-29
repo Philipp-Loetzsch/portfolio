@@ -1,12 +1,40 @@
 <section>
-    <nav class="nav-desktop">
+  @if(screenWidth > 700){
+  <nav class="nav-desktop">
+    <div class="language">
+      <button [ngClass]="{ chosen: !language }" (click)="english()">EN</button>
+      <button [ngClass]="{ chosen: language }" (click)="german()">DE</button>
+    </div>
+    <a href="#{{ navlink.link }}" *ngFor="let navlink of navLinks">{{
+      navlink.title
+    }}</a>
+  </nav>
+  <a href="#" class="logo">
+    <img src="assets/img/navbar/Logo/PNG/logo.png" alt="Logo" />
+  </a>
+  } @else{
+  <a href="#" class="logo">
+    <img src="assets/img/navbar/Logo/PNG/logo.png" alt="Logo" />
+  </a>
+  <div style="position: relative" >
+    <img style="cursor: pointer" [src]="!showNavbar ? 'assets/img/navbar/menu_icon.svg' : 'assets/img/navbar/menu_icon_green.svg'" alt="Menu" (click)="toggleNavbar()" />
+    <nav *ngIf="showNavbar" class="nav-mobile">
+      <div>
+        <a href="#{{ navlink.link }}" *ngFor="let navlink of navLinks">{{
+          navlink.title
+        }}</a>
         <div class="language">
-            <button [ngClass]="{'chosen': !language}" (click)="english()">EN</button>
-            <button [ngClass]="{'chosen': language}" (click)="german()">DE</button>
+          <button [ngClass]="{ chosen: !language }" (click)="english()">
+            EN
+          </button>
+          <button [ngClass]="{ chosen: language }" (click)="german()">
+            DE
+          </button>
         </div>
-        <a href="#{{ navlink.link }}" *ngFor="let navlink of navLinks">{{ navlink.title }}</a>
+      </div>
     </nav>
-    <a href="#" class="logo">
-        <img src="assets/img/navbar/Logo/PNG/logo.png" alt="Logo">
-    </a>
+  </div>
+  }
 </section>
+
+<div [ngClass]="{'full-size': showNavbar}" (click)="showNavbar = false"></div>

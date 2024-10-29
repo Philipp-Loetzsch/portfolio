@@ -28,12 +28,14 @@ form {
     border-top: rgba(61, 207, 183, 0.5) 1px solid;
     > input {
       @include inputFields();
+      width: 100%;
     }
     > textarea {
       @include inputFields();
       display: flex;
       align-items: center;
       resize: vertical;
+      width: 100%;
     }
     > img {
       position: relative;
@@ -63,4 +65,28 @@ form {
 
 .invalid{
   color: #EC7B7BCC;
+}
+
+.terms{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  >img:hover{
+    background-color: rgba(61, 207, 183, 0.4);
+    border-radius: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  section{
+    flex-direction: column;
+    padding: 16px ;
+    >img{
+      width: 100%;
+      padding-bottom: 32px;
+    }
+  }
+  form{
+    width: 100%;
+  }
 }

@@ -1,7 +1,7 @@
 @import "./../../../../styles.scss";
 
 section {
-  @include dFlex($jc:space-between);
+  @include dFlex($jc: space-between);
   padding: 24px 42px;
   box-sizing: border-box;
   position: sticky;
@@ -11,12 +11,45 @@ section {
   z-index: 999;
 }
 
+.full-size{
+  position: fixed;
+  top: 0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.267);
+  padding: 24px 42px;
+  z-index: 4;
+}
+
 .nav-desktop {
   display: flex;
   gap: 40px;
   > a {
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
   }
+}
+
+.nav-mobile {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to top right, #1c1c1c, 70%, #08463b);
+  border-radius: 20px;
+  border: 1px solid #3dcfb6;
+  right: 0;
+  top: 40px;
+  @include dFlex($fd:column, $ai:center, $jc:space-between);
+  padding:32px;
+  box-sizing: border-box;
+  >div{
+    @include dFlex($fd:column, $jc:space-between, $ai:start);
+    height: 100%;
+    >a{
+      font-family: "Fira Code", Arial, Helvetica, sans-serif;
+    }
+  }
+
 }
 
 .language {
@@ -30,18 +63,18 @@ section {
     border: none;
     border-radius: 100px;
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
-    color: rgba(61, 207, 183, 0.50);
+    color: rgba(61, 207, 183, 0.5);
   }
 }
 
-.logo{
-  >img{
+.logo {
+  > img {
     object-fit: cover;
     height: 48px;
   }
 }
 
-.chosen{
+.chosen {
   background-color: #3dcfb6 !important;
   color: white !important;
 }

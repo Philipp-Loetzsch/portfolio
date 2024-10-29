@@ -17,12 +17,12 @@
           Feel free to contact me. I look forward to expanding on my previous
           knowledge.
         </span>
-        <a
+        <a class="link-contact"
           href="#contact"
           (mouseenter)="startAnimation(linkContent, 200, -150)"
           (mouseleave)="stopAnimation(linkContent)"
         >
-          <span [ngStyle]="{ 'right.px': getMarqueePosition(linkContent) }">{{
+          <span  [ngStyle]="{ 'right.px': getMarqueePosition(linkContent) }">{{
             linkContent
           }}</span></a
         >

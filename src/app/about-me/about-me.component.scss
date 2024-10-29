@@ -1,8 +1,7 @@
 @import "./../../styles.scss";
 
 section {
-  display: flex;
-  justify-content: space-between;
+  @include dFlex($jc:space-between);
   min-height: 100vh;
   padding: 112px;
   box-sizing: border-box;
@@ -17,8 +16,30 @@ section {
 .description{
     @include dFlex($fd:unset, $g:24px, $ai:flex-start);
     padding-bottom: 16px;
+    
 }
 
 .content-am{
     align-self: flex-end;
+}
+
+@media screen and (max-width: 960px) {
+  section{
+    flex-direction: column;
+    padding: 16px ;
+    
+    >img{
+      width: 100%;
+      padding-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .description{
+    >span{
+      font-size: 14px;
+    }
+  }
+
 }

@@ -26,7 +26,7 @@ export class LandingPageComponent {
   socialMedias = [
     {
       img: 'mail',
-      link: 'mailto:philipp.loetzsch@outlook.com',
+      link: 'mailto:contact@webdevelopment-loetzsch.de',
     },
     {
       img: 'github',
