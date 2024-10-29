@@ -43,6 +43,7 @@ h5 {
   display: flex;
   position: relative;
   width: 100%;
+  max-width: 1100px;
   align-items: center;
   justify-content: center;
 }
@@ -52,6 +53,7 @@ h5 {
   left: -30%;
   @include dFlex($fd: column, $jc: space-between, $ai: start);
   @include commentFooter();
+  transform: scale(0.9)
 }
 
 .main-comment {
@@ -71,6 +73,7 @@ h5 {
   right: -30%;
   @include dFlex($fd: column, $jc: space-between, $ai: start);
   @include commentFooter();
+  transform: scale(0.9)
 }
 
 .line {

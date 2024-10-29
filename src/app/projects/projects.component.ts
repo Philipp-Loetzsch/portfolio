@@ -27,7 +27,7 @@ export class ProjectsComponent {
       codeLanguage: ['HTML', 'CSS', 'JavaScript'],
       image: 'elpolloloco',
       description:'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      links:[]
+      links:['https://philipp-loetzsch.webdevelopment-loetzsch.de/projects/el_pollo_loco/']
     },
     {
       title: 'DA Bubble',
