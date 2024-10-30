@@ -2,8 +2,8 @@
   @if(screenWidth > 700){
   <nav class="nav-desktop">
     <div class="language">
-      <button  (click)="useLanguage('en')">EN</button>
-      <button  (click)="useLanguage('de')">DE</button>
+      <button [ngClass]="{ chosen: !language }" (click)="useLanguage('en')">EN</button>
+      <button [ngClass]="{ chosen: language }" (click)="useLanguage('de')">DE</button>
     </div>
     <a href="#{{ navlink.link }}" *ngFor="let navlink of navLinks">{{
       navlink.title
@@ -24,10 +24,10 @@
           navlink.title
         }}</a>
         <div class="language">
-          <button  (click)="useLanguage('en')">
+          <button [ngClass]="{ chosen: !language }" (click)="useLanguage('en')">
             EN
           </button>
-          <button  (click)="useLanguage('de')">
+          <button [ngClass]="{ chosen: language }"  (click)="useLanguage('de')">
             DE
           </button>
         </div>

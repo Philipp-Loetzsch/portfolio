@@ -10,7 +10,7 @@ import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } 
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-
+  language:boolean =false
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
@@ -37,6 +37,8 @@ export class NavbarComponent {
 
   useLanguage(language:string):void {
     this.translate.use(language)
+    if(language === 'en') this.language = false
+    else this.language = true
   }
 
   toggleNavbar(){

@@ -20,8 +20,8 @@ export class FeedbackComponent {
       name: 'Kevin K. - Mentor Developer Akademie',
     },
     {
-      text: 'Super schnelle Änderungen meiner Webseite. Sehr unkompliziert und zielorientiert ',
-      name: 'Valeska S. - Customer',
+      text: 'Vielen Dank für die absolut unkomplizierte und sehr professionelle Zusammenarbeit! Philipp hat meine Anliegen immer zügig und perfekt umgesetzt. Er schafft es Design und Funktionalität optimal miteinander zu verbinden! ',
+      name: 'Dr.med. Valeska Sandvoss  - Customer',
     },
   ];
   currentComment = 0;

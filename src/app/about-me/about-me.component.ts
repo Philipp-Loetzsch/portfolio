@@ -17,9 +17,10 @@ export class AboutMeComponent {
     this.translate.use('en');
 }
 
-  descriptions = [
-    {text:'Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.', image:'my_location'},
-    {text:'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.', image:'cognition'},
-    {text:"In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.", image:'new_releases'}
-  ]
+descriptions = [
+  {text: 'main_content.about_me.description_location', image: 'my_location'},
+  {text: 'main_content.about_me.description_open_minded', image: 'cognition'},
+  {text: 'main_content.about_me.description_programming', image: 'new_releases'}
+];
+
 } 

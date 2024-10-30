@@ -1,3 +1,12 @@
 {
-	"main_content.about_me.title": "Wer ich bin"
+	"main_content": {
+		"about_me": {
+			"description_location": "Ich bin flexibel, was das Arbeitsumfeld angeht, und kann sowohl vor Ort in Chemnitz als auch aus der Ferne effektiv arbeiten.",
+			"description_open_minded": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
+			"description_programming": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten ständig zu verbessern.",
+			"headline": "Über mich",
+			"text": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Chemnitz. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
+			"title": "Wer ich bin"
+		}
+	}
 }
