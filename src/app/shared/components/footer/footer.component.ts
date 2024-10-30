@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  screenWidth=window.innerWidth
   links=[
     {
       link:'#',
@@ -26,6 +27,10 @@ export class FooterComponent {
       link:'#',
       name:'Legal Notice'
     },
-    
   ]
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.screenWidth = window.innerWidth;
+  }
 }

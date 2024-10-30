@@ -53,7 +53,7 @@ h5 {
   left: -30%;
   @include dFlex($fd: column, $jc: space-between, $ai: start);
   @include commentFooter();
-  transform: scale(0.9)
+  transform: scale(0.9);
 }
 
 .main-comment {
@@ -73,7 +73,7 @@ h5 {
   right: -30%;
   @include dFlex($fd: column, $jc: space-between, $ai: start);
   @include commentFooter();
-  transform: scale(0.9)
+  transform: scale(0.9);
 }
 
 .line {
@@ -89,5 +89,40 @@ h5 {
   gap: 20px;
   > img {
     padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  section {
+    padding: 12px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+
+  .previous-comment {
+    left: auto;
+    right: 102%;
+    transform-origin: right;
+  }
+  .next-comment {
+    right: auto;
+    left: 102%;
+    transform-origin: left;
+  }
+  .main-comment {
+    padding: 32px 12px;
+    >img{
+      width: 48px;
+      left:0;
+    }
+    > div {
+      > span {
+        font-size: 14px;
+      }
+    }
+  }
+  .line {
+    min-width: 10px;
   }
 }

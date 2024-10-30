@@ -78,3 +78,9 @@ section {
   background-color: #3dcfb6 !important;
   color: white !important;
 }
+
+@media screen and (max-width: 425px) {
+  section{
+    padding: 12px ;
+  }
+}

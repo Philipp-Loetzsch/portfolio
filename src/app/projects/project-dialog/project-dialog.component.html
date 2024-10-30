@@ -5,7 +5,7 @@
       <span class="title">{{ projects[currentIndex].title }}</span>
       <span class="headline">What is this project about?</span>
       <span>{{ projects[currentIndex].description }}</span>
-      <div style="display: flex; gap:16px;">
+      <div style="display: flex; gap:16px; flex-wrap: wrap;">
         <div class="used-skills" *ngFor="let item of projects[currentIndex].codeLanguage">
           <img
             src="assets/img/portfolio/{{ item | lowercase }}_green.png"
@@ -31,7 +31,7 @@
         <img src="assets/img/portfolio/close_small.png" alt="" />
       </button>
       <img src="assets/img/portfolio/{{formatTitle(projects[currentIndex].title)}}.png" alt="" />
-      <button (click)="nextProject()">
+      <button class="next-project" (click)="nextProject()">
         Next project
         <img src="assets/img/portfolio/arrow_forward_green.png" alt="" />
       </button>

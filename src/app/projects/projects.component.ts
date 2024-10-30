@@ -14,6 +14,7 @@ export class ProjectsComponent {
   showDialog = false;
   hoverIndex: number | null = null;
   currentIndex: number = 0;
+  screenWidth = window.innerWidth;
   projects: Projects[] = [
     {
       title: 'Join',
@@ -65,6 +66,11 @@ export class ProjectsComponent {
     if (this.showDialog) {
       event.preventDefault();
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.screenWidth = window.innerWidth;
   }
 
   openDialog(index: number) {

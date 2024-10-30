@@ -1,11 +1,14 @@
 <section>
-  <div>
-    <img src="assets/img/navbar/Logo/PNG/logo.png" alt="Logo" />
-    <span>Web Developer</span>
-    <span>Chemnitz Germany</span>
-  </div>
-  <div style="color: #3DCFB6 ; font-family: 'Fira Code';">&copy; Philipp Lötzsch 2024</div>
-  <div>
-    <a href="{{ link.link }}" *ngFor="let link of links">{{link.name}}</a>
-  </div>
+  <article>
+    <div>
+      <img src="assets/img/navbar/Logo/PNG/logo.png" alt="Logo" />
+      <span>Web Developer</span>
+      <span>Chemnitz Germany</span>
+    </div>
+    <div  *ngIf="screenWidth >=900" class="copyright-name">&copy; Philipp Lötzsch 2024</div>
+    <div>
+      <a href="{{ link.link }}" *ngFor="let link of links">{{ link.name }}</a>
+    </div>
+  </article>
+  <div *ngIf="screenWidth <=900"  class="copyright-name">&copy; Philipp Lötzsch 2024</div>
 </section>

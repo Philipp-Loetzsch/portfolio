@@ -20,20 +20,22 @@ section {
   flex-wrap: wrap;
   gap: 60px;
   padding-top: 3%;
+  align-items: center;
 }
 
 .skill {
   position: relative;
   width: 80px;
+  height: 95px;
   text-align: center;
-  height: fit-content;
-  @include dFlex($g: 10px, $fd: column);
+  @include dFlex($g: 10px, $fd: column, $jc:space-between);
   > span {
     display: flex;
     align-items: start;
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
   }
   > img {
+    width: 65px;
     &:hover {
       transform: scale(1.1);
     }
@@ -73,6 +75,7 @@ section {
 .content-container {
   > a {
     @include animatetLinks();
+    padding: 12px;
   }
 }
 
@@ -84,15 +87,28 @@ section {
 }
 
 @media screen and (max-width: 425px) {
+  section{
+    margin-bottom: 32px;
+  }
   .link-contact {
     width: max-content;
     padding: 2px 16px;
     > span {
-    
       font-size: 14px;
     }
   }
   .skilltree{
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
+  }
+  .skill{
+    width: 50px;
+    height: 60px;
+    >span{
+      font-size: 14px;
+    }
+    >img{
+      width: 40px;
+    }
   }
 }

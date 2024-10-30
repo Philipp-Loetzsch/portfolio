@@ -97,6 +97,59 @@ article {
 }
 
 .used-skills{
-  @include dFlex($g:4px);
-  
+  @include dFlex($g:4px); 
 }
+
+@media screen and (max-width: 900px) {
+  section{
+    padding: 0;
+  }
+  article{
+    flex-direction: column-reverse;
+    border-radius: unset;
+    padding: 0;
+  }
+  .project-content{
+    width: 100%;
+    padding: 0 12px 32px 12px;
+  }
+  .project-image{
+    width: 100%;
+    height: auto;
+    padding: 12px 12px 0 12px;
+    box-sizing: border-box;
+    >img{
+      width: fit-content;
+      object-fit: scale-down;
+      align-self: center;
+      max-height: 130px;
+    }
+  }
+  h6{
+   font-size: 64px;
+  }
+  .title{
+    font-size: 32px;
+  }
+  .headline{
+    font-size: 16px;
+  }
+  .next-project{
+    position: absolute;
+    bottom: 5px;
+  }
+ }
+
+ @media screen and (max-width: 425px) {
+  h6{
+    font-size: 32px;
+  }
+  .title{
+    font-size: 18px !important;
+  }
+  .project-content{
+    >span{
+      font-size: 14px;
+    }
+  }
+ }
