@@ -24,7 +24,7 @@
     </div>
     <div class="df-gap" style="max-width: 30px;">
       <a href="mailto:contact@webdevelopment-loetzsch.de">
-        <div *ngIf="screenWidth > 1100" style="transform: rotate(-90deg) translateX(140px); width: max-content;">contact&#64;webdevelopment-loetzsch.de</div>
+        <div *ngIf="screenWidth > 1100" class="mail-link" >contact&#64;webdevelopment-loetzsch.de</div>
         <img *ngIf="screenWidth < 1100" src="assets/img/sozial_media/mail_default.png" alt="">
       </a>
       <a href="{{ socialMedia.link }}" *ngFor="let socialMedia of socialMedias"

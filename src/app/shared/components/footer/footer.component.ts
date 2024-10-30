@@ -24,7 +24,7 @@ export class FooterComponent {
       name:'Email'
     },
     {
-      link:'#',
+      link:'legal-notice',
       name:'Legal Notice'
     },
   ]

@@ -108,6 +108,14 @@ h2 {
   max-width: 40px;
 }
 
+.mail-link{
+  transform: rotate(-90deg) translateX(140px); 
+  width: max-content;
+  &:hover{
+    color: #3dcfb6;
+  }
+}
+
 @media screen and (max-width: 960px) {
   h1 {
     font-size: 76px;

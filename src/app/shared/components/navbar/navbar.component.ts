@@ -1,15 +1,21 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  language: boolean = false;
+
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+}
   showNavbar:boolean = false;
   chosen = {color: 'red'}
   screenWidth = window.innerWidth
@@ -29,14 +35,8 @@ export class NavbarComponent {
     },
   ];
 
-  german() {
-    this.language = true;
-    console.log(true);
-  }
-
-  english() {
-    this.language = false;
-    console.log(false);
+  useLanguage(language:string):void {
+    this.translate.use(language)
   }
 
   toggleNavbar(){

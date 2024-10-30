@@ -32,7 +32,7 @@ export class ContactComponent {
 
   http = inject(HttpClient);
 
-  mailTest = false;
+  mailTest = true;
 
   post = {
     endPoint:
