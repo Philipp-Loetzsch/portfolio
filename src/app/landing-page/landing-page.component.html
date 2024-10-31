@@ -9,9 +9,7 @@
         (mouseenter)="startAnimation(link.content, 200, -150)"
         (mouseleave)="stopAnimation(link.content)"
       >
-        <span [ngStyle]="{ 'right.px': getMarqueePosition(link.content) }">{{
-          link.content
-        }}</span>
+        <span [ngStyle]="{ 'right.px': getMarqueePosition(link.content) }">{{link.content | translate }}</span>
       </a>
     </div>
   </div>

@@ -1,25 +1,38 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimationService } from '../services/animation.service';
+import {
+  TranslateService,
+  TranslateDirective,
+  TranslateModule,
+  TranslatePipe,
+} from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule, TranslateDirective, TranslatePipe],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent {
-  constructor(private animationService: AnimationService) {}
+  constructor( 
+    private animationService: AnimationService,
+    private translate: TranslateService,
+  ) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
+  }
 
   lpLinks = [
     {
       jump: 'projects',
-      content: 'Check my work',
+      content: 'main_content.landing_page.lpLinks_work',
     },
     {
       jump: 'contact',
-      content: 'Contact me',
+      content: 'main_content.landing_page.lpLinks_contact',
     },
   ];
 
@@ -88,7 +101,6 @@ export class LandingPageComponent {
     this.screenWidth = window.innerWidth;
     this.initializePositions();
   }
-
 
   startAnimation(content: string, maxXLeft: number, xRight: number) {
     this.animationService.startAnimation(content, maxXLeft, xRight);

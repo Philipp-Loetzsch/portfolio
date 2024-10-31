@@ -7,6 +7,42 @@
 			"headline": "Über mich",
 			"text": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Chemnitz. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
 			"title": "Wer ich bin"
+		},
+		"contact": {
+			"email": "Ihremail@email.com",
+			"headline": "Lasst uns zusammenarbeiten",
+			"invalid_email": "Hoppla! Ihre E-Mail ist erforderlich",
+			"invalid_message": "Was müssen Sie entwickeln?",
+			"invalid_name": "Ups! Ihr Name scheint zu fehlen",
+			"invalid_privacy": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
+			"message": "Hallo Philipp, ich bin interessiert an...",
+			"name": "Ihr Name steht hier",
+			"pargraph_question": "Haben Sie ein Problem zu lösen?",
+			"placeholder_email": "Wie lautet Ihre E-Mail?",
+			"placeholder_name": "Wie ist Ihr Name?",
+			"question_dev": "Brauchen Sie einen Frontend-Entwickler?",
+			"submit": "Hallo sagen",
+			"syntax_email": "Bitte verwenden Sie die richtige Syntax (name@email.com)",
+			"terms_1": "Ich habe die ",
+			"terms_2": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+			"terms_link": "Datenschutzbestimmungen",
+			"text": "Kontaktieren Sie mich über dieses Formular, ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu kennen und mit meiner Arbeit zu Ihren Projekten beizutragen",
+			"text_talk": "Lassen Sie uns reden!",
+			"title": "Kontaktieren Sie mich"
+		},
+		"feedback": {
+			"kevin": "Ja man merkt an deinem ganzen strukturellem Aufbau, coden ist dein Ding.",
+			"prathab": "Die Zusammenarbeit hat nicht nur sehr gut funktioniert, sondern auch richtig viel Spaß gemacht. Es war eine wertvolle Erfahrung, mit einem so engagierten und talentierten Partner zu coden.",
+			"valeska": "Vielen Dank für die absolut unkomplizierte und sehr professionelle Zusammenarbeit! Philipp hat meine Anliegen immer zügig und perfekt umgesetzt. Er schafft es Design und Funktionalität optimal miteinander zu verbinden!"
+		},
+		"landing_page": {
+			"lpLinks_contact": "Kontaktieren Sie mich",
+			"lpLinks_work": "Überprüfen Sie meine Arbeit"
 		}
+	},
+	"navbar": {
+		"about_me": "Über mich",
+		"projects": "Projekte",
+		"skills": "Fertigkeiten"
 	}
 }

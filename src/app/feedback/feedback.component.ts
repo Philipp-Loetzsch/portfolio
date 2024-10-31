@@ -1,26 +1,34 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-feedback',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule, TranslateDirective, TranslatePipe],
   templateUrl: './feedback.component.html',
   styleUrl: './feedback.component.scss',
 })
 export class FeedbackComponent {
+
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
+}
+
   feedbacks = [
     {
-      text: 'Die Zusammenarbeit hat nicht nur sehr gut funktioniert, sondern auch richtig viel Spaß gemacht. Es war eine wertvolle Erfahrung, mit einem so engagierten und talentierten Partner zu coden.',
+      text: 'main_content.feedback.prathab',
       name: 'Prathab K. - Team Partner Join',
     },
     {
-      text: 'Ja man merkt an deinem ganzen strukturellem Aufbau, coden ist dein Ding.',
+      text: 'main_content.feedback.kevin',
       name: 'Kevin K. - Mentor Developer Akademie',
     },
     {
-      text: 'Vielen Dank für die absolut unkomplizierte und sehr professionelle Zusammenarbeit! Philipp hat meine Anliegen immer zügig und perfekt umgesetzt. Er schafft es Design und Funktionalität optimal miteinander zu verbinden! ',
+      text: 'main_content.feedback.valeska',
       name: 'Dr.med. Valeska Sandvoss  - Customer',
     },
   ];

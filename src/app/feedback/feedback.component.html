@@ -2,7 +2,7 @@
   <h5>What my colleagues say about me</h5>
   <div class="carousel">
     <div class="previous-comment">
-      <span>{{ this.previousComment.text }}</span>
+      <span>{{ this.previousComment.text | translate }}</span>
       <div>
         <div class="line"></div>
         <span>{{ this.previousComment.name }}</span>
@@ -10,14 +10,14 @@
     </div>
     <div class="main-comment">
       <img src="assets/img/feedback/quotes.png" alt="" />
-      <span>{{ this.mainComment.text }}</span>
+      <span>{{ this.mainComment.text | translate}}</span>
       <div>
         <div class="line"></div>
         <span>{{ this.mainComment.name }}</span>
       </div>
     </div>
     <div class="next-comment">
-      <span>{{ this.nextComment.text }}</span>
+      <span>{{ this.nextComment.text | translate}}</span>
       <div>
         <div class="line"></div>
         <span>{{ this.nextComment.name }}</span>

@@ -6,7 +6,7 @@
       <button [ngClass]="{ chosen: language }" (click)="useLanguage('de')">DE</button>
     </div>
     <a href="#{{ navlink.link }}" *ngFor="let navlink of navLinks">{{
-      navlink.title
+      navlink.title | translate
     }}</a>
   </nav>
   <a href="#" class="logo">

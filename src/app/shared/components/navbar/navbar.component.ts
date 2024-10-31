@@ -10,11 +10,11 @@ import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } 
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  language:boolean =false
+  language:boolean =true
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
 }
   showNavbar:boolean = false;
   chosen = {color: 'red'}
@@ -23,15 +23,15 @@ export class NavbarComponent {
   navLinks: Array<{ link: string; title: string }> = [
     {
       link: 'aboutMe',
-      title: 'About me',
+      title: 'navbar.about_me',
     },
     {
       link: 'skills',
-      title: 'Skills',
+      title: 'navbar.skills',
     },
     {
       link: 'projects',
-      title: 'Projects',
+      title: 'navbar.projects',
     },
   ];
 
