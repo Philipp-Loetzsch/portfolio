@@ -1,21 +1,19 @@
 <section>
   <div class="content-am">
     <div>
-      <h4>Technologies</h4>
+      <h4>{{ 'main_content.skill.title' | translate}}</h4>
       <div class="content-container">
-        <h3>Skill Set</h3>
+        <h3>{{ 'main_content.skill.headline' | translate}}</h3>
         <span>
-          My journey has involved working on diverse projects, employing a range
-          of frontend technologies and concepts. I am open to embracing new
-          technologies and methodologies to Continously enhance my skills and
-          stay ahead in the ever-evolving landscape of web development.
+        
+          {{ 'main_content.skill.text' | translate}}
         </span>
         <div style="font-size: 24px">
-          <b>You Need <span style="color: #3dcfb6">another skill?</span></b>
+          <b>{{ 'main_content.skill.text_need_skill' | translate}} <span style="color: #3dcfb6">{{ 'main_content.skill.text_need_skill_color' | translate}}</span></b>
         </div>
         <span>
-          Feel free to contact me. I look forward to expanding on my previous
-          knowledge.
+          {{ 'main_content.skill.text_contact_me' | translate}}
+        
         </span>
         <a class="link-contact"
           href="#contact"
@@ -23,7 +21,7 @@
           (mouseleave)="stopAnimation(linkContent)"
         >
           <span  [ngStyle]="{ 'right.px': getMarqueePosition(linkContent) }">{{
-            linkContent
+            linkContent | translate
           }}</span></a
         >
       </div>
@@ -39,7 +37,7 @@
       />
       <span>{{ exp.skill }}</span>
       <div class="popover" *ngIf="i === skills.length - 1 && enablePopup">
-        <span>I have a special interest in learning</span>
+        <span>{{ 'main_content.skill.interests' | translate}}</span>
         <div>
           <div *ngFor="let interest of interests; let i = index">
             <div>

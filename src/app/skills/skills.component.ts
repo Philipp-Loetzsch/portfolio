@@ -1,17 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AnimationService } from '../services/animation.service';
+import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateDirective, TranslateModule, TranslatePipe],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-  constructor(private animationService: AnimationService) {}
-  linkContent: string = "Let's Talk";
+
+  constructor(private translate: TranslateService, private animationService: AnimationService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
+}
+
+  linkContent: string = "main_content.skil.link";
   enablePopup: boolean = false;
   skills: Array<{ img: string; skill: string }> = [
     { img: 'html', skill: 'HTML' },

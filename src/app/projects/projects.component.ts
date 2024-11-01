@@ -2,15 +2,23 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import { Projects } from '../interfaces/projects';
+import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ProjectDialogComponent],
+  imports: [CommonModule, ProjectDialogComponent, TranslateDirective, TranslateModule, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
+}
+
   showDialog = false;
   hoverIndex: number | null = null;
   currentIndex: number = 0;
@@ -21,7 +29,7 @@ export class ProjectsComponent {
       codeLanguage: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       image: 'join',
       description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        'main_content.projects.project_dialog.description_join',
       links: [
         'https://github.com/Philipp-Loetzsch/join',
         'https://philipp-loetzsch.webdevelopment-loetzsch.de/projects/join/',
@@ -32,7 +40,7 @@ export class ProjectsComponent {
       codeLanguage: ['HTML', 'CSS', 'JavaScript'],
       image: 'elpolloloco',
       description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+        'main_content.projects.project_dialog.description_el_pollo_loco',
       links: [
         'https://github.com/Philipp-Loetzsch/el_pollo-loco',
         'https://philipp-loetzsch.webdevelopment-loetzsch.de/projects/el_pollo_loco/',
@@ -43,7 +51,7 @@ export class ProjectsComponent {
       codeLanguage: ['Angular', 'Firebase', 'TypeScript'],
       image: 'dabubble',
       description:
-        'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+        'main_content.projects.project_dialog.description_da_bubble',
       links: [],
     },
   ];

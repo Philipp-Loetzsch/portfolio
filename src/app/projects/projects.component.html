@@ -1,10 +1,7 @@
 <section>
-  <h4>Portfolio</h4>
-  <h3>Featured Projects</h3>
-  <p>
-    Explore a selection of my work here - Interact with projects to see my
-    skills in action.
-  </p>
+  <h4>{{ 'main_content.projects.title' | translate }}</h4>
+  <h3>{{ 'main_content.projects.headline' | translate }}</h3>
+  <p> {{ 'main_content.projects.text' | translate }}</p>
 
   <div class="project-list" *ngFor="let project of projects; let index = index">
     <button

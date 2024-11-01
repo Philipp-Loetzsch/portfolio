@@ -11,6 +11,7 @@ import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } 
 })
 export class NavbarComponent {
   language:boolean =true
+  hoverIndex:number | null =null
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('de');
@@ -43,6 +44,14 @@ export class NavbarComponent {
 
   toggleNavbar(){
     this.showNavbar = !this.showNavbar
+  }
+
+  hoverIn(i:number){
+    this.hoverIndex = i
+  }
+
+  hoverOut(){
+    this.hoverIndex=null
   }
 
   @HostListener('window:resize', ['$event'])

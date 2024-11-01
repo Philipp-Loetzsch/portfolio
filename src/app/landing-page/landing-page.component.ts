@@ -25,6 +25,7 @@ export class LandingPageComponent {
     this.translate.use('de');
   }
 
+  hoverIndexLp:number | null = null
   lpLinks = [
     {
       jump: 'projects',
@@ -95,11 +96,19 @@ export class LandingPageComponent {
     });
   }
 
-  // Bildschirmbreite bei Änderung aktualisieren
+
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
     this.initializePositions();
+  }
+
+  hoverLinkLp(i:number){
+    this.hoverIndexLp = i
+  }
+
+  hoverOutLp(){
+    this.hoverIndexLp = null
   }
 
   startAnimation(content: string, maxXLeft: number, xRight: number) {

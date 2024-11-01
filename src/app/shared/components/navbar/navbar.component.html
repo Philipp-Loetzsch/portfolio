@@ -5,9 +5,14 @@
       <button [ngClass]="{ chosen: !language }" (click)="useLanguage('en')">EN</button>
       <button [ngClass]="{ chosen: language }" (click)="useLanguage('de')">DE</button>
     </div>
-    <a href="#{{ navlink.link }}" *ngFor="let navlink of navLinks">{{
-      navlink.title | translate
-    }}</a>
+    @for (navlink of navLinks; track navLinks; let i = $index) {
+      <div style="position: relative;" class="d-flex">
+       <a (mouseenter)="hoverIn(i)" (mouseleave)="hoverOut()" href="#{{ navlink.link }}">{{ navlink.title | translate}}</a>
+       <div style="position: absolute; top: 20px; " *ngIf="hoverIndex === i"><img src="assets/img/navbar/SVG/hover_point.svg" alt=""></div>
+    </div>
+    }
+
+
   </nav>
   <a href="#" class="logo">
     <img src="assets/img/navbar/Logo/PNG/logo.png" alt="Logo" />
@@ -20,9 +25,12 @@
     <img style="cursor: pointer" [src]="!showNavbar ? 'assets/img/navbar/menu_icon.svg' : 'assets/img/navbar/menu_icon_green.svg'" alt="Menu" (click)="toggleNavbar()" />
     <nav *ngIf="showNavbar" class="nav-mobile">
       <div>
-        <a href="#{{ navlink.link }}" *ngFor="let navlink of navLinks">{{
-          navlink.title
-        }}</a>
+        @for (navlink of navLinks; track navLinks; let i = $index) {
+          <div style="position: relative;" class="d-flex">
+           <a (mouseenter)="hoverIn(i)" (mouseleave)="hoverOut()" href="#{{ navlink.link }}">{{ navlink.title | translate}}</a>
+           <div style="position: absolute; left:100px; " *ngIf="hoverIndex === i"><img src="assets/img/navbar/SVG/hover_point.svg" alt=""></div>
+        </div>
+        }
         <div class="language">
           <button [ngClass]="{ chosen: !language }" (click)="useLanguage('en')">
             EN

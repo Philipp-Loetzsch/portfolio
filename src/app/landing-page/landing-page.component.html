@@ -25,8 +25,13 @@
         <div *ngIf="screenWidth > 1100" class="mail-link" >contact&#64;webdevelopment-loetzsch.de</div>
         <img *ngIf="screenWidth < 1100" src="assets/img/sozial_media/mail_default.png" alt="">
       </a>
-      <a href="{{ socialMedia.link }}" *ngFor="let socialMedia of socialMedias"
-        ><img src="assets/img/sozial_media/{{ socialMedia.img }}_default.png" alt=""/>
+      <a (mousenter)="hoverLinkLp(i)" (mousleave)="hoverOutLp()" href="{{ socialMedia.link }}" *ngFor="let socialMedia of socialMedias; let i = index">
+        @if(hoverIndexLp === i){
+          <img src="assets/img/sozial_media/{{ socialMedia.img }}_hover.png" alt="">
+        }
+        @else{
+          <img src="assets/img/sozial_media/{{ socialMedia.img }}_default.png" alt="">
+        }
       </a>
       <div class="line white"></div>
     </div>

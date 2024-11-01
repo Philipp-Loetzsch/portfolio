@@ -19,6 +19,7 @@
 			"name": "Ihr Name steht hier",
 			"pargraph_question": "Haben Sie ein Problem zu lösen?",
 			"placeholder_email": "Wie lautet Ihre E-Mail?",
+			"placeholder_message": "Wie kann ich Ihnen helfen?",
 			"placeholder_name": "Wie ist Ihr Name?",
 			"question_dev": "Brauchen Sie einen Frontend-Entwickler?",
 			"submit": "Hallo sagen",
@@ -37,7 +38,31 @@
 		},
 		"landing_page": {
 			"lpLinks_contact": "Kontaktieren Sie mich",
-			"lpLinks_work": "Überprüfen Sie meine Arbeit"
+			"lpLinks_work": "Meine Projekte"
+		},
+		"projects": {
+			"headline": "Ausgewählte Projekte",
+			"project_dialog": {
+				"description_da_bubble": "Diese App ist ein Slack Clone App. Sie revolutioniert die Teamkommunikation und -zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeitnachrichten und robuster Kanalorganisation.",
+				"description_el_pollo_loco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+				"description_join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+				"next_project": "Nächstes Projekt",
+				"question": "Worum geht es bei diesem Projekt?"
+			},
+			"text": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+			"title": "Portfolio"
+		},
+		"skil": {
+			"link": "Schreibe mir"
+		},
+		"skill": {
+			"headline": "Fertigkeiten",
+			"interests": "Ich habe ein besonderes Interesse am Lernen mit",
+			"text": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten erworben. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und  in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.",
+			"text_contact_me": " Nehmen Sie Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+			"text_need_skill": "Sie benötigen",
+			"text_need_skill_color": "eine andere Fähigkeit?",
+			"title": "Technologien"
 		}
 	},
 	"navbar": {
