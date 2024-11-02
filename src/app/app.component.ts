@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  screenWidth = window.innerWidth
   title = 'portfolio';
     constructor(private translate: TranslateService) {
         this.translate.addLangs(['de', 'en']);
@@ -29,5 +30,10 @@ export class AppComponent {
     onMouseMove(event: MouseEvent) {
       this.mouseX = event.clientX;
       this.mouseY = event.clientY;
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize() {
+      this.screenWidth = window.innerWidth;
     }
 }

@@ -1,22 +1,22 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import { Projects } from '../interfaces/projects';
 import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { NavbarComponent } from '../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ProjectDialogComponent, TranslateDirective, TranslateModule, TranslatePipe],
+  imports: [CommonModule, ProjectDialogComponent, TranslateDirective, TranslateModule, TranslatePipe, NavbarComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('de');
-    this.translate.use('de');
+    this.translate.use('de');    
 }
 
   showDialog = false;

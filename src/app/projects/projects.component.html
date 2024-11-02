@@ -34,5 +34,5 @@
       <img src="assets/img/portfolio/{{ project.image }}.png" alt="" />
     </div>
   </div>
-  <app-project-dialog [currentIndex]="currentIndex" [projects]="projects" *ngIf="showDialog" (addDialogClosed)="showDialog = $event"></app-project-dialog>
+  <app-project-dialog  [currentIndex]="currentIndex" [projects]="projects" *ngIf="showDialog" (addDialogClosed)="showDialog = $event"></app-project-dialog>
 </section>

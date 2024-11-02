@@ -16,21 +16,24 @@
   <div class="marquee-links">
     <div class="df-gap">
       <a class="next-page" href="#aboutMe"
-        ><img src="assets/img/links/Arrow_next.png" alt=""
+        ><img src="assets/img/links/Arrow_next.svg" alt=""
       /></a>
       <div class="line green"></div>
     </div>
     <div class="df-gap" style="max-width: 30px;">
-      <a href="mailto:contact@webdevelopment-loetzsch.de">
+      <a style="position: relative;" (mouseenter)="hover=true" (mouseleave)="hover=false" href="mailto:contact@webdevelopment-loetzsch.de">
         <div *ngIf="screenWidth > 1100" class="mail-link" >contact&#64;webdevelopment-loetzsch.de</div>
-        <img *ngIf="screenWidth < 1100" src="assets/img/sozial_media/mail_default.png" alt="">
+        <img *ngIf="screenWidth < 1100" [src]="hover ? 'assets/img/sozial_media/mail_hover.svg'  : 'assets/img/sozial_media/mail_default.svg'" alt="">
+        <div style="position: absolute; transform-origin: top; right: -10px; top: 5px; " *ngIf="hover"><img src="assets/img/navbar/SVG/hover_point.svg" alt=""></div>
       </a>
-      <a (mousenter)="hoverLinkLp(i)" (mousleave)="hoverOutLp()" href="{{ socialMedia.link }}" *ngFor="let socialMedia of socialMedias; let i = index">
+      <a style="position: relative;" (mouseenter)="hoverLinkLp(i)" (mouseleave)="hoverOutLp()" href="{{ socialMedia.link }}" *ngFor="let socialMedia of socialMedias; let i = index">
         @if(hoverIndexLp === i){
-          <img src="assets/img/sozial_media/{{ socialMedia.img }}_hover.png" alt="">
+          <img src="assets/img/sozial_media/{{ socialMedia.img }}_hover.svg" alt="">
+          <div style="position: absolute; transform-origin: top; right: -10px; top: 5px; " *ngIf="hoverIndexLp === i"><img src="assets/img/navbar/SVG/hover_point.svg" alt=""></div>
         }
         @else{
-          <img src="assets/img/sozial_media/{{ socialMedia.img }}_default.png" alt="">
+          <img src="assets/img/sozial_media/{{ socialMedia.img }}_default.svg" alt="">
+          
         }
       </a>
       <div class="line white"></div>

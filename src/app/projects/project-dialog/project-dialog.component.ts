@@ -12,19 +12,19 @@ import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } 
   styleUrl: './project-dialog.component.scss'
 })
 export class ProjectDialogComponent {
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
-}
 
   @Output() addDialogClosed: EventEmitter<boolean> = new EventEmitter();
   @Input() projects!: Projects[];
   @Input() currentIndex!: number;
 
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('de');
+    this.translate.use(translate.currentLang);    
+}
+  
   nextProject(){
     this.currentIndex= (this.currentIndex + 1)  % this.projects.length ;
-
   }
 
   formatTitle(title: string): string {

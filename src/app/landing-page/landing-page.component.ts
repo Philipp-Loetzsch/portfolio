@@ -44,7 +44,7 @@ export class LandingPageComponent {
     },
     {
       img: 'linkedIn',
-      link: 'https://de.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F',
+      link: 'https://www.linkedin.com/in/philipp-l%C3%B6tzsch-7835a9336/',
     },
   ];
   texts = [
@@ -57,7 +57,7 @@ export class LandingPageComponent {
     'Based in Chemnitz',
     'open to work',
   ];
-
+  hover:boolean = false;
   positions: number[] = [];
   screenWidth: number = window.innerWidth;
   speed: number = 1; // Geschwindigkeit der Bewegung (Pixel pro Frame)
@@ -103,7 +103,7 @@ export class LandingPageComponent {
     this.initializePositions();
   }
 
-  hoverLinkLp(i:number){
+  hoverLinkLp(i:number){  
     this.hoverIndexLp = i
   }
 
