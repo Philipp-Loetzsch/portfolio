@@ -31,7 +31,7 @@
         src="assets/img/portfolio/background.png"
         alt=""
       />
-      <img src="assets/img/portfolio/{{ project.image }}.png" alt="" />
+      <img style="max-width: 280px;" src="assets/img/portfolio/{{ project.image }}_cover.svg" alt="" />
     </div>
   </div>
   <app-project-dialog  [currentIndex]="currentIndex" [projects]="projects" *ngIf="showDialog" (addDialogClosed)="showDialog = $event"></app-project-dialog>

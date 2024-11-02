@@ -1,12 +1,10 @@
 <app-navbar></app-navbar>
 <div class="max-width">
-
-<router-outlet/>
-<app-footer></app-footer>
-
-<div
-  *ngIf="screenWidth > 1040"
-  class="custom-cursor"
-  [ngStyle]="{ 'left.px': mouseX, 'top.px': mouseY }"
-></div>
+  <router-outlet/>
+  <div
+    *ngIf="screenWidth > 1040"
+    class="custom-cursor"
+    [ngStyle]="{ 'left.px': mouseX, 'top.px': mouseY }"
+  ></div>
 </div>
+<app-footer></app-footer>

@@ -3,9 +3,14 @@
 section {
   @include dFlex($fd: column, $jc: space-between, $ai:center);
   padding: 112px 112px 24px 112px;
+  box-sizing: border-box;
   position: relative;
   min-height: 150px;
+  max-width: 1920px;
+  width: 100%;
+  justify-self: center;
 }
+
 article {
   @include dFlex($jc: space-between);
   width: 100%;
