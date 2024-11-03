@@ -36,6 +36,7 @@ export class FeedbackComponent {
   mainComment = this.feedbacks[this.currentComment];
   previousComment = this.feedbacks[this.getPreviousIndex(this.currentComment)];
   nextComment = this.feedbacks[this.getNextIndex(this.currentComment)];
+  showPrev=false
 
 
   getPreviousIndex(index: number): number {
@@ -48,14 +49,18 @@ export class FeedbackComponent {
 
   updateComments() {
     this.mainComment = this.feedbacks[this.currentComment];
-    this.previousComment =
-      this.feedbacks[this.getPreviousIndex(this.currentComment)];
+    this.previousComment= this.feedbacks[this.getPreviousIndex(this.currentComment)];
     this.nextComment = this.feedbacks[this.getNextIndex(this.currentComment)];
   }
 
   showPreviousComment() {
     this.currentComment = this.getPreviousIndex(this.currentComment);
-    this.updateComments();
+    this.showPrev=true
+    setTimeout(() => {
+      this.updateComments();
+      this.showPrev= false
+    }, 2100);
+    
   }
 
   showNextComment() {

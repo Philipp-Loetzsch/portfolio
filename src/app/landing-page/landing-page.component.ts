@@ -58,49 +58,17 @@ export class LandingPageComponent {
     'open to work',
   ];
   hover:boolean = false;
-  positions: number[] = [];
+ 
   screenWidth: number = window.innerWidth;
-  speed: number = 1; // Geschwindigkeit der Bewegung (Pixel pro Frame)
-  itemSpacing: number = 300; // fester Abstand zwischen den Elementen
+ 
 
-  ngOnInit() {
-    this.initializePositions();
-    this.startMarqueeAnimation();
-  }
-
-  // Initialisiert die Startpositionen der Texte
-  initializePositions() {
-    // Das erste Element startet am linken Rand (Position 0)
-    this.positions = this.texts.map((_, index) => index * this.itemSpacing);
-  }
-
-  // Animation starten
-  startMarqueeAnimation() {
-    setInterval(() => {
-      this.moveMarquee();
-    }, 16); // ca. 60fps
-  }
-
-  // Bewegt die Texte
-  moveMarquee() {
-    this.positions = this.positions.map((position) => {
-      // Bewege das Element nach links
-      let newPosition = position - this.speed;
-
-      // Wenn das Element den linken Bildschirmrand verlässt, springt es hinter das letzte sichtbare Element
-      if (newPosition < -this.itemSpacing) {
-        newPosition = Math.max(...this.positions) + this.itemSpacing;
-      }
-
-      return newPosition;
-    });
-  }
+  
 
 
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
-    this.initializePositions();
+    /* this.initializePositions(); */
   }
 
   hoverLinkLp(i:number){  

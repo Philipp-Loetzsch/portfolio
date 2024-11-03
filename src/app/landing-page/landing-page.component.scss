@@ -84,20 +84,23 @@ h2 {
   width: 100%;
   position: absolute;
   bottom: 0;
-  @include dFlex($jc: space-between);
+  @include dFlex($g:50px);
   background-color: rgba(85, 78, 78, 0.5);
   padding: 12px 32px;
   transform-origin: left bottom;
   transform: rotate(-3deg);
   overflow: hidden;
-  > span {
-    color: #3dcfb6;
-    position: absolute;
-    min-width: 300px;
+  >div {
+    min-width: max-content;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 50px;
     overflow: hidden;
+    > span {
+      color: #3dcfb6;
+      min-width: max-content;
+    }
   }
 }
 
@@ -110,10 +113,10 @@ h2 {
   max-width: 40px;
 }
 
-.mail-link{
-  transform: rotate(-90deg) translateX(140px); 
+.mail-link {
+  transform: rotate(-90deg) translateX(140px);
   width: max-content;
-  &:hover{
+  &:hover {
     color: #3dcfb6;
   }
 }
@@ -144,8 +147,8 @@ h2 {
 }
 
 @media screen and (max-width: 425px) {
-  section{
-    top:-76px;
+  section {
+    top: -76px;
   }
   h1 {
     font-size: 38px;
@@ -169,5 +172,4 @@ h2 {
       }
     }
   }
- 
 }

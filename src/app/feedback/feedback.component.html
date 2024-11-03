@@ -1,14 +1,14 @@
 <section>
   <h5>What my colleagues say about me</h5>
   <div class="carousel">
-    <div class="previous-comment">
+    <div class="previous-comment" [ngClass]="{'preview-left': showPrev}">
       <span>{{ this.previousComment.text | translate }}</span>
       <div>
         <div class="line"></div>
         <span>{{ this.previousComment.name }}</span>
       </div>
     </div>
-    <div class="main-comment">
+    <div class="main-comment" [ngClass]="{'main-left': showPrev}">
       <img src="assets/img/feedback/quotes.png" alt="" />
       <span>{{ this.mainComment.text | translate}}</span>
       <div>
@@ -16,7 +16,7 @@
         <span>{{ this.mainComment.name }}</span>
       </div>
     </div>
-    <div class="next-comment">
+    <div class="next-comment" >
       <span>{{ this.nextComment.text | translate}}</span>
       <div>
         <div class="line"></div>

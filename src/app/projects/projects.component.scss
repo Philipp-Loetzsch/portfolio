@@ -13,7 +13,7 @@ p{
 .project-list {
   @include dFlex($ai: flex-start, $jc:space-between);
   width: 100%;
-  gap: 10%;
+  gap: 5%;
   position: relative;
   > button {
     cursor: pointer;
@@ -42,7 +42,7 @@ p{
   object-fit: scale-down;
   >img{
     position: absolute;
-    right: 0;
+    right: 10%;
     border-radius: 20px;
   }
 }

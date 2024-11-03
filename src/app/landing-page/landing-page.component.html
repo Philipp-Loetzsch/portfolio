@@ -9,7 +9,9 @@
         (mouseenter)="startAnimation(link.content, 200, -150)"
         (mouseleave)="stopAnimation(link.content)"
       >
-        <span [ngStyle]="{ 'right.px': getMarqueePosition(link.content) }">{{link.content | translate }}</span>
+        <span [ngStyle]="{ 'right.px': getMarqueePosition(link.content) }">{{
+          link.content | translate
+        }}</span>
       </a>
     </div>
   </div>
@@ -20,20 +22,66 @@
       /></a>
       <div class="line green"></div>
     </div>
-    <div class="df-gap" style="max-width: 30px;">
-      <a style="position: relative;" (mouseenter)="hover=true" (mouseleave)="hover=false" href="mailto:contact@webdevelopment-loetzsch.de">
-        <div *ngIf="screenWidth > 1100" class="mail-link" >contact&#64;webdevelopment-loetzsch.de</div>
-        <img *ngIf="screenWidth < 1100" [src]="hover ? 'assets/img/sozial_media/mail_hover.svg'  : 'assets/img/sozial_media/mail_default.svg'" alt="">
-        <div style="position: absolute; transform-origin: top; right: -10px; top: 5px; " *ngIf="hover"><img src="assets/img/navbar/SVG/hover_point.svg" alt=""></div>
+    <div class="df-gap" style="max-width: 30px">
+      <a
+        style="position: relative"
+        (mouseenter)="hover = true"
+        (mouseleave)="hover = false"
+        href="mailto:contact@webdevelopment-loetzsch.de"
+      >
+        <div *ngIf="screenWidth > 1100" class="mail-link">
+          contact&#64;webdevelopment-loetzsch.de
+        </div>
+        <img
+          *ngIf="screenWidth < 1100"
+          [src]="
+            hover
+              ? 'assets/img/sozial_media/mail_hover.svg'
+              : 'assets/img/sozial_media/mail_default.svg'
+          "
+          alt=""
+        />
+        <div
+          style="
+            position: absolute;
+            transform-origin: top;
+            right: -10px;
+            top: 5px;
+          "
+          *ngIf="hover"
+        >
+          <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
+        </div>
       </a>
-      <a style="position: relative;" (mouseenter)="hoverLinkLp(i)" (mouseleave)="hoverOutLp()" href="{{ socialMedia.link }}" *ngFor="let socialMedia of socialMedias; let i = index">
+      <a
+        style="position: relative"
+        (mouseenter)="hoverLinkLp(i)"
+        (mouseleave)="hoverOutLp()"
+        href="{{ socialMedia.link }}"
+        *ngFor="let socialMedia of socialMedias; let i = index"
+      >
         @if(hoverIndexLp === i){
-          <img src="assets/img/sozial_media/{{ socialMedia.img }}_hover.svg" alt="">
-          <div style="position: absolute; transform-origin: top; right: -10px; top: 5px; " *ngIf="hoverIndexLp === i"><img src="assets/img/navbar/SVG/hover_point.svg" alt=""></div>
-        }
-        @else{
-          <img src="assets/img/sozial_media/{{ socialMedia.img }}_default.svg" alt="">
-          
+        <img
+          src="assets/img/sozial_media/{{ socialMedia.img }}_hover.svg"
+          alt=""
+        />
+        <div
+          style="
+            position: absolute;
+            transform-origin: top;
+            right: -10px;
+            top: 5px;
+          "
+          *ngIf="hoverIndexLp === i"
+        >
+          <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
+        </div>
+        } @else{
+        <img
+          src="assets/img/sozial_media/{{ socialMedia.img }}_default.svg"
+          alt=""
+        />
+
         }
       </a>
       <div class="line white"></div>
@@ -41,7 +89,16 @@
   </div>
   <div class="marquee">
     @for (text of texts; track text; let i = $index) {
-    <span [ngStyle]="{ 'left.px': positions[i] }">{{ text }}</span>
+    <div>
+      <span>{{ text }}</span>
+      <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
+    </div>
     }
+    @for (text of texts; track text; let i = $index) {
+      <div >
+        <span>{{ text }}</span>
+        <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
+      </div>
+      }
   </div>
 </section>

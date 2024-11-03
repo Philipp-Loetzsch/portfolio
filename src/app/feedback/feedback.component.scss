@@ -92,6 +92,27 @@ h5 {
   }
 }
 
+.main-left{
+  animation: mainCommentAnimationLeft 2s forwards ease-in-out;
+}
+
+@keyframes mainCommentAnimationLeft {
+  from{left:0}
+  to{left:+55%;
+  transform: scale(0.9);}
+}
+
+.preview-left{
+  animation: previewCommentAnimationLeft 2s forwards ease-in-out;
+}
+
+@keyframes previewCommentAnimationLeft {
+  from{left:-30%}
+  to{left:25%;
+  transform: scale(1);}
+}
+
+
 @media screen and (max-width: 960px) {
   section {
     padding: 12px;
