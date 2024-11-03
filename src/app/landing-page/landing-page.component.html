@@ -88,17 +88,19 @@
     </div>
   </div>
   <div class="marquee">
-    @for (text of texts; track text; let i = $index) {
-    <div>
-      <span>{{ text }}</span>
-      <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
-    </div>
-    }
-    @for (text of texts; track text; let i = $index) {
-      <div >
-        <span>{{ text }}</span>
+    <ngx-fast-marquee
+      [speed]="50"
+      direction="left"
+      [play]="true"
+      [maskPercentage]="10"
+      [autoFill]="true"
+    >
+      @for (text of texts; track text; let i = $index) {
+      <div class="text-element">
+        <span style="color:#3dcfb6;">{{ text }}</span>
         <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
       </div>
       }
+    </ngx-fast-marquee>
   </div>
 </section>

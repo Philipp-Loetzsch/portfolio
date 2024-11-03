@@ -7,11 +7,11 @@ import {
   TranslateModule,
   TranslatePipe,
 } from '@codeandweb/ngx-translate';
-
+import { NgxFastMarqueeModule } from "ngx-fast-marquee";
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TranslateDirective, TranslatePipe],
+  imports: [CommonModule, TranslateModule, TranslateDirective, TranslatePipe, NgxFastMarqueeModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
@@ -48,10 +48,6 @@ export class LandingPageComponent {
     },
   ];
   texts = [
-    'Available for remote work',
-    'Frontend Developer',
-    'Based in Chemnitz',
-    'open to work',
     'Available for remote work',
     'Frontend Developer',
     'Based in Chemnitz',

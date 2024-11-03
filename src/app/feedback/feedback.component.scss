@@ -93,7 +93,7 @@ h5 {
 }
 
 .main-left{
-  animation: mainCommentAnimationLeft 2s forwards ease-in-out;
+  animation: mainCommentAnimationLeft 1.3s forwards;
 }
 
 @keyframes mainCommentAnimationLeft {
@@ -103,7 +103,7 @@ h5 {
 }
 
 .preview-left{
-  animation: previewCommentAnimationLeft 2s forwards ease-in-out;
+  animation: previewCommentAnimationLeft 1.3s forwards;
 }
 
 @keyframes previewCommentAnimationLeft {
