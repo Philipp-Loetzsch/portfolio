@@ -30,6 +30,7 @@
   <div class="skilltree">
     <div class="skill" *ngFor="let exp of skills; let i = index">
       <img
+        (click)="showPopup(i)"
         (mouseenter)="showPopup(i)"
         (mouseleave)="enablePopup = false"
         src="assets/img/skills/{{ exp.img }}.png"

@@ -1,8 +1,11 @@
 @import "./../../styles.scss";
 
+$distance:33%;
+
 @mixin comments($pos: relative, $bgc: rgba(61, 207, 183, 0.3)) {
   position: $pos;
   height: 150px;
+  min-width: 450px;
   width: 100%;
   max-width: 500px;
   border: 1px solid #3dcfb76c;
@@ -46,9 +49,23 @@ h5 {
   align-items: center;
   justify-content: center;
 }
+.quotes {
+  position: absolute;
+  z-index: 200;
+  top: -4%;
+  right: 62%;
+  width: 60px;
+}
 
 .previous-comment {
-  @include comments( $bgc: rgba(61, 207, 183, 0.123));
+  @include comments($bgc: rgba(61, 207, 183, 0.123));
+  @include dFlex($fd: column, $jc: space-between, $ai: start);
+  @include commentFooter();
+  transform: scale(0.9);
+}
+
+.previous-comment-before{
+  @include comments($bgc: rgba(61, 207, 183, 0.123));
   @include dFlex($fd: column, $jc: space-between, $ai: start);
   @include commentFooter();
   transform: scale(0.9);
@@ -89,24 +106,91 @@ h5 {
   }
 }
 
-.main-left{
+.main-left {
   animation: mainCommentAnimationLeft 1.3s forwards;
 }
 
 @keyframes mainCommentAnimationLeft {
-  from{right:0}
-  to{right:-32%;
-  transform: scale(0.9);}
+  from {
+    right: 0;
+  }
+  to {
+    right: -$distance;
+    transform: scale(0.9);
+    background-color: rgba(61, 207, 183, 0.123);
+  }
 }
 
-.preview-left{
+.preview-left {
   animation: previewCommentAnimationLeft 1.3s forwards;
 }
 
 @keyframes previewCommentAnimationLeft {
-  from{right: 0;}
-  to{right: -32%;
-  transform: scale(1);}
+  from {
+    right: 0;
+  }
+  to {
+    right: -$distance;
+    transform: scale(1);
+    background-color: rgba(61, 207, 183, 0.3);
+  }
+}
+
+.next-left {
+  animation: nextCommentAnimationLeft 1.3s forwards;
+}
+
+@keyframes nextCommentAnimationLeft {
+  from {
+    right: 0;
+  }
+  to {
+    right: -$distance;
+  }
+}
+
+.main-right {
+  animation: mainCommentAnimationRight 1.3s forwards;
+}
+
+@keyframes mainCommentAnimationRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: $distance;
+    transform: scale(0.9);
+    background-color: rgba(61, 207, 183, 0.123);
+  }
+}
+
+.preview-right {
+  animation: previewCommentAnimationRight 1.3s forwards;
+}
+
+@keyframes previewCommentAnimationRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: $distance;
+  
+  }
+}
+
+.next-right {
+  animation: nextCommentAnimationRight 1.3s forwards;
+}
+
+@keyframes nextCommentAnimationRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: $distance;
+    transform: scale(1);
+    background-color: rgba(61, 207, 183, 0.3);
+  }
 }
 
 
@@ -138,9 +222,9 @@ h5 {
   .main-comment {
     padding: 32px 12px;
     max-width: 250px;
-    >img{
+    > img {
       width: 48px;
-      left:0;
+      left: 0;
     }
     > div {
       > span {

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+
 @Component({
   selector: 'app-feedback',
   standalone: true,
@@ -36,7 +37,7 @@ export class FeedbackComponent {
   previousComment = this.feedbacks[this.getPreviousIndex(this.currentComment)];
   nextComment = this.feedbacks[this.getNextIndex(this.currentComment)];
   showPrev=false
-
+  showNext=false
 
   getPreviousIndex(index: number): number {
     return (index - 1 + this.feedbacks.length) % this.feedbacks.length;
@@ -58,14 +59,16 @@ export class FeedbackComponent {
     setTimeout(() => {
       this.updateComments();
       this.showPrev= false
-    }, 2100);
+    }, 1300);
     
   }
 
   showNextComment() {
     this.currentComment = this.getNextIndex(this.currentComment);
-    this.updateComments();
+    this.showNext=true
+    setTimeout(() => {
+      this.updateComments();
+      this.showNext= false
+    }, 1300);
   }
-
-
 }
