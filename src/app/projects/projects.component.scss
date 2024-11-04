@@ -6,12 +6,12 @@ section {
   padding: 112px;
 }
 
-p{
-    padding: 24px 0;
+p {
+  padding: 24px 0;
 }
 
 .project-list {
-  @include dFlex($ai: flex-start, $jc:space-between);
+  @include dFlex($ai: flex-start, $jc: space-between);
   width: 100%;
   gap: 5%;
   position: relative;
@@ -31,53 +31,61 @@ p{
       font-weight: 700;
       width: max-content;
     }
-    &:hover{
-        background-color: rgba(63, 207, 183, 0.302);
+    &:hover {
+      background-color: rgba(63, 207, 183, 0.302);
     }
   }
-
 }
 
-.preview{
+.preview {
   object-fit: scale-down;
-  >img{
+  > img {
     position: absolute;
-    right: 10%;
+
     border-radius: 20px;
+    max-width: 280px;
   }
+}
+.background-preview {
+  right: 9%;
+  top: 25px;
+}
+
+.preview-img {
+  right: 10%;
 }
 
 .separator {
   gap: 10px;
 }
 
-.green-separator{
+.green-separator {
   width: 1px;
   height: 20px;
-  background-color:#3dcfb6;
+  background-color: #3dcfb6;
 }
 
-.show-arrow{
-    display: flex !important;
+.show-arrow {
+  display: flex !important;
 }
 
-df-i{
-    display: flex !important;
+df-i {
+  display: flex !important;
 }
 
 @media screen and (max-width: 960px) {
-  section{
+  section {
     flex-direction: column;
-    padding: 16px ;
-    
-    >img{
+    padding: 16px;
+
+    > img {
       width: 100%;
       padding-bottom: 32px;
     }
   }
 
-  .project-list{
-    >button{
+  .project-list {
+    > button {
       flex-direction: column;
       align-items: start;
       padding: 24px 0;
@@ -85,7 +93,19 @@ df-i{
       width: 100%;
     }
   }
-  .separator{
+  .separator {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .background-preview {
+    right: -1%;
+  }
+  .preview-img {
+    right: 0;
+  }
+  section {
+    padding: 64px;
   }
 }

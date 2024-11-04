@@ -77,6 +77,13 @@ form {
   }
 }
 
+
+@media screen and (max-width: 1350px) {
+  section {
+    padding: 64px;
+  }
+}
+
 @media screen and (max-width: 960px) {
   section{
     flex-direction: column;

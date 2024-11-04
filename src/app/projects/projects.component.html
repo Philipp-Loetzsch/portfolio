@@ -25,13 +25,13 @@
         } }
       </div>
     </button>
-    <div class="preview" *ngIf="hoverIndex === index && screenWidth > 900">
+    <div class="preview" *ngIf="hoverIndex === index && screenWidth > 960">
       <img
-        style="right: 9%; top: 20px"
+        class="background-preview"
         src="assets/img/portfolio/background.png"
         alt=""
       />
-      <img style="max-width: 280px;" src="assets/img/portfolio/{{ project.image }}_cover.svg" alt="" />
+      <img class="preview-img" src="assets/img/portfolio/{{ project.image }}_cover.svg" alt="" />
     </div>
   </div>
   <app-project-dialog  [currentIndex]="currentIndex" [projects]="projects" *ngIf="showDialog" (addDialogClosed)="showDialog = $event"></app-project-dialog>

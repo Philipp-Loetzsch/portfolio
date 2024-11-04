@@ -9,6 +9,7 @@ section {
   position: relative;
   top: -100px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -114,6 +115,13 @@ h2 {
   width: max-content;
   &:hover {
     color: #3dcfb6;
+  }
+}
+
+
+@media screen and (max-width: 1350px) {
+  section {
+    padding: 64px;
   }
 }
 

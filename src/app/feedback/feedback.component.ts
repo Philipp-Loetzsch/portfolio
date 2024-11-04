@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
-
 @Component({
   selector: 'app-feedback',
   standalone: true,
@@ -68,6 +67,5 @@ export class FeedbackComponent {
     this.updateComments();
   }
 
-  
 
 }

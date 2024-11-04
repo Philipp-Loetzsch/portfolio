@@ -12,6 +12,7 @@ section {
     #08463b4d 30%,
     #1c1c1c 100%
   );
+  overflow: hidden;
 }
 
 .skilltree {
@@ -78,6 +79,13 @@ section {
     padding: 12px;
   }
 }
+
+@media screen and (max-width: 1350px) {
+  section {
+    padding: 64px;
+  }
+}
+
 
 @media screen and (max-width: 960px) {
   section {

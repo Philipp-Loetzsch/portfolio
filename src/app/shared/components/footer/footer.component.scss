@@ -28,6 +28,13 @@ article {
   font-family: "Fira Code", Arial, Helvetica, sans-serif;
 }
 
+
+@media screen and (max-width: 1350px) {
+  section {
+    padding: 64px;
+  }
+}
+
 @media screen and (max-width: 960px) {
   section {
     padding: 16px 16px 24px 16px;
