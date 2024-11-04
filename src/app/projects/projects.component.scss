@@ -73,6 +73,18 @@ df-i {
   display: flex !important;
 }
 
+@media screen and (max-width: 1350px) {
+  .background-preview {
+    right: -1%;
+  }
+  .preview-img {
+    right: 0;
+  }
+  section {
+    padding: 64px;
+  }
+}
+
 @media screen and (max-width: 960px) {
   section {
     flex-direction: column;
@@ -98,14 +110,6 @@ df-i {
   }
 }
 
-@media screen and (max-width: 1350px) {
-  .background-preview {
-    right: -1%;
-  }
-  .preview-img {
-    right: 0;
-  }
-  section {
-    padding: 64px;
-  }
-}
+
+
+
