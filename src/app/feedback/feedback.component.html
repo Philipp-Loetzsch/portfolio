@@ -1,43 +1,52 @@
 <section>
   <h5>{{ "main_content.feedback.title" | translate }}</h5>
+  <img class="quotes" src="assets/img/feedback/quotes.png" alt="" />
   <div class="carousel">
-    <img class="quotes" src="assets/img/feedback/quotes.png" alt="" />
-
-    <div class="previous-comment scale" *ngIf="showPrev">
-      <span>{{ this.nextComment.text | translate }}</span>
-      <div>
-        <div class="line"></div>
-        <span>{{ this.nextComment.name }}</span>
+    
+    <div class="d-flex" style="position: relative;">
+      <div class="previous-comment scale" *ngIf="showPrev">
+        <span>{{ this.nextComment.text | translate }}</span>
+        <div>
+          <div class="line"></div>
+          <span>{{ this.nextComment.name }}</span>
+        </div>
       </div>
-    </div>
-    <div
-      class="previous-comment"
-      [ngClass]="{ 'preview-left': showPrev, 'preview-right': showNext }"
-    >
-      <span>{{ this.previousComment.text | translate }}</span>
-      <div>
-        <div class="line"></div>
-        <span>{{ this.previousComment.name }}</span>
+      <div
+        class="previous-comment"
+        [ngClass]="{ 'preview-left': showPrev, 'preview-right': showNext }"
+      >
+        <span>{{ this.previousComment.text | translate }}</span>
+        <div>
+          <div class="line"></div>
+          <span>{{ this.previousComment.name }}</span>
+        </div>
       </div>
-    </div>
-    <div
-      class="main-comment"
-      [ngClass]="{ 'main-left': showPrev, 'main-right': showNext }"
-    >
-      <span>{{ this.mainComment.text | translate }}</span>
-      <div>
-        <div class="line"></div>
-        <span>{{ this.mainComment.name }}</span>
+      <div
+        class="main-comment"
+        [ngClass]="{ 'main-left': showPrev, 'main-right': showNext }"
+      >
+        <span>{{ this.mainComment.text | translate }}</span>
+        <div>
+          <div class="line"></div>
+          <span>{{ this.mainComment.name }}</span>
+        </div>
       </div>
-    </div>
-    <div
-      class="next-comment"
-      [ngClass]="{ 'next-left': showPrev, 'next-right': showNext }"
-    >
-      <span>{{ this.nextComment.text | translate }}</span>
-      <div>
-        <div class="line"></div>
-        <span>{{ this.nextComment.name }}</span>
+      <div
+        class="next-comment"
+        [ngClass]="{ 'next-left': showPrev, 'next-right': showNext }"
+      >
+        <span>{{ this.nextComment.text | translate }}</span>
+        <div>
+          <div class="line"></div>
+          <span>{{ this.nextComment.name }}</span>
+        </div>
+      </div>
+      <div class="next-comment scale-right" *ngIf="showNext">
+        <span>{{ this.nextComment.text | translate }}</span>
+        <div>
+          <div class="line"></div>
+          <span>{{ this.nextComment.name }}</span>
+        </div>
       </div>
     </div>
   </div>

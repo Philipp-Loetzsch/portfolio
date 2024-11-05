@@ -8,7 +8,7 @@ import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } 
   standalone: true,
   imports: [CommonModule, FormsModule, TranslateModule, TranslateDirective, TranslatePipe],
   templateUrl: './feedback.component.html',
-  styleUrl: './feedback.component.scss',
+  styleUrls: ['./feedback.component.scss', './feedback.carousel.component.scss']
 })
 export class FeedbackComponent {
 

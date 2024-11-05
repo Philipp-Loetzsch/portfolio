@@ -1,0 +1,147 @@
+$distance: 33.3%;
+
+@mixin blur() {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 112%;
+  background-color: #1c1c1c;
+  filter: blur(11px);
+  z-index: 100;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 70%;
+  overflow: hidden;
+  z-index: 99;
+  border-radius: 10px;
+  &::before {
+    @include blur();
+    left: -20px;
+  }
+  &::after {
+    @include blur();
+    right: -20px;
+  }
+}
+
+.main-left {
+  animation: mainCommentAnimationLeft 1.3s forwards;
+}
+
+@keyframes mainCommentAnimationLeft {
+  from {
+    right: 0;
+  }
+  to {
+    right: -$distance;
+    transform: scale(0.9);
+    background-color: rgba(61, 207, 183, 0.123);
+  }
+}
+
+.preview-left {
+  animation: previewCommentAnimationLeft 1.3s forwards;
+}
+
+@keyframes previewCommentAnimationLeft {
+  from {
+    right: 0;
+  }
+  to {
+    right: -$distance;
+    transform: scale(1);
+    background-color: rgba(61, 207, 183, 0.3);
+  }
+}
+
+.next-left {
+  animation: nextCommentAnimationLeft 1.3s forwards;
+}
+
+@keyframes nextCommentAnimationLeft {
+  from {
+    right: 0;
+  }
+  to {
+    right: -$distance;
+  }
+}
+
+.main-right {
+  animation: mainCommentAnimationRight 1.3s forwards;
+}
+
+@keyframes mainCommentAnimationRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: $distance;
+    transform: scale(0.9);
+    background-color: rgba(61, 207, 183, 0.123);
+  }
+}
+
+.preview-right {
+  animation: previewCommentAnimationRight 1.3s forwards;
+}
+
+@keyframes previewCommentAnimationRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: $distance;
+  }
+}
+
+.next-right {
+  animation: nextCommentAnimationRight 1.3s forwards;
+}
+
+@keyframes nextCommentAnimationRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: $distance;
+    transform: scale(1);
+    background-color: rgba(61, 207, 183, 0.3);
+  }
+}
+
+.scale {
+  animation: scaleDummy 1.3s forwards;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes scaleDummy {
+  from {
+    transform: translateX(-100%) scale(0.6);
+  }
+  to {
+    transform: translateX(0) scale(0.9);
+  }
+}
+
+.scale-right {
+  animation: scaleDummyNext 1.3s forwards;
+  position: absolute;
+  right: 0;
+}
+
+@keyframes scaleDummyNext {
+  from {
+    transform: translateX(100%) scale(0.6);
+  }
+  to {
+    transform: translateX(0) scale(0.9);
+  }
+}
