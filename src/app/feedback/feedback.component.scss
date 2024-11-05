@@ -1,6 +1,6 @@
 @import "./../../styles.scss";
 
-$distance:33%;
+$distance: 33%;
 
 @mixin comments($pos: relative, $bgc: rgba(61, 207, 183, 0.3)) {
   position: $pos;
@@ -64,7 +64,7 @@ h5 {
   transform: scale(0.9);
 }
 
-.previous-comment-before{
+.previous-comment-before {
   @include comments($bgc: rgba(61, 207, 183, 0.123));
   @include dFlex($fd: column, $jc: space-between, $ai: start);
   @include commentFooter();
@@ -174,7 +174,6 @@ h5 {
   }
   to {
     right: $distance;
-  
   }
 }
 
@@ -193,16 +192,19 @@ h5 {
   }
 }
 
-.scale{
- animation: scaleDummy 1s linear;
+.scale {
+  animation: scaleDummy 1s linear;
+  position: absolute;
+  left: 0;
+  max-width: 450px;
 }
 
 @keyframes scaleDummy {
-  from{
+  from {
     opacity: 0;
     transform: scale(0.3);
   }
-  to{
+  to {
     opacity: 1;
     transform: scale(0.9);
   }
