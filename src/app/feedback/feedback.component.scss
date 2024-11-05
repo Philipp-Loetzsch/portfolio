@@ -45,8 +45,8 @@ h5 {
 .quotes {
   position: absolute;
   z-index: 200;
-  top: 35%;
-  right: 61%;
+  top: 3%;
+  right: 65%;
   width: 60px;
 }
 
@@ -113,7 +113,7 @@ h5 {
     font-size: 24px;
   }
 
-  .previous-comment {
+ /*  .previous-comment {
     left: auto;
     right: 102%;
     transform-origin: right;
@@ -122,10 +122,9 @@ h5 {
     right: auto;
     left: 102%;
     transform-origin: left;
-  }
+  } */
   .main-comment {
     padding: 32px 12px;
-    max-width: 250px;
     > img {
       width: 48px;
       left: 0;

@@ -1,4 +1,5 @@
-$distance: 485px;
+$distance: 500px;
+$endpoint: 17.2%;
 
 @mixin blur() {
   content: "";
@@ -12,13 +13,14 @@ $distance: 485px;
 
 .carousel {
   display: flex;
-  position: relative;
-  width: 100%;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  z-index: 99;
+  position: relative;
+  width: 100%; 
+  max-width: 80%;
+  height: 280px;
   border-radius: 10px;
+  overflow: hidden;
   &::before {
     @include blur();
     left: -20px;
@@ -69,6 +71,7 @@ $distance: 485px;
   }
   to {
     right: -$distance;
+    transform: scale(1);
   }
 }
 
@@ -107,6 +110,7 @@ $distance: 485px;
 @keyframes nextCommentAnimationRight {
   from {
     right: 0;
+    transform: scale(0.9);
   }
   to {
     right: $distance;
@@ -115,32 +119,15 @@ $distance: 485px;
   }
 }
 
-.scale {
-  animation: scaleDummy 1.3s forwards;
+.scale-left {
   position: absolute;
-  left: 0;
-}
-
-@keyframes scaleDummy {
-  from {
-    transform: translateX(-$distance) scale(0.6);
-  }
-  to {
-    transform: translateX(0) scale(0.9);
-  }
+  left: -100%;
+  top:0
 }
 
 .scale-right {
-  animation: scaleDummyNext 1.3s forwards;
   position: absolute;
-  right: 0;
+  right: -100%;
+  top: 0;
 }
 
-@keyframes scaleDummyNext {
-  from {
-    transform: translateX($distance) scale(0.6);
-  }
-  to {
-    transform: translateX(0) scale(0.9);
-  }
-}
