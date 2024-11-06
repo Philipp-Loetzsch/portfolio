@@ -1,0 +1,39 @@
+@import "./../../styles.scss";
+
+section {
+  @include dFlex($fd: column, $ai: flex-start);
+  padding: 64px 112px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+a {
+    color: #3dcfb7;
+  &:hover {
+    color: #3dcfb7a6;
+  }
+}
+
+h1 {
+  margin-bottom: 24px;
+  color: #3dcfb6;
+  font-size: 64px;
+}
+
+h2 {
+  margin: 16px 0px;
+  color: #3dcfb6;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    section{
+        padding: 12px;
+    }
+}
+

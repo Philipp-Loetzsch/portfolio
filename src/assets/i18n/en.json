@@ -1,4 +1,38 @@
 {
+	"legal_notice": {
+		"contact": {
+			"email": "E-mail address:",
+			"phone": "Phone:"
+		},
+		"data_mining": {
+			"text": " Reservation of use for text and data mining: The owner of this website\n authorizes the use or downloading of content from this website\n by third parties for the development, training or operation of artificial\n artificial intelligence or other machine learning systems (\"text and data\n data mining\") only with the express written consent of the owner.\nowner. Without such consent, it is prohibited to use the content for text\nand data mining. This also applies if the website does not contain\nmeta information is available on the website that excludes such procedures, and\n even if bots that have the purpose of reading the website for the purposes of text\n and data mining purposes are not blocked."
+		},
+		"genaerator_text": "Created with free Datenschutz-Generator.de by Dr. Thomas\n      Schwenke",
+		"headline": {
+			"contact": "Contact options",
+			"data_mining": "Reservation of use for text and data mining",
+			"law": "Dispute resolution and consumer dispute resolution",
+			"name": "Service provider",
+			"picture": "Picture credits",
+			"rights": "Liability and intellectual property rights",
+			"social_media": "Social media and other online presences"
+		},
+		"law": {
+			"text": " We are not willing or obliged to participate in dispute resolution proceedings before a consumer dispute resolution body."
+		},
+		"picture": {
+			"text_1": "Image sources and copyright notices:",
+			"text_2": "Profile picture / source and copyright:"
+		},
+		"rights": {
+			"text_1": " Copyrights and trademark rights: All content displayed on this website, such as\n    such as texts, photographs, graphics, brands and trademarks are protected by the\n    protected by the respective property rights (copyrights, trademark rights).\n    The use, reproduction, etc. are subject to our rights or the rights of the\n    rights of the respective authors or rights holders.",
+			"text_2": "  Information on legal violations: Should you notice any legal violations on our website\n    legal violations on our website, please inform us of these. We\n    illegal content and links as soon as we become aware of them.\n    remove them."
+		},
+		"social_media": {
+			"text": "This legal notice also applies to the following social media presences and online profiles:"
+		},
+		"title": "Legal notice"
+	},
 	"main_content": {
 		"about_me": {
 			"description_location": "Flexible in terms of working environments, I can work effectively both on-site in Chemnitz and remotely.",
