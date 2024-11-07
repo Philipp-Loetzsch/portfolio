@@ -73,7 +73,11 @@
 		},
 		"landing_page": {
 			"lpLinks_contact": "Contact me",
-			"lpLinks_work": "Check my work"
+			"lpLinks_work": "Check my work",
+			"marquee_text_1": "Available for remote work",
+			"marquee_text_2": "Frontend Developer",
+			"marquee_text_3": "Based in Chemnitz",
+			"marquee_text_4": "ready for new challenges"
 		},
 		"projects": {
 			"headline": "Featured Projects",

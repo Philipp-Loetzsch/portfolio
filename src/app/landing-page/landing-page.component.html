@@ -97,7 +97,7 @@
     >
       @for (text of texts; track text; let i = $index) {
       <div class="text-element">
-        <span style="color:#3dcfb6;">{{ text }}</span>
+        <span style="color:#3dcfb6;">{{ text | translate}}</span>
         <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
       </div>
       }

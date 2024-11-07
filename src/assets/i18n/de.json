@@ -73,7 +73,11 @@
 		},
 		"landing_page": {
 			"lpLinks_contact": "Kontaktieren Sie mich",
-			"lpLinks_work": "Meine Projekte"
+			"lpLinks_work": "Meine Projekte",
+			"marquee_text_1": "Verfügbar für Remotearbeit",
+			"marquee_text_2": "Frontend-Entwickler",
+			"marquee_text_3": "Wohnhaft in Chemnitz",
+			"marquee_text_4": "bereit für neue Herausforderungen"
 		},
 		"projects": {
 			"headline": "Ausgewählte Projekte",

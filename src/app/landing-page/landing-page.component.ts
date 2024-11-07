@@ -48,10 +48,10 @@ export class LandingPageComponent {
     },
   ];
   texts = [
-    'Available for remote work',
-    'Frontend Developer',
-    'Based in Chemnitz',
-    'open to work',
+    'main_content.landing_page.marquee_text_1',
+    'main_content.landing_page.marquee_text_2',
+    'main_content.landing_page.marquee_text_3',
+    'main_content.landing_page.marquee_text_4',
   ];
   hover:boolean = false;
  
