@@ -10,6 +10,7 @@ import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } 
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  hoverLogo=false
   language:boolean =true
   hoverIndex:number | null =null
   constructor(private translate: TranslateService) {

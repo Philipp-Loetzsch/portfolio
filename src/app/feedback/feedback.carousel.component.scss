@@ -1,5 +1,5 @@
+
 $distance: 500px;
-$endpoint: 17.2%;
 
 @mixin blur() {
   content: "";
@@ -133,7 +133,7 @@ $endpoint: 17.2%;
 
 @media screen and (max-width: 900px) {
   .carousel{
-    width: 100%;
+    max-width: 90%;
     &::before{
       display: none;
     }
@@ -142,5 +142,5 @@ $endpoint: 17.2%;
     }
     overflow: visible;
   }
-  
+
 }
