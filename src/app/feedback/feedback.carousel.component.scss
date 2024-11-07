@@ -131,3 +131,16 @@ $endpoint: 17.2%;
   top: 0;
 }
 
+@media screen and (max-width: 900px) {
+  .carousel{
+    width: 100%;
+    &::before{
+      display: none;
+    }
+    &::after{
+      display: none;
+    }
+    overflow: visible;
+  }
+  
+}
