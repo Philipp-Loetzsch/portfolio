@@ -1,3 +1,5 @@
+@import "./../../styles.scss";
+
 section{
     padding: 112px;
 }
@@ -19,4 +21,25 @@ h6{
     color: #3dcfb6;
     font-size: 18px;
     margin: 8px 0;
+}
+
+@media screen and (max-width: 1110px) {
+    h3{
+        font-size: 48px;
+      }
+}
+
+@media screen and (max-width: 900px) {
+    section{
+        padding: 12px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 36px;
+      }
+    h5{
+        font-size: 20px;
+    }
 }

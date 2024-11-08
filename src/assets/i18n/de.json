@@ -178,6 +178,22 @@
 		"paragraph_1_1": "Diese Datenschutzrichtlinie beschreibt unsere Richtlinien und Verfahren für die Erfassung, Verwendung und Offenlegung Ihrer Daten bei der Nutzung des Dienstes und informiert Sie über Ihre Datenschutzrechte und den gesetzlichen Schutz Ihrer Daten.",
 		"paragraph_1_2": "Wir verwenden Ihre persönlichen Daten zur Bereitstellung und Verbesserung des Dienstes. Durch die Nutzung des Dienstes erklären Sie sich mit der Erfassung und Nutzung von Informationen in Übereinstimmung mit dieser Datenschutzrichtlinie einverstanden. Diese Datenschutzrichtlinie wurde mit der Hilfe der",
 		"title": "Datenschutzbestimmungen",
+		"tracking": {
+			"headline": "Tracking-Technologien und Cookies",
+			"list": {
+				"beacons": "Web Beacons.",
+				"cokies": "Cookies oder Browser-Cookies.",
+				"description": {
+					"becons": "Bestimmte Bereiche unseres Dienstes und unserer E-Mails können kleine elektronische Dateien enthalten, die als Web-Beacons (auch als Clear Gifs, Pixel-Tags und Single-Pixel-Gifs bezeichnet) bekannt sind und die es dem Unternehmen beispielsweise ermöglichen, die Benutzer zu zählen, die diese Seiten besucht oder eine E-Mail geöffnet haben, sowie andere damit verbundene Website-Statistiken zu erstellen (z. B. die Aufzeichnung der Beliebtheit eines bestimmten Bereichs und die Überprüfung der System- und Serverintegrität).",
+					"cokies": "Ein Cookie ist eine kleine Datei, die auf Ihrem Gerät abgelegt wird. Sie können Ihren Browser anweisen, alle Cookies abzulehnen oder anzuzeigen, wenn ein Cookie gesendet wird. Wenn Sie jedoch keine Cookies akzeptieren, können Sie möglicherweise einige Teile unseres Dienstes nicht nutzen. Sofern Sie Ihren Browser nicht so eingestellt haben, dass er Cookies ablehnt, kann unser Dienst Cookies verwenden."
+				}
+			},
+			"pragraph": {
+				"text_1": "Wir verwenden Cookies und ähnliche Tracking-Technologien, um die Aktivitäten auf Unserem Dienst zu verfolgen und bestimmte Informationen zu speichern. Bei den verwendeten Tracking-Technologien handelt es sich um Beacons, Tags und Skripte zur Erfassung und Verfolgung von Informationen sowie zur Verbesserung und Analyse Unseres Dienstes. Zu den von uns verwendeten Technologien können gehören:",
+				"text_2": "Cookies können \"dauerhafte\" oder \"Sitzungs\"-Cookies sein. Dauerhafte Cookies bleiben auf Ihrem Computer oder Mobilgerät, wenn Sie offline gehen, während Sitzungscookies gelöscht werden, sobald Sie Ihren Webbrowser schließen. Erfahren Sie mehr über Cookies in diesem Artikel.",
+				"text_3": "Wir verwenden sowohl Sitzungscookies als auch dauerhafte Cookies für die unten genannten Zwecke:"
+			}
+		},
 		"update": "Zuletzt aktualisiert: Oktober 30, 2024"
 	}
 }

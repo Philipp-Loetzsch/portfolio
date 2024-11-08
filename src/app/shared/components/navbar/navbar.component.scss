@@ -58,6 +58,9 @@ section {
   border: 1px solid #3dcfb6;
   border-radius: 100px;
   display: flex;
+  &:hover{
+    border-color: white;
+  }
   > button {
     cursor: pointer;
     font-weight: 500;
@@ -79,6 +82,7 @@ section {
 .chosen {
   background-color: #3dcfb6 !important;
   color: white !important;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 425px) {
