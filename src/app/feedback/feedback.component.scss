@@ -4,7 +4,6 @@
   position: $pos;
   height: 150px;
   flex: 0 0 auto;
-  width: 450px;
   max-width: 450px;
   width: 100%;
   border: 1px solid #3dcfb76c;
@@ -68,12 +67,6 @@ h5 {
   @include comments();
   @include dFlex($fd: column, $jc: space-between, $ai: start);
   @include commentFooter();
-  > img {
-    position: absolute;
-    width: 62px;
-    left: -5%;
-    top: -5px;
-  }
 }
 
 .next-comment {
@@ -115,10 +108,6 @@ h5 {
 
   .main-comment {
     padding: 32px 12px;
-    > img {
-      width: 48px;
-      left: 0;
-    }
     > div {
       > span {
         font-size: 14px;

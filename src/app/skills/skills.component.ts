@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AnimationService } from '../services/animation.service';
-import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, TranslateDirective, TranslateModule, TranslatePipe],
+  imports: [CommonModule, TranslateModule, TranslatePipe],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
@@ -35,8 +35,8 @@ export class SkillsComponent {
   ];
   interests: Array<{ img: string; title: string }> = [
     {
-      img: 'webflow',
-      title: 'Webflow',
+      img: 'react',
+      title: 'React',
     },
     {
       img: 'python',

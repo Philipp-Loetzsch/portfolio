@@ -77,7 +77,7 @@
 			"marquee_text_1": "Verfügbar für Remotearbeit",
 			"marquee_text_2": "Frontend-Entwickler",
 			"marquee_text_3": "Wohnhaft in Chemnitz",
-			"marquee_text_4": "bereit für neue Herausforderungen"
+			"marquee_text_4": "Bereit für neue Herausforderungen"
 		},
 		"projects": {
 			"headline": "Ausgewählte Projekte",
@@ -108,5 +108,76 @@
 		"about_me": "Über mich",
 		"projects": "Projekte",
 		"skills": "Fertigkeiten"
+	},
+	"privacy_policy": {
+		"collective": {
+			"headline": "Erfassung und Verwendung Ihrer persönlichen Daten",
+			"types": {
+				"headline": "Arten von gesammelten Daten",
+				"personal_data": {
+					"headline": "Persönliche Daten",
+					"paragraph": {
+						"email": "E-Mail Adresse",
+						"name": "Vorname und Nachname",
+						"text": "Während der Nutzung unseres Dienstes bitten wir Sie möglicherweise, uns bestimmte personenbezogene Daten mitzuteilen, die dazu verwendet werden können, Sie zu kontaktieren oder zu identifizieren. Persönlich identifizierbare Informationen können unter anderem sein:",
+						"using": "Verwendungsdaten"
+					}
+				},
+				"using": {
+					"paragraph": {
+						"text_1": "Nutzungsdaten werden bei der Nutzung des Dienstes automatisch erfasst.",
+						"text_2": "Zu den Nutzungsdaten können Informationen wie die Internetprotokolladresse Ihres Geräts (z. B. IP-Adresse), der Browsertyp, die Browserversion, die von Ihnen besuchten Seiten unseres Dienstes, die Uhrzeit und das Datum Ihres Besuchs, die auf diesen Seiten verbrachte Zeit, eindeutige Gerätekennungen und andere Diagnosedaten gehören.",
+						"text_3": "Wenn Sie mit oder über ein mobiles Gerät auf den Dienst zugreifen, können wir bestimmte Informationen automatisch erfassen, einschließlich, aber nicht beschränkt auf die Art des von Ihnen verwendeten mobilen Geräts, die eindeutige ID Ihres mobilen Geräts, die IP-Adresse Ihres mobilen Geräts, Ihr mobiles Betriebssystem, die Art des von Ihnen verwendeten mobilen Internetbrowsers, eindeutige Gerätekennungen und andere Diagnosedaten.",
+						"text_4": "Wir können auch Informationen erfassen, die Ihr Browser sendet, wenn Sie unseren Dienst besuchen oder wenn Sie über ein mobiles Gerät auf den Dienst zugreifen."
+					}
+				},
+				"using_data": {
+					"headline": ""
+				}
+			}
+		},
+		"interpretation_definition": {
+			"definition": {
+				"headline": "Definitionen",
+				"list": {
+					"account": "Konto",
+					"affiliate": "Tochtergesellschaft",
+					"company": "Unternehmen",
+					"cookies": "Cookies",
+					"country": "Land",
+					"description": {
+						"account": "bedeutet ein einzigartiges Konto, das für Sie erstellt wurde, um auf unseren Service oder Teile davon zuzugreifen.",
+						"affiliate": "bezeichnet ein Unternehmen, das eine Partei beherrscht, von ihr beherrscht wird oder mit ihr unter gemeinsamer Beherrschung steht, wobei \"Beherrschung\" den Besitz von 50 % oder mehr der Aktien, Anteile oder anderer Wertpapiere bedeutet, die zur Wahl von Direktoren oder anderen leitenden Angestellten berechtigt sind.",
+						"company": "(in diesem Vertrag entweder als \"das Unternehmen\", \"wir\", \"uns\" oder \"unser\" bezeichnet) bezieht sich auf Philipp Lötzsch.",
+						"cookies": "sind kleine Dateien, die von einer Website auf Ihrem Computer, Ihrem Mobilgerät oder einem anderen Gerät gespeichert werden und unter anderem die Details Ihres Surfverhaltens auf dieser Website enthalten.",
+						"country": " bezieht sich auf: Sachsen, Deutschland",
+						"device": "ist jedes Gerät, das auf den Dienst zugreifen kann, wie z. B. ein Computer, ein Mobiltelefon oder ein digitales Tablet.",
+						"personal_data": "ist jede Information, die sich auf eine identifizierte oder identifizierbare Person bezieht.",
+						"service": "bezieht sich auf die Website.",
+						"service_provider": " bezeichnet jede natürliche oder juristische Person, die die Daten im Auftrag des Unternehmens verarbeitet. Der Begriff bezieht sich auf Drittunternehmen oder Einzelpersonen, die vom Unternehmen angestellt sind, um den Dienst zu erleichtern, den Dienst im Namen des Unternehmens bereitzustellen, Dienstleistungen im Zusammenhang mit dem Dienst zu erbringen oder das Unternehmen bei der Analyse der Nutzung des Dienstes zu unterstützen.",
+						"using_date": "bezieht sich auf automatisch erfasste Daten, die entweder durch die Nutzung des Dienstes oder durch die Infrastruktur des Dienstes selbst erzeugt werden (z. B. die Dauer eines Seitenbesuchs).",
+						"website": "bezieht sich auf Philipp Lötzsch, erreichbar über",
+						"you": "bezeichnet die Person, die auf den Dienst zugreift oder ihn nutzt, bzw. das Unternehmen oder eine andere juristische Person, in deren Namen eine solche Person auf den Dienst zugreift oder ihn nutzt, je nach Fall."
+					},
+					"device": "Gerät",
+					"personal_data": "Persönliche Daten",
+					"service": "Dienstleistung",
+					"service_provider": "Dienstanbieter",
+					"using_date": "Verwendungsdaten",
+					"website": "Website",
+					"you": "Sie"
+				},
+				"paragraph": "Für die Zwecke dieser Datenschutzrichtlinie:"
+			},
+			"headline": "Auslegung und Definitionen",
+			"interpretation": {
+				"headline": "Auslegung",
+				"paragraph": "Die Wörter, deren Anfangsbuchstaben groß geschrieben sind, haben die unter den nachstehenden Bedingungen definierte Bedeutung. Die folgenden Definitionen haben dieselbe Bedeutung, unabhängig davon, ob sie im Singular oder im Plural stehen."
+			}
+		},
+		"paragraph_1_1": "Diese Datenschutzrichtlinie beschreibt unsere Richtlinien und Verfahren für die Erfassung, Verwendung und Offenlegung Ihrer Daten bei der Nutzung des Dienstes und informiert Sie über Ihre Datenschutzrechte und den gesetzlichen Schutz Ihrer Daten.",
+		"paragraph_1_2": "Wir verwenden Ihre persönlichen Daten zur Bereitstellung und Verbesserung des Dienstes. Durch die Nutzung des Dienstes erklären Sie sich mit der Erfassung und Nutzung von Informationen in Übereinstimmung mit dieser Datenschutzrichtlinie einverstanden. Diese Datenschutzrichtlinie wurde mit der Hilfe der",
+		"title": "Datenschutzbestimmungen",
+		"update": "Zuletzt aktualisiert: Oktober 30, 2024"
 	}
 }

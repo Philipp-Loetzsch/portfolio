@@ -6,7 +6,7 @@ import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } 
 @Component({
   selector: 'app-feedback',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, TranslateDirective, TranslatePipe],
+  imports: [CommonModule, FormsModule, TranslateModule, TranslatePipe],
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.scss', './feedback.carousel.component.scss']
 })
@@ -54,6 +54,7 @@ export class FeedbackComponent {
   }
 
   showPreviousComment() {
+    if(this.showPrev || this.showNext) return
     this.currentComment = this.getPreviousIndex(this.currentComment);
     this.showPrev=true
     setTimeout(() => {
@@ -64,6 +65,7 @@ export class FeedbackComponent {
   }
 
   showNextComment() {
+    if(this.showNext || this.showPrev) return
     this.currentComment = this.getNextIndex(this.currentComment);
     this.showNext=true
     setTimeout(() => {

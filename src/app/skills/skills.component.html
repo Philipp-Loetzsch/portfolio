@@ -33,7 +33,7 @@
         (click)="showPopup(i)"
         (mouseenter)="showPopup(i)"
         (mouseleave)="enablePopup = false"
-        src="assets/img/skills/{{ exp.img }}.png"
+        src="assets/img/skills/{{ exp.img }}.svg"
         alt=""
       />
       <span>{{ exp.skill }}</span>
@@ -42,7 +42,7 @@
         <div>
           <div *ngFor="let interest of interests; let i = index">
             <div>
-              <img src="assets/img/skills/{{ interest.img }}.png" alt="" />
+              <img src="assets/img/skills/{{ interest.img }}.svg" alt="" />
             </div>
             <span>{{ interest.title }}</span>
           </div>

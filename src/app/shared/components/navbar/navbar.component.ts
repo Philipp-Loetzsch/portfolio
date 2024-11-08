@@ -1,11 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective, TranslateModule],
+  imports: [CommonModule, TranslatePipe, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
