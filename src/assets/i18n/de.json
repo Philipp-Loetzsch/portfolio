@@ -177,6 +177,26 @@
 		},
 		"paragraph_1_1": "Diese Datenschutzrichtlinie beschreibt unsere Richtlinien und Verfahren für die Erfassung, Verwendung und Offenlegung Ihrer Daten bei der Nutzung des Dienstes und informiert Sie über Ihre Datenschutzrechte und den gesetzlichen Schutz Ihrer Daten.",
 		"paragraph_1_2": "Wir verwenden Ihre persönlichen Daten zur Bereitstellung und Verbesserung des Dienstes. Durch die Nutzung des Dienstes erklären Sie sich mit der Erfassung und Nutzung von Informationen in Übereinstimmung mit dieser Datenschutzrichtlinie einverstanden. Diese Datenschutzrichtlinie wurde mit der Hilfe der",
+		"personal_data": {
+			"headline": "",
+			"paragraph_text_1": "Das Unternehmen kann personenbezogene Daten für die folgenden Zwecke verwenden:",
+			"paragraph_text_2": ", einschließlich der Überwachung der Nutzung unseres Dienstes.",
+			"paragraph_text_2_strong": "Zur Bereitstellung und Aufrechterhaltung unseres Dienstes",
+			"paragraph_text_3": "um Ihre Registrierung als Nutzer des Dienstes zu verwalten. Die von Ihnen bereitgestellten personenbezogenen Daten können Ihnen Zugang zu verschiedenen Funktionen des Dienstes geben, die Ihnen als registriertem Nutzer zur Verfügung stehen.",
+			"paragraph_text_3_strong": "Um Ihr Konto zu verwalten:",
+			"paragraph_text_4": "die Entwicklung, Einhaltung und Durchführung des Kaufvertrags für die Produkte, Artikel oder Dienstleistungen, die Sie gekauft haben, oder eines anderen Vertrags mit uns über den Dienst.",
+			"paragraph_text_4_strong": "Für die Erfüllung eines Vertrages:",
+			"paragraph_text_5": "Sie per E-Mail, Telefonanrufe, SMS oder andere gleichwertige Formen der elektronischen Kommunikation zu kontaktieren, wie z. B. Push-Benachrichtigungen einer mobilen Anwendung in Bezug auf Aktualisierungen oder informative Mitteilungen im Zusammenhang mit den Funktionen, Produkten oder vertraglich vereinbarten Diensten, einschließlich der Sicherheitsaktualisierungen, wenn dies für ihre Durchführung notwendig oder angemessen ist.",
+			"paragraph_text_5_strong": "Sie zu kontaktieren:",
+			"paragraph_text_6": " mit Nachrichten, Sonderangeboten und allgemeinen Informationen über andere Waren, Dienstleistungen und Veranstaltungen, die wir anbieten und die denen ähnlich sind, die Sie bereits gekauft oder angefragt haben, es sei denn, Sie haben sich gegen den Erhalt solcher Informationen entschieden.",
+			"paragraph_text_6_strong": "Für Sie",
+			"paragraph_text_7": "Um Ihre Anfragen an uns zu bearbeiten und zu verwalten.",
+			"paragraph_text_7_strong": "Um Ihre Anfragen zu verwalten:",
+			"paragraph_text_8": "Wir können Ihre Informationen verwenden, um eine Fusion, Veräußerung, Umstrukturierung, Reorganisation, Auflösung oder einen anderen Verkauf oder eine Übertragung einiger oder aller unserer Vermögenswerte zu bewerten oder durchzuführen, sei es als laufendes Unternehmen oder als Teil eines Konkurses, einer Liquidation oder eines ähnlichen Verfahrens, bei dem persönliche Daten, die wir über unsere Dienstnutzer besitzen, zu den übertragenen Vermögenswerten gehören.",
+			"paragraph_text_8_strong": "Für Unternehmensübertragungen:",
+			"paragraph_text_9": ": Wir können Ihre Daten für andere Zwecke verwenden, wie z.B. zur Datenanalyse, zur Ermittlung von Nutzungstrends, zur Bestimmung der Wirksamkeit unserer Werbekampagnen und zur Bewertung und Verbesserung unseres Dienstes, unserer Produkte, Dienstleistungen, unseres Marketings und Ihrer Erfahrungen.",
+			"paragraph_text_9_strong": "Für andere Zwecke"
+		},
 		"title": "Datenschutzbestimmungen",
 		"tracking": {
 			"headline": "Tracking-Technologien und Cookies",
@@ -186,6 +206,27 @@
 				"description": {
 					"becons": "Bestimmte Bereiche unseres Dienstes und unserer E-Mails können kleine elektronische Dateien enthalten, die als Web-Beacons (auch als Clear Gifs, Pixel-Tags und Single-Pixel-Gifs bezeichnet) bekannt sind und die es dem Unternehmen beispielsweise ermöglichen, die Benutzer zu zählen, die diese Seiten besucht oder eine E-Mail geöffnet haben, sowie andere damit verbundene Website-Statistiken zu erstellen (z. B. die Aufzeichnung der Beliebtheit eines bestimmten Bereichs und die Überprüfung der System- und Serverintegrität).",
 					"cokies": "Ein Cookie ist eine kleine Datei, die auf Ihrem Gerät abgelegt wird. Sie können Ihren Browser anweisen, alle Cookies abzulehnen oder anzuzeigen, wenn ein Cookie gesendet wird. Wenn Sie jedoch keine Cookies akzeptieren, können Sie möglicherweise einige Teile unseres Dienstes nicht nutzen. Sofern Sie Ihren Browser nicht so eingestellt haben, dass er Cookies ablehnt, kann unser Dienst Cookies verwenden."
+				},
+				"essential_cokies": {
+					"text_1": "Typ: Session-Cookies",
+					"text_2": "Verwaltet von: Uns",
+					"text_3": "Zweck: Diese Cookies sind unerlässlich, um Ihnen die über die Website verfügbaren Dienste zur Verfügung zu stellen und Ihnen die Nutzung einiger ihrer Funktionen zu ermöglichen. Sie helfen bei der Authentifizierung von Benutzern und verhindern die betrügerische Nutzung von Benutzerkonten. Ohne diese Cookies können die von Ihnen angeforderten Dienste nicht bereitgestellt werden, und wir verwenden diese Cookies nur, um Ihnen diese Dienste zur Verfügung zu stellen."
+				},
+				"essential_cookies": {
+					"headline": "Notwendige / essentielle Cookies"
+				},
+				"functionality_cookies": {
+					"headline": "Funktionalität Cookies",
+					"text_1": "Typ: Dauerhafte Cookies",
+					"text_2": "Verwaltet von: Uns",
+					"text_3": "Zweck: Diese Cookies ermöglichen es uns, die von Ihnen bei der Nutzung der Website getroffenen Entscheidungen zu speichern, z. B. Ihre Anmeldedaten oder die von Ihnen bevorzugte Sprache. Der Zweck dieser Cookies ist es, Ihnen eine persönlichere Erfahrung zu bieten und zu vermeiden, dass Sie Ihre Einstellungen jedes Mal neu eingeben müssen, wenn Sie die Website nutzen.",
+					"text_4": "Weitere Informationen über die von uns verwendeten Cookies und Ihre Wahlmöglichkeiten in Bezug auf Cookies finden Sie in unserer Cookie-Richtlinie oder im Abschnitt Cookies unserer Datenschutzrichtlinie."
+				},
+				"policy_cookies": {
+					"headline": "Cookies Politik / Hinweis Akzeptanz Cookies",
+					"text_1": "Typ: Dauerhafte Cookies",
+					"text_2": "Verwaltet von: Us",
+					"text_3": "Zweck: Diese Cookies zeigen an, ob die Nutzer die Verwendung von Cookies auf der Website akzeptiert haben."
 				}
 			},
 			"pragraph": {

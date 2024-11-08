@@ -94,6 +94,12 @@ section {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .popover{
+    left: 20%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   section {
     margin-bottom: 32px;
@@ -121,8 +127,9 @@ section {
     }
   }
   .popover {
-    min-width: 100px;
+    min-width: 150px;
     left: 15%;
+    
     > span {
       font-size: 14px;
       text-align: start;
