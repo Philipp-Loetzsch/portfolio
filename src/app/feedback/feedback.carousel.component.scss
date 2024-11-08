@@ -133,7 +133,6 @@ $distance: 500px;
 
 @media screen and (max-width: 900px) {
   .carousel{
-    max-width: 90%;
     &::before{
       display: none;
     }

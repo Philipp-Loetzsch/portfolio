@@ -7,7 +7,7 @@ import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, TranslateDirective, TranslatePipe],
+  imports: [CommonModule, FormsModule, TranslateModule, TranslatePipe],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

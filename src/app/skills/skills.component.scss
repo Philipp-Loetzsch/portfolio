@@ -6,30 +6,30 @@ section {
   padding: 112px;
   box-sizing: border-box;
   min-height: 100vh;
-  align-items: center;
+  align-items: start;
   background: radial-gradient(
     farthest-side at left,
     #08463b4d 30%,
     #1c1c1c 100%
   );
-  overflow: hidden;
 }
 
 .skilltree {
   min-width: 50%;
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
   padding-top: 3%;
   align-items: center;
+  flex: auto;
 }
 
 .skill {
   position: relative;
-  width: 80px;
+  width: 25%;
   height: 95px;
   text-align: center;
-  @include dFlex($g: 10px, $fd: column, $jc:space-between);
+  margin-bottom: 48px;
+  @include dFlex($g: 10px, $fd: column, $jc: space-between);
   > span {
     display: flex;
     align-items: start;
@@ -42,10 +42,11 @@ section {
     }
   }
 }
+
 .popover {
   position: absolute;
-  top: -120%;
-  left: 10px;
+  transform: translateY(-100%);
+  left: 35%;
   background-color: #ffffff;
   min-width: 200px;
   padding: 10px;
@@ -86,7 +87,6 @@ section {
   }
 }
 
-
 @media screen and (max-width: 960px) {
   section {
     flex-direction: column;
@@ -95,7 +95,7 @@ section {
 }
 
 @media screen and (max-width: 425px) {
-  section{
+  section {
     margin-bottom: 32px;
   }
   .link-contact {
@@ -105,18 +105,27 @@ section {
       font-size: 14px;
     }
   }
-  .skilltree{
+  .skilltree {
     align-items: center;
-    gap: 30px;
   }
-  .skill{
-    width: 50px;
+  .skill {
+    width: 33%;
     height: 60px;
-    >span{
+    box-sizing: content-box;
+    > span {
       font-size: 14px;
+      word-break: keep-all;
     }
-    >img{
+    > img {
       width: 40px;
+    }
+  }
+  .popover {
+    min-width: 100px;
+    left: 15%;
+    > span {
+      font-size: 14px;
+      text-align: start;
     }
   }
 }

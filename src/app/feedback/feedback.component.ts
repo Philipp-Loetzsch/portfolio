@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-feedback',
@@ -38,6 +38,7 @@ export class FeedbackComponent {
   nextComment = this.feedbacks[this.getNextIndex(this.currentComment)];
   showPrev=false
   showNext=false
+  currentScreenWidth = window.innerWidth
 
   getPreviousIndex(index: number): number {
     return (index - 1 + this.feedbacks.length) % this.feedbacks.length;
@@ -56,6 +57,7 @@ export class FeedbackComponent {
   showPreviousComment() {
     if(this.showPrev || this.showNext) return
     this.currentComment = this.getPreviousIndex(this.currentComment);
+    if(this.currentScreenWidth < 540) return this.updateComments();
     this.showPrev=true
     setTimeout(() => {
       this.updateComments();
@@ -67,10 +69,17 @@ export class FeedbackComponent {
   showNextComment() {
     if(this.showNext || this.showPrev) return
     this.currentComment = this.getNextIndex(this.currentComment);
+    if(this.currentScreenWidth < 540) return this.updateComments();
     this.showNext=true
     setTimeout(() => {
       this.updateComments();
       this.showNext= false
     }, 1300);
+  }
+
+  
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.currentScreenWidth = window.innerWidth;
   }
 }

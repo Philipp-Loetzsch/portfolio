@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import { Projects } from '../interfaces/projects';
-import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
-import { NavbarComponent } from '../shared/components/navbar/navbar.component';
+import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ProjectDialogComponent, TranslateDirective, TranslateModule, TranslatePipe, NavbarComponent],
+  imports: [CommonModule, ProjectDialogComponent, TranslateModule, TranslatePipe,],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
