@@ -92,6 +92,7 @@ h2 {
   transform-origin: left bottom;
   transform: rotate(-3deg);
   overflow: hidden;
+  backdrop-filter: blur(1px);
  }
 
 .text-element {

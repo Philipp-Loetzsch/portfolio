@@ -13,10 +13,10 @@ section {
   justify-self: center;
 }
 
-.full-size{
+.full-size {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.267);
@@ -41,24 +41,33 @@ section {
   border: 1px solid #3dcfb6;
   right: 0;
   top: 40px;
-  @include dFlex($fd:column, $ai:center, $jc:space-between);
-  padding:32px;
+  animation: slideIn 0.25s linear;
+  @include dFlex($fd: column, $ai: center, $jc: space-between);
+  padding: 32px;
   box-sizing: border-box;
-  >div{
-    @include dFlex($fd:column, $jc:space-between, $ai:start);
+  > div {
+    @include dFlex($fd: column, $jc: space-between, $ai: start);
     height: 100%;
-    >a{
+    > a {
       font-family: "Fira Code", Arial, Helvetica, sans-serif;
     }
   }
+}
 
+@keyframes slideIn {
+  from {
+    right: -500%;
+  }
+  to {
+    right: 0;
+  }
 }
 
 .language {
   border: 1px solid #3dcfb6;
   border-radius: 100px;
   display: flex;
-  &:hover{
+  &:hover {
     border-color: white;
   }
   > button {
@@ -86,7 +95,7 @@ section {
 }
 
 @media screen and (max-width: 425px) {
-  section{
-    padding: 12px ;
+  section {
+    padding: 12px;
   }
 }
