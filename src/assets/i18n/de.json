@@ -195,7 +195,24 @@
 			"paragraph_text_8": "Wir können Ihre Informationen verwenden, um eine Fusion, Veräußerung, Umstrukturierung, Reorganisation, Auflösung oder einen anderen Verkauf oder eine Übertragung einiger oder aller unserer Vermögenswerte zu bewerten oder durchzuführen, sei es als laufendes Unternehmen oder als Teil eines Konkurses, einer Liquidation oder eines ähnlichen Verfahrens, bei dem persönliche Daten, die wir über unsere Dienstnutzer besitzen, zu den übertragenen Vermögenswerten gehören.",
 			"paragraph_text_8_strong": "Für Unternehmensübertragungen:",
 			"paragraph_text_9": ": Wir können Ihre Daten für andere Zwecke verwenden, wie z.B. zur Datenanalyse, zur Ermittlung von Nutzungstrends, zur Bestimmung der Wirksamkeit unserer Werbekampagnen und zur Bewertung und Verbesserung unseres Dienstes, unserer Produkte, Dienstleistungen, unseres Marketings und Ihrer Erfahrungen.",
-			"paragraph_text_9_strong": "Für andere Zwecke"
+			"paragraph_text_9_strong": "Für andere Zwecke",
+			"share": {
+				"paragraph": {
+					"headline": "Wir können Ihre personenbezogenen Daten in den folgenden Situationen weitergeben:"
+				},
+				"paragraph_text_1": "Wir können Ihre persönlichen Daten an Dienstanbieter weitergeben, um die Nutzung unseres Dienstes zu überwachen und zu analysieren und um Sie zu kontaktieren.",
+				"paragraph_text_1_strong": "Mit Dienstleistern:",
+				"paragraph_text_2": "Wir können Ihre persönlichen Daten in Verbindung mit oder während der Verhandlungen über eine Fusion, den Verkauf von Unternehmensvermögen, eine Finanzierung oder die Übernahme unseres gesamten oder eines Teils unseres Unternehmens durch ein anderes Unternehmen weitergeben oder übertragen.",
+				"paragraph_text_2_strong": "Für Unternehmensübertragungen:",
+				"paragraph_text_3": "Wir können Ihre Daten an unsere Tochtergesellschaften weitergeben; in diesem Fall verpflichten wir diese Tochtergesellschaften, diese Datenschutzrichtlinie einzuhalten. Zu den verbundenen Unternehmen gehören unsere Muttergesellschaft und alle anderen Tochtergesellschaften, Joint-Venture-Partner oder andere Unternehmen, die wir kontrollieren oder die unter gemeinsamer Kontrolle mit uns stehen.",
+				"paragraph_text_3_strong": "Mit verbundenen Unternehmen:",
+				"paragraph_text_4": "Wir können Ihre Informationen an unsere Geschäftspartner weitergeben, um Ihnen bestimmte Produkte, Dienstleistungen oder Werbeaktionen anzubieten.",
+				"paragraph_text_4_strong": "Mit Geschäftspartnern:",
+				"paragraph_text_5": "Wenn Sie persönliche Informationen weitergeben oder auf andere Weise in den öffentlichen Bereichen mit anderen Nutzern interagieren, können diese Informationen von allen Nutzern eingesehen und öffentlich nach außen verbreitet werden.",
+				"paragraph_text_5_strong": "Mit anderen Benutzern:",
+				"paragraph_text_6": ": Wir können Ihre persönlichen Daten mit Ihrer Zustimmung für jeden anderen Zweck weitergeben.",
+				"paragraph_text_6_strong": "Mit Ihrer Zustimmung"
+			}
 		},
 		"title": "Datenschutzbestimmungen",
 		"tracking": {

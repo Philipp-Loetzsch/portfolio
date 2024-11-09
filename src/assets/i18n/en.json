@@ -195,7 +195,24 @@
 			"paragraph_text_8": "We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.",
 			"paragraph_text_8_strong": "For business transfers:",
 			"paragraph_text_9": ": We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.",
-			"paragraph_text_9_strong": "For other purposes"
+			"paragraph_text_9_strong": "For other purposes",
+			"share": {
+				"paragraph": {
+					"headline": "We may share Your personal information in the following situations:"
+				},
+				"paragraph_text_1": "We may share Your personal information with Service Providers to monitor and analyze the use of our Service,  to contact You.",
+				"paragraph_text_1_strong": "With Service Providers:",
+				"paragraph_text_2": "We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.",
+				"paragraph_text_2_strong": "For business transfers:",
+				"paragraph_text_3": "We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.",
+				"paragraph_text_3_strong": "With Affiliates:",
+				"paragraph_text_4": "We may share Your information with Our business partners to offer You certain products, services or promotions.",
+				"paragraph_text_4_strong": "With business partners:",
+				"paragraph_text_5": "when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.",
+				"paragraph_text_5_strong": "With other users:",
+				"paragraph_text_6": ": We may disclose Your personal information for any other purpose with Your consent.",
+				"paragraph_text_6_strong": "With Your consent"
+			}
 		},
 		"title": "Privacy Policy",
 		"tracking": {
