@@ -40,9 +40,7 @@ export class NavbarComponent {
   useLanguage(language:string):void {
     this.translate.use(language)
     if(language === 'en') this.language = false
-    else this.language = true
-    console.log(this.translate.currentLang);
-    
+    else this.language = true    
   }
 
   toggleNavbar(){

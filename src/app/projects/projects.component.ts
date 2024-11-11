@@ -83,6 +83,5 @@ export class ProjectsComponent {
   openDialog(index: number) {
     this.showDialog = true;
     this.currentIndex = index;
-    console.log(this.currentIndex);
   }
 }

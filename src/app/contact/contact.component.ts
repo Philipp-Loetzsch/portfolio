@@ -112,7 +112,6 @@ export class ContactComponent {
       this.mailTest &&
       this.terms
     ) {
-      console.log('erfolgreich');
       ngForm.resetForm();
     }
   }
