@@ -1,6 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import {
+  Component,
+  inject,
+  Injector,
+  ViewChild,
+  afterNextRender,
+} from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import {
   TranslateService,
@@ -8,15 +14,41 @@ import {
   TranslatePipe,
 } from '@codeandweb/ngx-translate';
 import { AnimationService } from '../services/animation.service';
+import { CdkTextareaAutosize, TextFieldModule } from '@angular/cdk/text-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, TranslatePipe],
+  imports: [
+    CommonModule,
+    FormsModule,
+    TranslateModule,
+    TranslatePipe,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    TextFieldModule,
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  private _injector = inject(Injector);
+  @ViewChild('autosize') autosize!: CdkTextareaAutosize;
+  triggerResize() {
+    // Wait for content to render, then trigger textarea resize.
+    afterNextRender(
+      () => {
+        this.autosize.resizeToFitContent(true);
+      },
+      {
+        injector: this._injector,
+      },
+    );
+  }
   constructor(
     private translate: TranslateService,
     private animationService: AnimationService

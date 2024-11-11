@@ -41,7 +41,7 @@
         id="email"
         name="email"
         type="text"
-        placeholder="{{ 'main_content.contact.placeholder_name' | translate }}"
+        placeholder="{{ 'main_content.contact.placeholder_email' | translate }}"
         [(ngModel)]="contactData.email"
         required
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
@@ -68,11 +68,12 @@
           'main_content.contact.placeholder_message' | translate
         }}"
         [(ngModel)]="contactData.message"
-        cols="auto"
-        rows="1"
-        maxlength="500"
         required
-        minlength="4"
+        matInput
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"
       ></textarea>
 
       @if(!message.valid && (message.touched || contactForm.submitted)){
