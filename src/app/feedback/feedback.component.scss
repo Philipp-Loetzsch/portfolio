@@ -2,7 +2,7 @@
 
 @mixin comments($pos: relative, $bgc: rgba(61, 207, 183, 0.3)) {
   position: $pos;
-  height: 150px;
+  height: 210px;
   flex: 0 0 auto;
   max-width: 450px;
   width: 100%;
@@ -10,6 +10,7 @@
   background-color: $bgc;
   border-radius: 30px;
   padding: 40px 24px;
+  box-sizing: border-box;
 }
 
 @mixin commentFooter() {
@@ -42,12 +43,14 @@ h5 {
 }
 
 .quotes {
-  position: absolute;
-  z-index: 200;
-  top:-10px;
-  left: -20px;
-  width: 60px;
-
+  height: 250px;
+  position: relative;
+  > img {
+    position: absolute;
+    z-index: 200;
+    left: -20px;
+    width: 60px;
+  }
 }
 
 .previous-comment {
@@ -106,19 +109,20 @@ h5 {
   h5 {
     font-size: 24px;
   }
-
-  .main-comment {
-    padding: 32px 12px;
-    >span{
-      font-size: 14px;
-    }
-    > div {
-      > span {
-        font-size: 13px;
-      }
-    }
+  .fs_14 {
+    font-size: 14px;
+  }
+  .fs_13 {
+    font-size: 13px;
   }
   .line {
     min-width: 10px;
+  }
+  .quotes {
+    > img {
+      width: 40px;
+      left: 0;
+      top: 10px;
+    }
   }
 }

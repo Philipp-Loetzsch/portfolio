@@ -1,5 +1,5 @@
 
-$distance: 500px;
+$distance: 450px;
 
 @mixin blur() {
   content: "";
@@ -121,14 +121,14 @@ $distance: 500px;
 
 .scale-left {
   position: absolute;
-  left: -100%;
-  top:0
+  left: -100.1%;
+  top:-1px
 }
 
 .scale-right {
   position: absolute;
-  right: -100%;
-  top: 0;
+  right: -100.3%;
+  top: -1px;
 }
 
 @media screen and (max-width: 900px) {
@@ -141,5 +141,4 @@ $distance: 500px;
     }
     overflow: visible;
   }
-
 }

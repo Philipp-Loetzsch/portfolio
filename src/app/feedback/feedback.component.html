@@ -7,44 +7,45 @@
         class="previous-comment"
         [ngClass]="{ 'preview-left': showPrev, 'preview-right': showNext }"
       >
-        <span>{{ this.previousComment.text | translate }}</span>
+        <span class="fs_14">{{ this.previousComment.text | translate }}</span>
         <div>
           <div class="line"></div>
-          <span>{{ this.previousComment.name }}</span>
+          <span class="fs_13">{{ this.previousComment.name }}</span>
         </div>
         <div class="previous-comment scale-left" *ngIf="showPrev">
-          <span>{{ this.nextComment.text | translate }}</span>
+          <span class="fs_14">{{ this.nextComment.text | translate }}</span>
           <div>
             <div class="line"></div>
-            <span>{{ this.nextComment.name }}</span>
+            <span class="fs_13">{{ this.nextComment.name }}</span>
           </div>
         </div>
       </div>
+      <div class="quotes"><img src="assets/img/feedback/quotes.png" alt=""/></div>
       <div
         class="main-comment"
         [ngClass]="{ 'main-left': showPrev, 'main-right': showNext }"
       >
-        <img class="quotes" src="assets/img/feedback/quotes.png" alt=""/>
-        <span>{{ this.mainComment.text | translate }}</span>
+        
+        <span class="fs_14">{{ this.mainComment.text | translate }}</span>
         <div>
           <div class="line"></div>
-          <span>{{ this.mainComment.name }}</span>
+          <span class="fs_13">{{ this.mainComment.name }}</span>
         </div>
       </div>
       <div
         class="next-comment"
         [ngClass]="{ 'next-left': showPrev, 'next-right': showNext }"
       >
-        <span>{{ this.nextComment.text | translate }}</span>
+        <span class="fs_14">{{ this.nextComment.text | translate }}</span>
         <div>
           <div class="line"></div>
-          <span>{{ this.nextComment.name }}</span>
+          <span class="fs_13">{{ this.nextComment.name }}</span>
         </div>
         <div class="next-comment scale-right" *ngIf="showNext || true">
-          <span>{{ this.previousComment.text | translate }}</span>
+          <span class="fs_14">{{ this.previousComment.text | translate }}</span>
           <div>
             <div class="line"></div>
-            <span>{{ this.previousComment.name }}</span>
+            <span class="fs_13">{{ this.previousComment.name }}</span>
           </div>
         </div>
       </div>
