@@ -2,9 +2,7 @@
   <h5>{{ "main_content.feedback.title" | translate }}</h5>
 
   <div class="carousel">
-    <img class="quotes" src="assets/img/feedback/quotes.png" alt="" />
-    <div class="d-flex" style="position: relative;">
-      
+    <div class="d-flex" style="position: relative">
       <div
         class="previous-comment"
         [ngClass]="{ 'preview-left': showPrev, 'preview-right': showNext }"
@@ -26,6 +24,7 @@
         class="main-comment"
         [ngClass]="{ 'main-left': showPrev, 'main-right': showNext }"
       >
+        <img class="quotes" src="assets/img/feedback/quotes.png" alt=""/>
         <span>{{ this.mainComment.text | translate }}</span>
         <div>
           <div class="line"></div>
@@ -33,7 +32,7 @@
         </div>
       </div>
       <div
-        class="next-comment" 
+        class="next-comment"
         [ngClass]="{ 'next-left': showPrev, 'next-right': showNext }"
       >
         <span>{{ this.nextComment.text | translate }}</span>
@@ -49,7 +48,6 @@
           </div>
         </div>
       </div>
-    
     </div>
   </div>
 
