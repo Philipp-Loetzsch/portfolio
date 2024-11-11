@@ -45,7 +45,7 @@ form {
       }
     }
   }
-  > input {
+  > button {
     cursor: pointer;
     background-color: transparent;
     font-size: 18px;
@@ -56,27 +56,35 @@ form {
     box-sizing: border-box;
     width: fit-content;
     align-self: center;
-    &:hover{
-      color:#3dcfb6;
+    position: relative;
+    overflow: hidden;
+    >span{
+      position: relative;
+    }
+    &:hover {
+      color: #3dcfb6;
       border-color: #3dcfb6;
+      > span {
+        color: #3dcfb6;
+        cursor: pointer;
+      }
     }
   }
 }
 
-.invalid{
-  color: #EC7B7BCC;
+.invalid {
+  color: #ec7b7bcc;
 }
 
-.terms{
+.terms {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  >img:hover{
+  > img:hover {
     background-color: rgba(61, 207, 183, 0.4);
     border-radius: 100%;
   }
 }
-
 
 @media screen and (max-width: 1350px) {
   section {
@@ -85,16 +93,15 @@ form {
 }
 
 @media screen and (max-width: 960px) {
-  section{
+  section {
     flex-direction: column;
-    padding: 16px ;
-    >img{
+    padding: 16px;
+    > img {
       width: 100%;
       padding-bottom: 32px;
     }
   }
-  form{
+  form {
     width: 100%;
   }
 }
-

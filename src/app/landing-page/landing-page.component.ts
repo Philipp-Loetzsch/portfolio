@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { AnimationService } from '../services/animation.service';
 import {
   TranslateService,
-  TranslateDirective,
   TranslateModule,
   TranslatePipe,
 } from '@codeandweb/ngx-translate';
@@ -11,7 +10,7 @@ import { NgxFastMarqueeModule } from "ngx-fast-marquee";
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TranslateDirective, TranslatePipe, NgxFastMarqueeModule],
+  imports: [CommonModule, TranslateModule, TranslatePipe, NgxFastMarqueeModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
@@ -57,10 +56,6 @@ export class LandingPageComponent {
  
   screenWidth: number = window.innerWidth;
  
-
-  
-
-
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;

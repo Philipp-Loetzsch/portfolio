@@ -1,16 +1,18 @@
 <section>
   <div>
-    <h4> {{ 'main_content.contact.title' | translate }}</h4>
-    <h3> {{ 'main_content.contact.headline' | translate }}</h3>
+    <h4>{{ "main_content.contact.title" | translate }}</h4>
+    <h3>{{ "main_content.contact.headline" | translate }}</h3>
     <p style="color: #3dcfb6; font-family: 'Fira Code'; padding: 20px 0">
-       {{ 'main_content.contact.pargraph_question' | translate }}
+      {{ "main_content.contact.pargraph_question" | translate }}
     </p>
     <span>
-      {{ 'main_content.contact.text' | translate }}
-      </span
-    >
+      {{ "main_content.contact.text" | translate }}
+    </span>
     <p style="padding-top: 20px">
-       {{ 'main_content.contact.question_dev' | translate }} <span style="color: #3dcfb6"> {{ 'main_content.contact.text_talk' | translate }}</span>
+      {{ "main_content.contact.question_dev" | translate }}
+      <span style="color: #3dcfb6">
+        {{ "main_content.contact.text_talk" | translate }}</span
+      >
     </p>
   </div>
 
@@ -27,10 +29,10 @@
       />
       @if(!name.valid && (name.touched || contactForm.submitted)){
       <label class="invalid" for="name"
-        >{{ 'main_content.contact.invalid_name' | translate }}
+        >{{ "main_content.contact.invalid_name" | translate }}
       </label>
       } @else{
-      <label for="name">{{ 'main_content.contact.name' | translate }}</label>
+      <label for="name">{{ "main_content.contact.name" | translate }}</label>
       }
     </div>
     <div>
@@ -46,19 +48,25 @@
       />
       @if(email.hasError('required') && (email.touched ||
       contactForm.submitted)){
-      <label class="invalid" for="email"> {{ 'main_content.contact.invalid_email' | translate }}</label>
-      } @else if(email.hasError('pattern') && contactForm.submitted){
-      <label class="invalid" for="email"
-        > {{ 'main_content.contact.syntax_email' | translate }}</label
+      <label class="invalid" for="email">
+        {{ "main_content.contact.invalid_email" | translate }}</label
       >
-      } @else{ <label for="email">{{ 'main_content.contact.email' | translate }} </label>}
+      } @else if(email.hasError('pattern') && contactForm.submitted){
+      <label class="invalid" for="email">
+        {{ "main_content.contact.syntax_email" | translate }}</label
+      >
+      } @else{
+      <label for="email">{{ "main_content.contact.email" | translate }} </label
+      >}
     </div>
     <div>
       <textarea
         #message="ngModel"
         id="message"
         name="message"
-        placeholder="{{ 'main_content.contact.placeholder_message' | translate }}"
+        placeholder="{{
+          'main_content.contact.placeholder_message' | translate
+        }}"
         [(ngModel)]="contactData.message"
         cols="auto"
         rows="1"
@@ -68,26 +76,48 @@
       ></textarea>
 
       @if(!message.valid && (message.touched || contactForm.submitted)){
-      <label class="invalid" for="message"> {{ 'main_content.contact.invalid_message' | translate }}</label>
+      <label class="invalid" for="message">
+        {{ "main_content.contact.invalid_message" | translate }}</label
+      >
       } @else{
-      <label for="message">{{ 'main_content.contact.message' | translate }}</label>
+      <label for="message">{{
+        "main_content.contact.message" | translate
+      }}</label>
       }
     </div>
 
-    <div style="flex-direction: unset; padding: 32px 0 0 0;">
-    <button class="terms" type="button"(click)="toggleTerms()" required>
-       <img src="{{img}}" alt="">
-      </button> 
+    <div style="flex-direction: unset; padding: 32px 0 0 0">
+      <button class="terms" type="button" (click)="toggleTerms()" required>
+        <img src="{{ img }}" alt="" />
+      </button>
       <label for="acceptTerms"
-      >{{ 'main_content.contact.terms_1' | translate }} <a href="privacy-policy" style="color: #3dcfb6; font-family: 'Fira Code';">{{ 'main_content.contact.terms_link' | translate }}</a>{{ 'main_content.contact.terms_2' | translate }} </label>
+        >{{ "main_content.contact.terms_1" | translate }}
+        <a
+          href="privacy-policy"
+          style="color: #3dcfb6; font-family: 'Fira Code'"
+          >{{ "main_content.contact.terms_link" | translate }}</a
+        >
+        {{ "main_content.contact.terms_2" | translate }}
+      </label>
     </div>
     @if( !terms && contactForm.submitted){
-      <label for="acceptTerms" class="invalid" style="height: 18px; padding-bottom: 32px;">{{ 'main_content.contact.invalid_privacy' | translate }}</label>
+    <label
+      for="acceptTerms"
+      class="invalid"
+      style="height: 18px; padding-bottom: 32px"
+      >{{ "main_content.contact.invalid_privacy" | translate }}</label
+    >
+    } @else{
+    <label for="acceptTerms" style="height: 18px; padding-bottom: 32px"></label>
     }
-    @else{
-      <label for="acceptTerms" style="height: 18px; padding-bottom: 32px;"></label>
-    }
-
-    <input type="submit" value="{{ 'main_content.contact.submit' | translate }} :)" />
+    <button
+      type="submit"
+      (mouseenter)="startAnimation(submitContent, 200, -150)"
+      (mouseleave)="stopAnimation(submitContent)"
+    >
+      <span [ngStyle]="{ 'right.px': getMarqueePosition(submitContent) }"
+        >{{ submitContent | translate }} :)</span
+      >
+    </button>
   </form>
 </section>
