@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Projects } from '../../interfaces/projects';
 import { CommonModule } from '@angular/common';
-import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 
 
 @Component({
   selector: 'app-project-dialog',
   standalone: true,
-  imports: [CommonModule, TranslateDirective, TranslateModule, TranslatePipe],
+  imports: [CommonModule, TranslateModule, TranslatePipe],
   templateUrl: './project-dialog.component.html',
   styleUrl: './project-dialog.component.scss'
 })

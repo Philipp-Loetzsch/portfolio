@@ -79,19 +79,23 @@ article {
 
 .project-links {
   @include dFlex($g: 24px);
-  > a {
-    @include dFlex($g: 8px);
-    padding: 12px;
-    box-sizing: border-box;
-    border-radius: 100px;
-    border: 1px solid #ffffff;
-    &:hover {
-      border-color: #3dcfb6;
-      color: #3dcfb6;
-      > img {
-        transition-duration: 300ms;
-        transform: translateX(3px) translateY(-3px);
-      }
+  >button{
+    cursor: not-allowed;
+  }
+}
+.project-links_link {
+  @include dFlex($g: 8px);
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  &:hover {
+    border-color: #3dcfb6;
+    color: #3dcfb6;
+    > img {
+      transition-duration: 300ms;
+      transform: translateX(3px) translateY(-3px);
     }
   }
 }
@@ -122,13 +126,14 @@ article {
     flex-direction: column-reverse;
     border-radius: unset;
     padding: 0;
+    justify-content: start;
   }
   section {
     padding: 0;
   }
 
   .project-content {
-    height: 75%;
+    height: 60%;
     width: 100%;
     padding: 32px 12px;
   }
@@ -184,7 +189,7 @@ article {
       font-size: 14px;
     }
   }
-  .used-skills{
+  .used-skills {
     flex-wrap: wrap;
   }
 }

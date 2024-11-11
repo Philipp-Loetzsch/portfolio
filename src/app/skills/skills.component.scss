@@ -52,14 +52,16 @@ section {
   padding: 10px;
   box-sizing: border-box;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   span {
     word-break: keep-all;
-    padding: 10px;
     box-sizing: border-box;
     color: #3dcfb6;
   }
   > div {
-    @include dFlex();
+    @include dFlex($g:10px);
   }
 }
 

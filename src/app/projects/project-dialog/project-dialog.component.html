@@ -16,14 +16,26 @@
       </div>
 
       <div class="project-links">
-        <a href="{{ projects[currentIndex].links[0] }}"
+        @if(projects[currentIndex].links[0]=== undefined){
+          <button class="project-links_link"
+          >Comming soon
+          <img src="assets/img/portfolio/arrow_outward_green.png" alt=""
+        /></button>
+        }
+        @else{<a class="project-links_link" href="{{ projects[currentIndex].links[0] }}"
           >Github
           <img src="assets/img/portfolio/arrow_outward_green.png" alt=""
-        /></a>
-        <a href="{{ projects[currentIndex].links[1] }}"
+        /></a>}
+        @if(projects[currentIndex].links[1]=== undefined){
+          <button class="project-links_link"
+          >Comming soon
+          <img src="assets/img/portfolio/arrow_outward_green.png" alt=""
+        /></button>
+        }
+        @else{<a class="project-links_link" href="{{ projects[currentIndex].links[1] }}"
           >Live Test
           <img src="assets/img/portfolio/arrow_outward_green.png" alt=""
-        /></a>
+        /></a>}
       </div>
     </div>
     <div class="project-image">
