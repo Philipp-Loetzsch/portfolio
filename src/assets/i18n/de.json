@@ -66,7 +66,7 @@
 			"title": "Kontaktieren Sie mich"
 		},
 		"feedback": {
-			"kevin": "Ja man merkt an deinem ganzen strukturellem Aufbau, coden ist dein Ding.",
+			"kevin": "An deinem ganzen strukturellem Aufbau merkt man, coden ist dein Ding.",
 			"prathab": "Die Zusammenarbeit hat nicht nur sehr gut funktioniert, sondern auch richtig viel Spaß gemacht. Es war eine wertvolle Erfahrung, mit einem so engagierten und talentierten Partner zu coden.",
 			"title": "Was andere über mich sagen",
 			"valeska": "Vielen Dank für die absolut unkomplizierte und sehr professionelle Zusammenarbeit! Philipp hat meine Anliegen immer zügig und perfekt umgesetzt. Er schafft es Design und Funktionalität optimal miteinander zu verbinden!"
@@ -213,6 +213,75 @@
 				"paragraph_text_6": ": Wir können Ihre persönlichen Daten mit Ihrer Zustimmung für jeden anderen Zweck weitergeben.",
 				"paragraph_text_6_strong": "Mit Ihrer Zustimmung"
 			}
+		},
+		"personal_delete": {
+			"headline": "Löschen Sie Ihre persönlichen Daten",
+			"paragraph": {
+				"text_1": "Sie haben das Recht, die persönlichen Daten, die wir über Sie gesammelt haben, zu löschen oder von uns Unterstützung bei der Löschung zu verlangen.",
+				"text_2": "Unser Service kann Ihnen die Möglichkeit geben, bestimmte Informationen über Sie innerhalb des Service zu löschen.",
+				"text_3": "Sie können Ihre Daten jederzeit aktualisieren, ändern oder löschen, indem Sie sich bei Ihrem Konto anmelden, falls Sie eines haben, und den Abschnitt mit den Kontoeinstellungen besuchen, in dem Sie Ihre persönlichen Daten verwalten können. Sie können sich auch an uns wenden, um Zugang zu den persönlichen Daten zu erhalten, sie zu korrigieren oder zu löschen, die Sie uns zur Verfügung gestellt haben.",
+				"text_4": "Bitte beachten Sie jedoch, dass wir bestimmte Informationen aufbewahren müssen, wenn wir dazu gesetzlich verpflichtet sind oder eine gesetzliche Grundlage dafür haben."
+			},
+			"paragraph_text_1": "",
+			"paragraph_text_2": "",
+			"paragraph_text_3": "",
+			"paragraph_text_4": ""
+		},
+		"personal_disclosure": {
+			"headline": "Offenlegung Ihrer persönlichen Daten",
+			"law_enforcement": {
+				"headline": "Strafverfolgung",
+				"paragraph_text": "Unter bestimmten Umständen kann das Unternehmen verpflichtet sein, Ihre persönlichen Daten offen zu legen, wenn dies gesetzlich vorgeschrieben ist oder als Reaktion auf berechtigte Anfragen von Behörden (z. B. einem Gericht oder einer Regierungsbehörde)."
+			},
+			"other_legal": {
+				"headline": "Sonstige rechtliche Anforderungen",
+				"list_text_1": "Einer gesetzlichen Verpflichtung nachkommen",
+				"list_text_2": "Schutz und Verteidigung der Rechte und des Eigentums des Unternehmens",
+				"list_text_3": "Verhinderung oder Untersuchung von möglichem Fehlverhalten im Zusammenhang mit dem Dienst",
+				"list_text_4": "Die persönliche Sicherheit der Nutzer des Dienstes oder der Öffentlichkeit zu schützen",
+				"list_text_5": "Schutz vor rechtlicher Haftung",
+				"paragraph_text": "Das Unternehmen kann Ihre persönlichen Daten in gutem Glauben offenlegen, dass eine solche Maßnahme notwendig ist, um:"
+			},
+			"transactions": {
+				"headline": "Geschäftsvorfälle",
+				"paragraph_text": "Wenn das Unternehmen an einer Fusion, einer Übernahme oder einem Verkauf von Vermögenswerten beteiligt ist, können Ihre persönlichen Daten übertragen werden. Wir werden Sie darüber informieren, bevor Ihre persönlichen Daten übertragen werden und einer anderen Datenschutzrichtlinie unterliegen."
+			}
+		},
+		"personal_retention": {
+			"headline": "Aufbewahrung Ihrer persönlichen Daten",
+			"paragraph_text_1": "Das Unternehmen wird Ihre persönlichen Daten nur so lange aufbewahren, wie es für die in dieser Datenschutzrichtlinie genannten Zwecke erforderlich ist. Wir werden Ihre personenbezogenen Daten in dem Umfang aufbewahren und verwenden, der erforderlich ist, um unseren rechtlichen Verpflichtungen nachzukommen (z. B. wenn wir Ihre Daten aufbewahren müssen, um geltende Gesetze einzuhalten), Streitigkeiten beizulegen und unsere rechtlichen Vereinbarungen und Richtlinien durchzusetzen.",
+			"paragraph_text_2": "Das Unternehmen speichert die Nutzungsdaten auch für interne Analysezwecke. Nutzungsdaten werden im Allgemeinen für einen kürzeren Zeitraum aufbewahrt, es sei denn, diese Daten werden verwendet, um die Sicherheit oder die Funktionalität unseres Dienstes zu verbessern, oder wir sind gesetzlich verpflichtet, diese Daten für längere Zeiträume aufzubewahren."
+		},
+		"personal_security": {
+			"changes": {
+				"headline": "Änderungen an dieser Datenschutzrichtlinie",
+				"paragraph_text_1": "Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wir werden Sie über alle Änderungen informieren, indem wir die neue Datenschutzrichtlinie auf dieser Seite veröffentlichen.",
+				"paragraph_text_2": "Wir werden Sie per E-Mail und/oder durch einen auffälligen Hinweis in unserem Service informieren, bevor die Änderung in Kraft tritt, und das &quot;Datum der letzten Aktualisierung&quot; oben in dieser Datenschutzrichtlinie aktualisieren.",
+				"paragraph_text_3": "Wir empfehlen Ihnen, diese Datenschutzrichtlinie regelmäßig auf Änderungen zu überprüfen. Änderungen an dieser Datenschutzrichtlinie werden wirksam, wenn sie auf dieser Seite veröffentlicht werden."
+			},
+			"children": {
+				"headline": "Datenschutz für Kinder",
+				"paragraph_text_1": "Unser Service richtet sich nicht an Personen unter 13 Jahren. Wir sammeln nicht wissentlich personenbezogene Daten von Personen unter 13 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und wissen, dass Ihr Kind uns personenbezogene Daten zur Verfügung gestellt hat, kontaktieren Sie uns bitte. Wenn wir erfahren, dass wir personenbezogene Daten von Personen unter 13 Jahren ohne Überprüfung der elterlichen Zustimmung erfasst haben, ergreifen wir Maßnahmen, um diese Daten von unseren Servern zu entfernen.",
+				"paragraph_text_2": "Wenn wir uns auf die Zustimmung als Rechtsgrundlage für die Verarbeitung Ihrer Daten stützen müssen und Ihr Land die Zustimmung eines Elternteils erfordert, können wir die Zustimmung Ihres Elternteils verlangen, bevor wir diese Daten sammeln und verwenden."
+			},
+			"contact": {
+				"email": "Per E-Mail:",
+				"headline": "Kontaktieren Sie uns",
+				"paragraph_text_1": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, können Sie sich an uns wenden:"
+			},
+			"headline": "Sicherheit Ihrer persönlichen Daten",
+			"links_other_website": {
+				"headline": "Links zu anderen Websites",
+				"paragraph_text_1": "Unser Service kann Links zu anderen Websites enthalten, die nicht von uns betrieben werden. Wenn Sie auf einen Link einer dritten Partei klicken, werden Sie auf die Seite dieser dritten Partei weitergeleitet. Wir empfehlen Ihnen dringend, die Datenschutzrichtlinien jeder Website, die Sie besuchen, zu lesen.",
+				"paragraph_text_2": "Wir haben keine Kontrolle über und übernehmen keine Verantwortung für den Inhalt, die Datenschutzrichtlinien oder Praktiken von Websites oder Diensten Dritter."
+			},
+			"paragraph_text": "Die Sicherheit Ihrer persönlichen Daten ist uns wichtig, aber denken Sie daran, dass keine Methode der Übertragung über das Internet oder der elektronischen Speicherung 100% sicher ist. Wir bemühen uns, Ihre persönlichen Daten mit kommerziell akzeptablen Mitteln zu schützen, können aber keine absolute Sicherheit garantieren."
+		},
+		"personal_transfer": {
+			"headline": "Übermittlung Ihrer persönlichen Daten",
+			"paragraph_text_1": "Ihre Informationen, einschließlich personenbezogener Daten, werden in den Betriebsbüros des Unternehmens und an anderen Orten verarbeitet, an denen sich die an der Verarbeitung beteiligten Parteien befinden. Das bedeutet, dass diese Daten an Computer außerhalb Ihres Staates, Ihrer Provinz, Ihres Landes oder einer anderen staatlichen Gerichtsbarkeit, in der andere Datenschutzgesetze als in Ihrer Gerichtsbarkeit gelten, übertragen und dort gespeichert werden können.",
+			"paragraph_text_2": "Mit Ihrer Zustimmung zu dieser Datenschutzrichtlinie und der anschließenden Übermittlung dieser Informationen erklären Sie sich mit dieser Übertragung einverstanden.",
+			"paragraph_text_3": "Das Unternehmen wird alle angemessenen Schritte unternehmen, um sicherzustellen, dass Ihre Daten sicher und in Übereinstimmung mit dieser Datenschutzrichtlinie behandelt werden, und es wird keine Übermittlung Ihrer persönlichen Daten an eine Organisation oder ein Land stattfinden, es sei denn, es sind angemessene Kontrollen vorhanden, die die Sicherheit Ihrer Daten und anderer persönlicher Informationen einschließen."
 		},
 		"title": "Datenschutzbestimmungen",
 		"tracking": {

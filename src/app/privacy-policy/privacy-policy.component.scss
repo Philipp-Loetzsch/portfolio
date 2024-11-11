@@ -1,45 +1,50 @@
 @import "./../../styles.scss";
 
-section{
-    padding: 112px;
+section {
+  padding: 112px;
+}
+a {
+  color: #3dcfb6;
+  &:hover {
+    color: rgba(61, 207, 183, 0.7);
+  }
+}
+h2 {
+  font-size: 32px;
+  margin: 24px 0px;
+  color: #3dcfb6;
+  font-weight: 700;
 }
 
-h2{
-    font-size: 32px;
-    margin: 24px 0px;
-    color: #3dcfb6;
-    font-weight: 700;
+h5 {
+  font-size: 24px;
+  margin: 12px 0;
+  color: #3dcfb6;
+  font-weight: 500;
 }
-
-h5{
-    font-size: 24px;
-    margin: 12px 0;
-    color: #3dcfb6;
-    font-weight: 500;
-}
-h6{
-    color: #3dcfb6;
-    font-size: 18px;
-    margin: 8px 0;
+h6 {
+  color: #3dcfb6;
+  font-size: 18px;
+  margin: 8px 0;
 }
 
 @media screen and (max-width: 1110px) {
-    h3{
-        font-size: 48px;
-      }
+  h3 {
+    font-size: 48px;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    section{
-        padding: 12px;
-    }
-    h2{
-        font-size: 24px;
-    }
-    h3{
-        font-size: 36px;
-      }
-    h5{
-        font-size: 20px;
-    }
+  section {
+    padding: 12px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+  h5 {
+    font-size: 20px;
+  }
 }
