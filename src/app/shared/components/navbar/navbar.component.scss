@@ -4,7 +4,7 @@ section {
   @include dFlex($jc: space-between);
   padding: 24px 42px;
   box-sizing: border-box;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background: linear-gradient(to bottom, black, 20%, rgba(0, 0, 0, 0.1));
