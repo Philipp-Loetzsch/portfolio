@@ -15,19 +15,23 @@ export class FooterComponent {
   links=[
     {
       link:'https://github.com/Philipp-Loetzsch',
-      name:'Github'
+      name:'Github',
+      target: '_blank'
     },
     {
       link:'https://www.linkedin.com/in/philipp-l%C3%B6tzsch-7835a9336/',
-      name:'LinkedIn'
+      name:'LinkedIn',
+      target: '_blank'
     },
     {
       link:'mailto:philipp.loetzsch@outlook.com',
-      name:'Email'
+      name:'Email',
+      target: '_blank'
     },
     {
       link:'legal-notice',
-      name:'Legal Notice'
+      name:'Legal Notice',
+      target: '_self'
     },
   ]
 

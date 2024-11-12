@@ -21,7 +21,7 @@
     <div >
       @for (link of links; track link; let i = $index) {
       <div style="position: relative;">
-        <a (mouseenter)="hoverIn(i)" (mouseleave)="hoverOut()" class="link" href="{{ link.link }}">{{ link.name }}</a>
+        <a (mouseenter)="hoverIn(i)" (mouseleave)="hoverOut()" class="link" href="{{ link.link }}" target="{{ link.target }}">{{ link.name }}</a>
         <div style="position: absolute; left: -20px; top: 0;" *ngIf="hoverIndex === i">
           <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
         </div>

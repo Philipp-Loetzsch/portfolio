@@ -53,11 +53,12 @@
           <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
         </div>
       </a>
-      <a
+      <a 
         style="position: relative"
         (mouseenter)="hoverLinkLp(i)"
         (mouseleave)="hoverOutLp()"
-        href="{{ socialMedia.link }}"
+        href="{{ socialMedia.link }}" 
+        target="_blank"
         *ngFor="let socialMedia of socialMedias; let i = index"
       >
         @if(hoverIndexLp === i){
@@ -65,15 +66,7 @@
           src="assets/img/sozial_media/{{ socialMedia.img }}_hover.svg"
           alt=""
         />
-        <div
-          style="
-            position: absolute;
-            transform-origin: top;
-            right: -10px;
-            top: 5px;
-          "
-          *ngIf="hoverIndexLp === i"
-        >
+        <div style="position: absolute; transform-origin: top; right: -10px; top: 5px;" *ngIf="hoverIndexLp === i">
           <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
         </div>
         } @else{
