@@ -57,6 +57,12 @@
 			"placeholder_name": "Wie ist Ihr Name?",
 			"question_dev": "Brauchen Sie einen Frontend-Entwickler?",
 			"submit": "Hallo sagen",
+			"succses_popup": {
+				"button": "Schließen",
+				"paragraph_text_1": "Danke, dass Sie mich kontaktiert haben.",
+				"paragraph_text_2": "Ihre Nachricht wurde gesendet.",
+				"paragraph_text_3": "Ich werde Ihnen so schnell wie möglich antworten."
+			},
 			"syntax_email": "Bitte verwenden Sie die richtige Syntax (name@email.com)",
 			"terms_1": "Ich habe die ",
 			"terms_2": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",

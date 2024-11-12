@@ -16,6 +16,7 @@ section {
   @include dFlex($ai: flex-start, $g: 10%, $jc: space-between);
   padding: 112px;
   box-sizing: border-box;
+  position: relative;
 }
 
 form {
@@ -58,7 +59,7 @@ form {
     align-self: center;
     position: relative;
     overflow: hidden;
-    >span{
+    > span {
       position: relative;
     }
     &:hover {
@@ -86,6 +87,40 @@ form {
   }
 }
 
+.submit-succses {
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  background-color: #1c1c1c;
+  border: 1px solid #3dcfb6;
+  width: 50%;
+  height: 50%;
+  @include dFlex($fd: column);
+  z-index: 9999;
+  border-radius: 30px;
+  text-align: center;
+  > p {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #3dcfb6;
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  }
+  button {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-size: 18px;
+    margin-top: 48px;
+    &:hover {
+      cursor: pointer;
+      border-color: #3dcfb6;
+      color: #3dcfb6;
+    }
+  }
+}
+
 @media screen and (max-width: 1350px) {
   section {
     padding: 64px;
@@ -103,5 +138,19 @@ form {
   }
   form {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .submit-succses{
+    left: 0;
+    width: 100%;
+    >p{
+      font-size: 18px;
+    }
+    >button{
+      font-size: 14px;
+      margin-top: 8px;
+    }
   }
 }

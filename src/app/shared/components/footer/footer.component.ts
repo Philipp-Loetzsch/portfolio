@@ -9,14 +9,16 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  hoverLogo=false
+  hoverIndex:number | null =null
   screenWidth=window.innerWidth
   links=[
     {
-      link:'#',
+      link:'https://github.com/Philipp-Loetzsch',
       name:'Github'
     },
     {
-      link:'#',
+      link:'https://www.linkedin.com/in/philipp-l%C3%B6tzsch-7835a9336/',
       name:'LinkedIn'
     },
     {
@@ -32,5 +34,13 @@ export class FooterComponent {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
+  }
+
+  hoverIn(i:number){
+    this.hoverIndex = i
+  }
+
+  hoverOut(){
+    this.hoverIndex=null
   }
 }

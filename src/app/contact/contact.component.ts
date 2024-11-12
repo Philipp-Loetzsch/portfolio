@@ -6,6 +6,7 @@ import {
   Injector,
   ViewChild,
   afterNextRender,
+  HostListener
 } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import {
@@ -79,7 +80,7 @@ export class ContactComponent {
   http = inject(HttpClient);
 
   mailTest = false;
-
+  submitForm = false;
   post = {
     endPoint:
       'https://philipp-loetzsch.webdevelopment-loetzsch.de/sendMail.php',
@@ -100,19 +101,20 @@ export class ContactComponent {
           next: (response) => {
             ngForm.resetForm();
             this.terms = false;
+            this.submitForm = true
+            setTimeout(() => {
+              this.submitForm =false
+            }, 1000);
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (
-      ngForm.submitted &&
-      ngForm.form.valid &&
-      this.mailTest &&
-      this.terms
+    } else if ( ngForm.submitted && ngForm.form.valid && this.mailTest && this.terms
     ) {
       ngForm.resetForm();
+      this.submitForm = true
     }
   }
 
@@ -127,4 +129,18 @@ export class ContactComponent {
   getMarqueePosition(content: string): number {
     return this.animationService.marqueeLinkX[content] || 0;
   }
+
+  @HostListener('wheel', ['$event'])
+  onWheel(event: Event) {
+    if (this.submitForm) event.preventDefault();
+  }
+
+  @HostListener('touchmove', ['$event'])
+  onTouchMove(event: TouchEvent) {
+    if (this.submitForm) {
+      event.preventDefault();
+    }
+  }
 }
+
+

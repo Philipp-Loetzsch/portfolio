@@ -11,6 +11,10 @@ section {
   justify-self: center;
 }
 
+a:hover{
+  color: #3dcfb6;
+}
+
 article {
   @include dFlex($jc: space-between);
   width: 100%;
@@ -20,6 +24,12 @@ article {
     > img {
       height: 48px;
     }
+  }
+}
+.logo {
+  > img {
+    object-fit: cover;
+    height: 48px;
   }
 }
 

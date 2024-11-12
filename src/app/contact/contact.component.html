@@ -121,4 +121,11 @@
       >
     </button>
   </form>
+
+  <div class="submit-succses" *ngIf="submitForm">
+    <p>{{ "main_content.contact.succses_popup.paragraph_text_1" | translate }}</p>
+    <p>{{ "main_content.contact.succses_popup.paragraph_text_2" | translate }}</p>
+    <p>{{ "main_content.contact.succses_popup.paragraph_text_3" | translate }}</p>
+    <button (click)="submitForm=false">{{ "main_content.contact.succses_popup.button" | translate }}</button>
+  </div>
 </section>
