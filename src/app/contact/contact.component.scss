@@ -12,7 +12,6 @@
 }
 
 section {
-  min-height: 100vh;
   @include dFlex($ai: flex-start, $g: 10%, $jc: space-between);
   padding: 112px;
   box-sizing: border-box;

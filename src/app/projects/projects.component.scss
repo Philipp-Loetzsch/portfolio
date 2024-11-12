@@ -1,7 +1,6 @@
 @import "./../../styles.scss";
 
 section {
-  min-height: 100vh;
   @include dFlex($fd: column, $ai: flex-start);
   padding: 112px;
 }

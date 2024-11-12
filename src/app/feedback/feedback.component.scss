@@ -27,7 +27,6 @@
 }
 
 section {
-  min-height: 100vh;
   @include dFlex($fd: column, $ai: center, $g: 40px);
   padding: 112px;
   overflow: hidden;
