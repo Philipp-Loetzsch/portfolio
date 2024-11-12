@@ -27,6 +27,7 @@ export class ProjectsComponent {
       title: 'Join',
       codeLanguage: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       image: 'join',
+      format:'.png',
       description:
         'main_content.projects.project_dialog.description_join',
       links: [
@@ -38,6 +39,7 @@ export class ProjectsComponent {
       title: 'El Pollo Loco',
       codeLanguage: ['HTML', 'CSS', 'JavaScript'],
       image: 'elpolloloco',
+      format:'.svg',
       description:
         'main_content.projects.project_dialog.description_el_pollo_loco',
       links: [
@@ -49,6 +51,7 @@ export class ProjectsComponent {
       title: 'DA Bubble',
       codeLanguage: ['Angular', 'Firebase', 'TypeScript'],
       image: 'dabubble',
+      format:'.svg',
       description:
         'main_content.projects.project_dialog.description_da_bubble',
       links: [],
