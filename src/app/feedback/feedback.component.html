@@ -1,4 +1,4 @@
-<section>
+<section class="max-width">
   <h5>{{ "main_content.feedback.title" | translate }}</h5>
 
   <div class="carousel">
@@ -41,7 +41,7 @@
           <div class="line"></div>
           <span class="fs_13">{{ this.nextComment.name }}</span>
         </div>
-        <div class="next-comment scale-right" *ngIf="showNext || true">
+        <div class="next-comment scale-right" *ngIf="showNext">
           <span class="fs_14">{{ this.previousComment.text | translate }}</span>
           <div>
             <div class="line"></div>

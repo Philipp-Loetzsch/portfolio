@@ -15,7 +15,7 @@
       </a>
     </div>
   </div>
-  <div class="marquee-links">
+  <div class="marquee-links max-width">
     <div class="df-gap">
       <a class="next-page" href="#aboutMe"
         ><img src="assets/img/links/Arrow_next.svg" alt=""
@@ -33,23 +33,8 @@
           contact&#64;webdevelopment-loetzsch.de
         </div>
         <img
-          *ngIf="screenWidth < 1100"
-          [src]="
-            hover
-              ? 'assets/img/sozial_media/mail_hover.svg'
-              : 'assets/img/sozial_media/mail_default.svg'
-          "
-          alt=""
-        />
-        <div
-          style="
-            position: absolute;
-            transform-origin: top;
-            right: -10px;
-            top: 5px;
-          "
-          *ngIf="hover"
-        >
+          *ngIf="screenWidth < 1100" [src]="hover ? 'assets/img/sozial_media/mail_hover.svg': 'assets/img/sozial_media/mail_default.svg'" alt=""/>
+        <div class="hover-point" *ngIf="hover">
           <img src="assets/img/navbar/SVG/hover_point.svg" alt="" />
         </div>
       </a>

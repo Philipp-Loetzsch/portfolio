@@ -8,15 +8,8 @@
 
 section {
   animation: slideIn 500ms forwards ease-in-out;
-  position: fixed;
   padding: 112px;
   box-sizing: border-box;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: 100%;
-  z-index: 999;
   @include dFlex();
 }
 
