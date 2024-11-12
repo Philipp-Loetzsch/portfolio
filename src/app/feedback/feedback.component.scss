@@ -60,13 +60,6 @@ h5 {
   transform: scale(0.9);
 }
 
-.previous-comment-before {
-  @include comments($bgc: rgba(61, 207, 183, 0.123));
-  @include dFlex($fd: column, $jc: space-between, $ai: start);
-  @include commentFooter();
-  transform: scale(0.9);
-}
-
 .main-comment {
   @include comments();
   @include dFlex($fd: column, $jc: space-between, $ai: start);
