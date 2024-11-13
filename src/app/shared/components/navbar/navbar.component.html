@@ -27,7 +27,7 @@
       <div>
         @for (navlink of navLinks; track navLinks; let i = $index) {
           <div style="position: relative;" class="d-flex">
-           <a (mouseenter)="hoverIn(i)" (mouseleave)="hoverOut()" href="#{{ navlink.link }}">{{ navlink.title | translate}}</a>
+           <a (mouseenter)="hoverIn(i)" (mouseleave)="hoverOut()" (click)="toggleNavbar()" href="#{{ navlink.link }}">{{ navlink.title | translate}}</a>
            <div style="position: absolute; left:100px; " *ngIf="hoverIndex === i"><img src="assets/img/navbar/SVG/hover_point.svg" alt=""></div>
         </div>
         }

@@ -38,6 +38,7 @@ section {
   right: 0;
   top: 40px;
   animation: slideIn 0.25s linear;
+  z-index: 10;
   @include dFlex($fd: column, $ai: center, $jc: space-between);
   padding: 32px;
   box-sizing: border-box;
