@@ -1,5 +1,5 @@
 <section class="max-width">
-  <div class="content-am">
+  <div appScrollAnimate="slide-in-left" class="content-am slide-in-left">
     <div>
       <h4>{{ 'main_content.skill.title' | translate}}</h4>
       <div class="content-container">
@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <div class="skilltree">
+  <div appScrollAnimate="slide-in-right" class="skilltree slide-in-right">
     <div class="skill" *ngFor="let exp of skills; let i = index">
       <img
         (click)="showPopup(i)"

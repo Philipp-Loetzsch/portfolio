@@ -3,11 +3,12 @@ import { Component, HostListener } from '@angular/core';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import { Projects } from '../interfaces/projects';
 import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ProjectDialogComponent, TranslateModule, TranslatePipe,],
+  imports: [CommonModule, ProjectDialogComponent, TranslateModule, TranslatePipe, ScrollAnimateDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })

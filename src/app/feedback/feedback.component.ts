@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component,HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
 
 @Component({
   selector: 'app-feedback',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, TranslatePipe],
+  imports: [CommonModule, FormsModule, TranslateModule, TranslatePipe, ScrollAnimateDirective],
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.scss', './feedback.carousel.component.scss']
 })

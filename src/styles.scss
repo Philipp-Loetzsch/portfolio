@@ -131,6 +131,7 @@
 
 body{
   background-color: #1C1C1C; 
+  overflow-x: hidden;
 }
 
 span{
@@ -194,4 +195,32 @@ h4{
       font-size: 14px;
     }
   }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100%); 
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0); 
 }

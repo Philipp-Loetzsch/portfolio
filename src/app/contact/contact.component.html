@@ -1,5 +1,5 @@
-<section class="max-width">
-  <div>
+<section >
+  <div appScrollAnimate="slide-in-left" class="max-width slide-in-left">
     <h4>{{ "main_content.contact.title" | translate }}</h4>
     <h3>{{ "main_content.contact.headline" | translate }}</h3>
     <p style="color: #3dcfb6; font-family: 'Fira Code'; padding: 20px 0">
@@ -16,7 +16,7 @@
     </p>
   </div>
 
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <form appScrollAnimate="slide-in-right" class="slide-in-right" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div>
       <input
         #name="ngModel"
