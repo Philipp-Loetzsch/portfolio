@@ -85,6 +85,16 @@ df-i {
   height: 100%;
   z-index: 999;
   @include dFlex();
+  animation: slideIn 500ms forwards ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 @media screen and (max-width: 1350px) {

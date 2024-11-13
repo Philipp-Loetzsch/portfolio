@@ -5,21 +5,12 @@
   font-weight: $w;
   font-size: $fs;
 }
-
+span {
+  padding: 8px 0;
+}
 section {
-  animation: slideIn 500ms forwards ease-in-out;
   padding: 112px;
   box-sizing: border-box;
-  @include dFlex();
-}
-
-@keyframes slideIn {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0;
-  }
 }
 
 h6 {
@@ -66,14 +57,16 @@ article {
     @include dFlex($g: 16px);
   }
   > img {
-    width: 100%;
     border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
   }
 }
 
 .project-links {
   @include dFlex($g: 24px);
-  >button{
+  padding-top: 24px;
+  > button {
     cursor: not-allowed;
   }
 }
@@ -121,9 +114,11 @@ article {
     border-radius: unset;
     padding: 0;
     justify-content: start;
+    position: relative;
   }
   section {
     padding: 0;
+    height: 100%;
   }
 
   .project-content {
