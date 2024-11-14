@@ -18,12 +18,11 @@ h6 {
   color: #3dcfb6;
 }
 article {
-  @include dFlex($jc: space-between, $ai: start);
+  @include dFlex($jc: space-between, $ai: start, $g:24px);
   background: linear-gradient(to top right, #1c1c1c, 80%, #08463b);
   padding: 32px;
   box-sizing: border-box;
   border-radius: 30px;
-  height: 100%;
 }
 
 .title {
@@ -39,8 +38,6 @@ article {
   @include dFlex($fd: column, $ai: start, $jc: space-between);
   height: 100%;
   width: 50%;
-  padding: 32px;
-  box-sizing: border-box;
 }
 
 .project-image {
@@ -115,6 +112,8 @@ article {
     padding: 0;
     justify-content: start;
     position: relative;
+    gap: 0;
+    height: 100%;
   }
   section {
     padding: 0;
