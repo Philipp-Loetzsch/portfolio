@@ -56,7 +56,6 @@ article {
     @include dFlex($g: 16px);
   }
   > div {
-    max-width: 533px;
     display: flex;
   }
 }
@@ -117,6 +116,7 @@ article {
     border-radius: unset;
     padding: 0;
     justify-content: start;
+    gap: 0;
   }
   section {
     padding: 0;
@@ -126,14 +126,20 @@ article {
 
   .project-content {
     width: 100%;
-    padding: 32px 12px;
+    padding: 24px 12px 48px 12px;
     box-sizing: border-box;
+    justify-content: center;
   }
   .project-image {
     width: 100%;
+    height: auto;
     padding: 12px 12px 0 12px;
     box-sizing: border-box;
-    overflow: hidden;
+    > div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   h6 {
@@ -150,9 +156,12 @@ article {
     position: absolute;
     bottom: 5px;
   }
+  .project-image_picture {
+    width: 80%;
+  }
 }
 
-@media screen and (max-width: 500px) and (max-height: 900px) {
+@media screen and (max-width: 500px) , (max-height: 840px) {
   h6 {
     font-size: 64px;
   }
@@ -162,9 +171,19 @@ article {
   .headline {
     font-size: 16px;
   }
+
+  
 }
 
-@media screen and (max-width: 425px) and (max-height: 700px) {
+@media screen and (max-width: 500px) and (max-height: 500px) {
+  .description{
+    max-height: 50px;
+    overflow-y: auto;
+  }
+}
+
+
+@media screen and (max-width: 425px) and (max-height: 640px) {
   h6 {
     font-size: 32px;
   }
@@ -172,12 +191,28 @@ article {
     font-size: 18px !important;
   }
   .project-content {
-    padding: 0 0 32px 0;
+    padding: 0 8px 32px 8px;
     > span {
       font-size: 14px;
     }
   }
   .used-skills {
     flex-wrap: wrap;
+  }
+  .used-skills_element {
+    > img {
+      width: 14px;
+    }
+    > span {
+      font-size: 14px;
+    }
+  }
+  .project-links_link{
+    font-size: 12px;
+  }
+  .project-image_picture {
+    width: 280px;
+    height: 138px;
+    object-fit: cover;
   }
 }

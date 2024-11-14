@@ -4,7 +4,7 @@
       <h6>0{{ currentIndex + 1 }}</h6>
       <span class="title">{{ projects[currentIndex].title }}</span>
       <span class="headline">{{ 'main_content.projects.project_dialog.question' |translate }}</span>
-      <span>{{ projects[currentIndex].description | translate}}</span>
+      <span class="description">{{ projects[currentIndex].description | translate}}</span>
       <div class="used-skills">
         <div class="used-skills_element" *ngFor="let item of projects[currentIndex].codeLanguage">
           <img
