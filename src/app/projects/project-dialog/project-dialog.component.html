@@ -42,7 +42,9 @@
       <button (click)="this.addDialogClosed.emit(false)">
         <img src="assets/img/portfolio/close_small.png" alt="" />
       </button>
-      <img src="assets/img/portfolio/{{formatTitle(projects[currentIndex].title)}}{{projects[currentIndex].format}}" alt="" />
+      <div>
+       <img class="project-image_picture" src="assets/img/portfolio/{{formatTitle(projects[currentIndex].title)}}{{projects[currentIndex].format}}" alt="" />
+      </div>
       <button class="next-project" (click)="nextProject()">
         {{ 'main_content.projects.project_dialog.next_project' |translate }}
         <img src="assets/img/portfolio/arrow_forward_green.png" alt="" />
