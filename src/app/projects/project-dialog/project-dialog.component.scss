@@ -57,6 +57,8 @@ article {
   }
   > div {
     display: flex;
+    max-width: 533px;
+    align-self: center;
   }
 }
 
