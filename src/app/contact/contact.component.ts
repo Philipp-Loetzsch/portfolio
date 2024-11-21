@@ -42,7 +42,6 @@ export class ContactComponent {
   private _injector = inject(Injector);
   @ViewChild('autosize') autosize!: CdkTextareaAutosize;
   triggerResize() {
-    // Wait for content to render, then trigger textarea resize.
     afterNextRender(
       () => {
         this.autosize.resizeToFitContent(true);

@@ -59,7 +59,6 @@ export class LandingPageComponent {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
-    /* this.initializePositions(); */
   }
 
   hoverLinkLp(i:number){  
