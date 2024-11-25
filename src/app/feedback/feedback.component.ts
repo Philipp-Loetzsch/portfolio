@@ -1,23 +1,30 @@
 import { CommonModule } from '@angular/common';
-import { Component,HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
+import { TranslationService } from '../services/translate.service';
 
 @Component({
   selector: 'app-feedback',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, TranslatePipe, ScrollAnimateDirective],
+  imports: [
+    CommonModule,
+    FormsModule,
+    TranslateModule,
+    TranslatePipe,
+    ScrollAnimateDirective,
+  ],
   templateUrl: './feedback.component.html',
-  styleUrls: ['./feedback.component.scss', './feedback.carousel.component.scss']
+  styleUrls: [
+    './feedback.component.scss',
+    './feedback.carousel.component.scss',
+  ],
 })
 export class FeedbackComponent {
-
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
-}
+  constructor(translationService: TranslationService) {
+    translationService.initializeTranslation();
+  }
 
   feedbacks = [
     {
@@ -37,9 +44,9 @@ export class FeedbackComponent {
   mainComment = this.feedbacks[this.currentComment];
   previousComment = this.feedbacks[this.getPreviousIndex(this.currentComment)];
   nextComment = this.feedbacks[this.getNextIndex(this.currentComment)];
-  showPrev=false
-  showNext=false
-  currentScreenWidth = window.innerWidth
+  showPrev = false;
+  showNext = false;
+  currentScreenWidth = window.innerWidth;
 
   getPreviousIndex(index: number): number {
     return (index - 1 + this.feedbacks.length) % this.feedbacks.length;
@@ -51,34 +58,33 @@ export class FeedbackComponent {
 
   updateComments() {
     this.mainComment = this.feedbacks[this.currentComment];
-    this.previousComment= this.feedbacks[this.getPreviousIndex(this.currentComment)];
+    this.previousComment =
+      this.feedbacks[this.getPreviousIndex(this.currentComment)];
     this.nextComment = this.feedbacks[this.getNextIndex(this.currentComment)];
   }
 
   showPreviousComment() {
-    if(this.showPrev || this.showNext) return
+    if (this.showPrev || this.showNext) return;
     this.currentComment = this.getPreviousIndex(this.currentComment);
-    if(this.currentScreenWidth < 540) return this.updateComments();
-    this.showPrev=true
+    if (this.currentScreenWidth < 540) return this.updateComments();
+    this.showPrev = true;
     setTimeout(() => {
       this.updateComments();
-      this.showPrev= false
+      this.showPrev = false;
     }, 1300);
-    
   }
 
   showNextComment() {
-    if(this.showNext || this.showPrev) return
+    if (this.showNext || this.showPrev) return;
     this.currentComment = this.getNextIndex(this.currentComment);
-    if(this.currentScreenWidth < 540) return this.updateComments();
-    this.showNext=true
+    if (this.currentScreenWidth < 540) return this.updateComments();
+    this.showNext = true;
     setTimeout(() => {
       this.updateComments();
-      this.showNext= false
+      this.showNext = false;
     }, 1300);
   }
 
-  
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.currentScreenWidth = window.innerWidth;

@@ -2,22 +2,27 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import { Projects } from '../interfaces/projects';
-import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
+import { TranslationService } from '../services/translate.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ProjectDialogComponent, TranslateModule, TranslatePipe, ScrollAnimateDirective],
+  imports: [
+    CommonModule,
+    ProjectDialogComponent,
+    TranslateModule,
+    TranslatePipe,
+    ScrollAnimateDirective,
+  ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');    
-}
+  constructor(translationService: TranslationService) {
+    translationService.initializeTranslation();
+  }
 
   showDialog = false;
   hoverIndex: number | null = null;
@@ -28,9 +33,8 @@ export class ProjectsComponent {
       title: 'Join',
       codeLanguage: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       image: 'join',
-      format:'.png',
-      description:
-        'main_content.projects.project_dialog.description_join',
+      format: '.png',
+      description: 'main_content.projects.project_dialog.description_join',
       links: [
         'https://github.com/Philipp-Loetzsch/join',
         'https://philipp-loetzsch.webdevelopment-loetzsch.de/projects/join/',
@@ -40,7 +44,7 @@ export class ProjectsComponent {
       title: 'El Pollo Loco',
       codeLanguage: ['HTML', 'CSS', 'JavaScript'],
       image: 'elpolloloco',
-      format:'.svg',
+      format: '.svg',
       description:
         'main_content.projects.project_dialog.description_el_pollo_loco',
       links: [
@@ -52,9 +56,8 @@ export class ProjectsComponent {
       title: 'DA Bubble',
       codeLanguage: ['Angular', 'Firebase', 'TypeScript'],
       image: 'dabubble',
-      format:'.svg',
-      description:
-        'main_content.projects.project_dialog.description_da_bubble',
+      format: '.svg',
+      description: 'main_content.projects.project_dialog.description_da_bubble',
       links: [],
     },
   ];

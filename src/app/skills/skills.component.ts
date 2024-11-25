@@ -1,25 +1,31 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AnimationService } from '../services/animation.service';
-import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
+import { TranslationService } from '../services/translate.service';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TranslatePipe, ScrollAnimateDirective],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    TranslatePipe,
+    ScrollAnimateDirective,
+  ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
+  constructor(
+    private animationService: AnimationService,
+    translationService: TranslationService
+  ) {
+    translationService.initializeTranslation();
+  }
 
-  constructor(private translate: TranslateService, private animationService: AnimationService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
-}
-
-  linkContent: string = "main_content.skil.link";
+  linkContent: string = 'main_content.skil.link';
   enablePopup: boolean = false;
   skills: Array<{ img: string; skill: string }> = [
     { img: 'html', skill: 'HTML' },

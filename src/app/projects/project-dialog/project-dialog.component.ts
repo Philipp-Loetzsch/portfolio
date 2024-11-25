@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Projects } from '../../interfaces/projects';
 import { CommonModule } from '@angular/common';
-import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslationService } from '../../services/translate.service';
 
 
 @Component({
@@ -17,11 +18,10 @@ export class ProjectDialogComponent {
   @Input() projects!: Projects[];
   @Input() currentIndex!: number;
 
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use(translate.currentLang);    
-}
+    constructor(translationService: TranslationService) {
+      translationService.initializeTranslation();
+    }
+
   
   nextProject(){
     this.currentIndex= (this.currentIndex + 1)  % this.projects.length ;

@@ -6,20 +6,17 @@ import {
   Injector,
   ViewChild,
   afterNextRender,
-  HostListener
+  HostListener,
 } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import {
-  TranslateService,
-  TranslateModule,
-  TranslatePipe,
-} from '@codeandweb/ngx-translate';
+import { TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
 import { AnimationService } from '../services/animation.service';
 import { CdkTextareaAutosize, TextFieldModule } from '@angular/cdk/text-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
+import { TranslationService } from '../services/translate.service';
 
 @Component({
   selector: 'app-contact',
@@ -33,7 +30,7 @@ import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
     MatSelectModule,
     MatInputModule,
     TextFieldModule,
-    ScrollAnimateDirective
+    ScrollAnimateDirective,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
@@ -48,16 +45,15 @@ export class ContactComponent {
       },
       {
         injector: this._injector,
-      },
+      }
     );
   }
+
   constructor(
-    private translate: TranslateService,
-    private animationService: AnimationService
+    private animationService: AnimationService,
+    translationService: TranslationService
   ) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
+    translationService.initializeTranslation();
   }
 
   submitContent: string = 'main_content.contact.submit';
@@ -102,9 +98,9 @@ export class ContactComponent {
           next: (response) => {
             ngForm.resetForm();
             this.terms = false;
-            this.submitForm = true
+            this.submitForm = true;
             setTimeout(() => {
-              this.submitForm =false
+              this.submitForm = false;
             }, 1000);
           },
           error: (error) => {
@@ -112,10 +108,14 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if ( ngForm.submitted && ngForm.form.valid && this.mailTest && this.terms
+    } else if (
+      ngForm.submitted &&
+      ngForm.form.valid &&
+      this.mailTest &&
+      this.terms
     ) {
       ngForm.resetForm();
-      this.submitForm = true
+      this.submitForm = true;
     }
   }
 
@@ -143,5 +143,3 @@ export class ContactComponent {
     }
   }
 }
-
-

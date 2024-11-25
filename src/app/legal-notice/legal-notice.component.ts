@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import { TranslateService, TranslateDirective, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslationService } from '../services/translate.service';
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [TranslateDirective, TranslateModule, TranslatePipe],
+  imports: [TranslateModule, TranslatePipe],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
 
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
-}
+  constructor(translationService: TranslationService) {
+    translationService.initializeTranslation();
+  }
 
 }

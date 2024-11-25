@@ -1,12 +1,9 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimationService } from '../services/animation.service';
-import {
-  TranslateService,
-  TranslateModule,
-  TranslatePipe,
-} from '@codeandweb/ngx-translate';
-import { NgxFastMarqueeModule } from "ngx-fast-marquee";
+import { TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { NgxFastMarqueeModule } from 'ngx-fast-marquee';
+import { TranslationService } from '../services/translate.service';
 @Component({
   selector: 'app-landing-page',
   standalone: true,
@@ -15,16 +12,14 @@ import { NgxFastMarqueeModule } from "ngx-fast-marquee";
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent {
-  constructor( 
+  constructor(
     private animationService: AnimationService,
-    private translate: TranslateService,
+    translationService: TranslationService
   ) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
+    translationService.initializeTranslation();
   }
 
-  hoverIndexLp:number | null = null
+  hoverIndexLp: number | null = null;
   lpLinks = [
     {
       jump: 'projects',
@@ -52,21 +47,21 @@ export class LandingPageComponent {
     'main_content.landing_page.marquee_text_3',
     'main_content.landing_page.marquee_text_4',
   ];
-  hover:boolean = false;
- 
+  hover: boolean = false;
+
   screenWidth: number = window.innerWidth;
- 
+
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
   }
 
-  hoverLinkLp(i:number){  
-    this.hoverIndexLp = i
+  hoverLinkLp(i: number) {
+    this.hoverIndexLp = i;
   }
 
-  hoverOutLp(){
-    this.hoverIndexLp = null
+  hoverOutLp() {
+    this.hoverIndexLp = null;
   }
 
   startAnimation(content: string, maxXLeft: number, xRight: number) {
