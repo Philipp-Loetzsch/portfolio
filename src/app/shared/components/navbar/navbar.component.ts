@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateService, TranslateModule, TranslatePipe } from '@codeandweb/ngx-translate';
+import { TranslateModule, TranslatePipe, TranslateService } from '@codeandweb/ngx-translate';
+import { TranslationService } from '../../../services/translate.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,14 +14,13 @@ export class NavbarComponent {
   hoverLogo=false
   language:boolean =true
   hoverIndex:number | null =null
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('de');
-    this.translate.use('de');
-}
   showNavbar:boolean = false;
   chosen = {color: 'red'}
   screenWidth = window.innerWidth
+
+  constructor(translationService: TranslationService, private translate: TranslateService) {
+    translationService.initializeTranslation();
+  }  
 
   navLinks: Array<{ link: string; title: string }> = [
     {
@@ -38,9 +38,8 @@ export class NavbarComponent {
   ];
 
   useLanguage(language:string):void {
-    this.translate.use(language)
-    if(language === 'en') this.language = false
-    else this.language = true    
+    this.translate.use(language);
+    this.language = language === 'en' ? false : true;
   }
 
   toggleNavbar(){
