@@ -41,6 +41,18 @@ export class ProjectsComponent {
       ],
     },
     {
+      title: 'Join Angular',
+      codeLanguage: ['Angular', 'Firebase'],
+      image: 'join',
+      format: '.png',
+      description: 'main_content.projects.project_dialog.description_join',
+      links: [
+        'https://github.com/Philipp-Loetzsch/join_angular',
+        'https://philipp-loetzsch.webdevelopment-loetzsch.de/projects/join_angular/',
+      ],
+    },
+
+    {
       title: 'El Pollo Loco',
       codeLanguage: ['HTML', 'CSS', 'JavaScript'],
       image: 'elpolloloco',
