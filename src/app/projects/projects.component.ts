@@ -37,7 +37,7 @@ export class ProjectsComponent {
       description: 'main_content.projects.project_dialog.description_join',
       links: [
         'https://github.com/Philipp-Loetzsch/join',
-        'https://philipp-loetzsch.webdevelopment-loetzsch.de/projects/join/',
+        'https://webdevelopment-loetzsch.de/projects/join/',
       ],
     },
     {
@@ -48,7 +48,7 @@ export class ProjectsComponent {
       description: 'main_content.projects.project_dialog.description_join',
       links: [
         'https://github.com/Philipp-Loetzsch/join_angular',
-        'https://philipp-loetzsch.webdevelopment-loetzsch.de/projects/join_angular/',
+        'https://webdevelopment-loetzsch.de/projects/join_angular/',
       ],
     },
 
@@ -61,7 +61,7 @@ export class ProjectsComponent {
         'main_content.projects.project_dialog.description_el_pollo_loco',
       links: [
         'https://github.com/Philipp-Loetzsch/el_pollo-loco',
-        'https://philipp-loetzsch.webdevelopment-loetzsch.de/projects/el_pollo_loco/',
+        'https://webdevelopment-loetzsch.de/projects/el_pollo_loco/',
       ],
     },
     {
@@ -70,8 +70,23 @@ export class ProjectsComponent {
       image: 'dabubble',
       format: '.svg',
       description: 'main_content.projects.project_dialog.description_da_bubble',
-      links: [],
+      links: [
+        'https://github.com/Philipp-Loetzsch/dabubble',
+        'https://webdevelopment-loetzsch.de/projects/dabubble/'
+      ],
     },
+    {
+      title: 'Join Backend',
+      codeLanguage: ['Angular', 'Python', 'TypeScript', 'Django', 'DRF'],
+      image: 'join',
+      format: '.png',
+      description: 'main_content.projects.project_dialog.description_join',
+      links: [
+        'https://github.com/Philipp-Loetzsch/join_backend',
+        'https://github.com/Philipp-Loetzsch/join_frontend'
+      ],
+      
+    }
   ];
 
   hoverButton(index: number) {
